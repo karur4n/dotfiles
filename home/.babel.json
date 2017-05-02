@@ -1,0 +1,1211 @@
+{
+  "{\"filename\":\"/Users/karur4n/sandbox/shadowversejson/development/test/index.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/Users/karur4n/sandbox/shadowversejson/development/test\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.21.0": {
+    "metadata": {
+      "usedHelpers": [
+        "asyncToGenerator",
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "assert",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "assert"
+              }
+            ]
+          },
+          {
+            "source": "../src",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "shadowversejson"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/Users/karur4n/sandbox/shadowversejson/development/test/index.js",
+      "filenameRelative": "/Users/karur4n/sandbox/shadowversejson/development/test/index.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "index.js",
+      "sourceFileName": "index.js",
+      "sourceRoot": "/Users/karur4n/sandbox/shadowversejson/development/test",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/Users/karur4n/sandbox/shadowversejson/development/test",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "index"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _bluebird = require('bluebird');\n\nvar _bluebird2 = _interopRequireDefault(_bluebird);\n\nvar _powerAssert = require('power-assert');\n\nvar _powerAssert2 = _interopRequireDefault(_powerAssert);\n\nvar _src = require('../src');\n\nvar _src2 = _interopRequireDefault(_src);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new _bluebird2.default(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return _bluebird2.default.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); }); }; } // dependencies\n\n\n// target\n\n\n// specs\ndescribe('shadowversejson', function () {\n  it('spec1', _asyncToGenerator(regeneratorRuntime.mark(function _callee() {\n    var cards;\n    return regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.next = 2;\n            return (0, _src2.default)();\n\n          case 2:\n            cards = _context.sent;\n\n            console.log(cards);\n\n          case 4:\n          case 'end':\n            return _context.stop();\n        }\n      }\n    }, _callee, undefined);\n  })));\n});\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbImRlc2NyaWJlIiwiaXQiLCJjYXJkcyIsImNvbnNvbGUiLCJsb2ciXSwibWFwcGluZ3MiOiI7Ozs7OztBQUNBOzs7O0FBR0E7Ozs7OztpZUFKQTs7O0FBR0E7OztBQUdBO0FBQ0FBLFNBQVMsaUJBQVQsRUFBNEIsWUFBTTtBQUNoQ0MsS0FBRyxPQUFILDRDQUFZO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsbUJBQ1Usb0JBRFY7O0FBQUE7QUFDSkMsaUJBREk7O0FBRVZDLG9CQUFRQyxHQUFSLENBQVlGLEtBQVo7O0FBRlU7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsR0FBWjtBQUlELENBTEQiLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL2thcnVyNG4vc2FuZGJveC9zaGFkb3d2ZXJzZWpzb24vZGV2ZWxvcG1lbnQvdGVzdCIsInNvdXJjZXNDb250ZW50IjpbIi8vIGRlcGVuZGVuY2llc1xuaW1wb3J0IGFzc2VydCBmcm9tICdhc3NlcnQnO1xuXG4vLyB0YXJnZXRcbmltcG9ydCBzaGFkb3d2ZXJzZWpzb24gZnJvbSAnLi4vc3JjJztcblxuLy8gc3BlY3NcbmRlc2NyaWJlKCdzaGFkb3d2ZXJzZWpzb24nLCAoKSA9PiB7XG4gIGl0KCdzcGVjMScsIGFzeW5jICgpID0+IHtcbiAgICBjb25zdCBjYXJkcyA9IGF3YWl0IHNoYWRvd3ZlcnNlanNvbigpO1xuICAgIGNvbnNvbGUubG9nKGNhcmRzKVxuICB9KTtcbn0pO1xuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "index.js"
+      ],
+      "names": [
+        "describe",
+        "it",
+        "cards",
+        "console",
+        "log"
+      ],
+      "mappings": ";;;;;;AACA;;;;AAGA;;;;;;ieAJA;;;AAGA;;;AAGA;AACAA,SAAS,iBAAT,EAA4B,YAAM;AAChCC,KAAG,OAAH,4CAAY;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,mBACU,oBADV;;AAAA;AACJC,iBADI;;AAEVC,oBAAQC,GAAR,CAAYF,KAAZ;;AAFU;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,GAAZ;AAID,CALD",
+      "file": "index.js",
+      "sourceRoot": "/Users/karur4n/sandbox/shadowversejson/development/test",
+      "sourcesContent": [
+        "// dependencies\nimport assert from 'assert';\n\n// target\nimport shadowversejson from '../src';\n\n// specs\ndescribe('shadowversejson', () => {\n  it('spec1', async () => {\n    const cards = await shadowversejson();\n    console.log(cards)\n  });\n});\n"
+      ]
+    },
+    "mtime": 1484035012000
+  },
+  "{\"filename\":\"/Users/karur4n/sandbox/shadowversejson/development/src/index.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/Users/karur4n/sandbox/shadowversejson/development/src\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.21.0": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "bluebird",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "Promise"
+              }
+            ]
+          },
+          {
+            "source": "axios",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "axios"
+              }
+            ]
+          },
+          {
+            "source": "./fetch-all-card-url",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "fetchAllCardUrl"
+              }
+            ]
+          },
+          {
+            "source": "./scrape-card-data",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "scrapeCardData"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/Users/karur4n/sandbox/shadowversejson/development/src/index.js",
+      "filenameRelative": "/Users/karur4n/sandbox/shadowversejson/development/src/index.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "index.js",
+      "sourceFileName": "index.js",
+      "sourceRoot": "/Users/karur4n/sandbox/shadowversejson/development/src",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/Users/karur4n/sandbox/shadowversejson/development/src",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "index"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _bluebird = require('bluebird');\n\nvar _bluebird2 = _interopRequireDefault(_bluebird);\n\nvar _axios = require('axios');\n\nvar _axios2 = _interopRequireDefault(_axios);\n\nvar _fetchAllCardUrl = require('./fetch-all-card-url');\n\nvar _fetchAllCardUrl2 = _interopRequireDefault(_fetchAllCardUrl);\n\nvar _scrapeCardData = require('./scrape-card-data');\n\nvar _scrapeCardData2 = _interopRequireDefault(_scrapeCardData);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar rarities = {\n  ブロンズレア: 'bronze',\n  シルバーレア: 'silver',\n  ゴールドレア: 'gold',\n  レジェンド: 'legendary'\n};\nvar classes = {\n  ニュートラル: 'neutral',\n  エルフ: 'forestcraft',\n  ロイヤル: 'swordcraft',\n  ウィッチ: 'runecraft',\n  ドラゴン: 'dragoncraft',\n  ネクロマンサー: 'shadowcraft',\n  ヴァンパイア: 'bloodcraft',\n  ビショップ: 'havencraft'\n};\nvar categories = [undefined, 'follower', 'spell', 'amulet'];\nvar types = {\n  '-': undefined,\n  兵士: 'officer',\n  指揮官: 'commander',\n  土の印: 'earth_sigil'\n};\nfunction normalize(languages, id, cost, category) {\n  var names = {};\n  Object.keys(languages).forEach(function (lang) {\n    names[lang] = languages[lang].name;\n  });\n\n  return {\n    id: id,\n    name: names,\n    cost: id === '101334020' ? 18 : cost,\n    card: languages.ja.card.map(function (data, i) {\n      Object.keys(data).forEach(function (key) {\n        if (['skill', 'description'].indexOf(key) > -1) {\n          (function () {\n            var value = data[key];\n            var langs = {};\n            if (value.length) {\n              Object.keys(languages).forEach(function (lang) {\n                langs[lang] = languages[lang].card[i][key];\n              });\n            }\n            data[key] = langs;\n          })();\n        }\n      });\n      return data;\n    }),\n    meta: {\n      rarity: rarities[languages.ja.rarity],\n      class: classes[languages.ja.class],\n      category: categories[category],\n      type: types[languages.ja.type]\n    }\n  };\n}\n\nvar base = 'https://shadowverse-portal.com';\n\nexports.default = function () {\n  return (0, _fetchAllCardUrl2.default)().then(function (items) {\n    return _bluebird2.default.all(items.map(function (item) {\n      var uri = base + item.url;\n      var id = item.url.split('/').slice(-1)[0];\n      return _bluebird2.default.props({\n        ja: (0, _axios2.default)(uri, { headers: { 'Accept-Language': 'ja' } }).then(function (_ref) {\n          var data = _ref.data;\n          return (0, _scrapeCardData2.default)(data);\n        }),\n\n        en: (0, _axios2.default)(uri, { headers: { 'Accept-Language': 'en' } }).then(function (_ref2) {\n          var data = _ref2.data;\n          return (0, _scrapeCardData2.default)(data, false);\n        })\n      }).then(function (languages) {\n        return normalize(languages, id, item.cost, item.category);\n      });\n    }));\n  });\n};\n\nmodule.exports = exports['default'];\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbInJhcml0aWVzIiwi44OW44Ot44Oz44K644Os44KiIiwi44K344Or44OQ44O844Os44KiIiwi44K044O844Or44OJ44Os44KiIiwi44Os44K444Kn44Oz44OJIiwiY2xhc3NlcyIsIuODi+ODpeODvOODiOODqeODqyIsIuOCqOODq+ODlSIsIuODreOCpOODpOODqyIsIuOCpuOCo+ODg+ODgSIsIuODieODqeOCtOODsyIsIuODjeOCr+ODreODnuODs+OCteODvCIsIuODtOOCoeODs+ODkeOCpOOCoiIsIuODk+OCt+ODp+ODg+ODlyIsImNhdGVnb3JpZXMiLCJ1bmRlZmluZWQiLCJ0eXBlcyIsIuWFteWjqyIsIuaMh+aPruWumCIsIuWcn+OBruWNsCIsIm5vcm1hbGl6ZSIsImxhbmd1YWdlcyIsImlkIiwiY29zdCIsImNhdGVnb3J5IiwibmFtZXMiLCJPYmplY3QiLCJrZXlzIiwiZm9yRWFjaCIsImxhbmciLCJuYW1lIiwiY2FyZCIsImphIiwibWFwIiwiZGF0YSIsImkiLCJpbmRleE9mIiwia2V5IiwidmFsdWUiLCJsYW5ncyIsImxlbmd0aCIsIm1ldGEiLCJyYXJpdHkiLCJjbGFzcyIsInR5cGUiLCJiYXNlIiwidGhlbiIsImFsbCIsIml0ZW1zIiwidXJpIiwiaXRlbSIsInVybCIsInNwbGl0Iiwic2xpY2UiLCJwcm9wcyIsImhlYWRlcnMiLCJlbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUE7Ozs7QUFDQTs7OztBQUNBOzs7O0FBQ0E7Ozs7OztBQUVBLElBQU1BLFdBQVc7QUFDZkMsVUFBUSxRQURPO0FBRWZDLFVBQVEsUUFGTztBQUdmQyxVQUFRLE1BSE87QUFJZkMsU0FBTztBQUpRLENBQWpCO0FBTUEsSUFBTUMsVUFBVTtBQUNkQyxVQUFRLFNBRE07QUFFZEMsT0FBSyxhQUZTO0FBR2RDLFFBQU0sWUFIUTtBQUlkQyxRQUFNLFdBSlE7QUFLZEMsUUFBTSxhQUxRO0FBTWRDLFdBQVMsYUFOSztBQU9kQyxVQUFRLFlB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ZSxPQUFkLEVBT05ZLElBUE0sQ0FPRDtBQUFBLGVBQWExQixVQUFVQyxTQUFWLEVBQXFCQyxFQUFyQixFQUF5QjRCLEtBQUszQixJQUE5QixFQUFvQzJCLEtBQUsxQixRQUF6QyxDQUFiO0FBQUEsT0FQQyxDQUFQO0FBUUQsS0FYRCxDQURhLENBQVQ7QUFBQSxHQUROLENBRGE7QUFBQSxDIiwiZmlsZSI6ImluZGV4LmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9rYXJ1cjRuL3NhbmRib3gvc2hhZG93dmVyc2Vqc29uL2RldmVsb3BtZW50L3NyYyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBQcm9taXNlIGZyb20gJ2JsdWViaXJkJztcbmltcG9ydCBheGlvcyBmcm9tICdheGlvcyc7XG5pbXBvcnQgZmV0Y2hBbGxDYXJkVXJsIGZyb20gJy4vZmV0Y2gtYWxsLWNhcmQtdXJsJztcbmltcG9ydCBzY3JhcGVDYXJkRGF0YSBmcm9tICcuL3NjcmFwZS1jYXJkLWRhdGEnO1xuXG5jb25zdCByYXJpdGllcyA9IHtcbiAg44OW44Ot44Oz44K644Os44KiOiAnYnJvbnplJyxcbiAg44K344Or44OQ44O844Os44KiOiAnc2lsdmVyJyxcbiAg44K044O844Or44OJ44Os44KiOiAnZ29sZCcsXG4gIOODrOOCuOOCp+ODs+ODiTogJ2xlZ2VuZGFyeScsXG59O1xuY29uc3QgY2xhc3NlcyA9IHtcbiAg44OL44Ol44O844OI44Op44OrOiAnbmV1dHJhbCcsXG4gIOOCqOODq+ODlTogJ2ZvcmVzdGNyYWZ0JyxcbiAg44Ot44Kk44Ok44OrOiAnc3dvcmRjcmFmdCcsXG4gIOOCpuOCo+ODg+ODgTogJ3J1bmVjcmFmdCcsXG4gIOODieODqeOCtOODszogJ2RyYWdvbmNyYWZ0JyxcbiAg44ON44Kv44Ot44Oe44Oz44K144O8OiAnc2hhZG93Y3JhZnQnLFxuICDjg7TjgqHjg7Pjg5HjgqTjgqI6ICdibG9vZGNyYWZ0JyxcbiAg44OT44K344On44OD44OXOiAnaGF2ZW5jcmFmdCcsXG59O1xuY29uc3QgY2F0ZWdvcmllcyA9IFt1bmRlZmluZWQsICdmb2xsb3dlcicsICdzcGVsbCcsICdhbXVsZXQnXTtcbmNvbnN0IHR5cGVzID0ge1xuICAnLSc6IHVuZGVmaW5lZCxcbiAg5YW15aOrOiAnb2ZmaWNlcicsXG4gIOaMh+aPruWumDogJ2NvbW1hbmRlcicsXG4gIOWcn+OBruWNsDogJ2VhcnRoX3NpZ2lsJyxcbn07XG5mdW5jdGlvbiBub3JtYWxpemUobGFuZ3VhZ2VzLCBpZCwgY29zdCwgY2F0ZWdvcnkpIHtcbiAgY29uc3QgbmFtZXMgPSB7fTtcbiAgT2JqZWN0LmtleXMobGFuZ3VhZ2VzKS5mb3JFYWNoKGxhbmcgPT4ge1xuICAgIG5hbWVzW2xhbmddID0gbGFuZ3VhZ2VzW2xhbmddLm5hbWU7XG4gIH0pO1xuXG4gIHJldHVybiB7XG4gICAgaWQsXG4gICAgbmFtZTogbmFtZXMsXG4gICAgY29zdDogaWQgPT09ICcxMDEzMzQwMjAnID8gMTggOiBjb3N0LFxuICAgIGNhcmQ6IGxhbmd1YWdlcy5qYS5jYXJkLm1hcCgoZGF0YSwgaSkgPT4ge1xuICAgICAgT2JqZWN0LmtleXMoZGF0YSkuZm9yRWFjaChrZXkgPT4ge1xuICAgICAgICBpZiAoWydza2lsbCcsICdkZXNjcmlwdGlvbiddLmluZGV4T2Yoa2V5KSA+IC0xKSB7XG4gICAgICAgICAgY29uc3QgdmFsdWUgPSBkYXRhW2tleV07XG4gICAgICAgICAgY29uc3QgbGFuZ3MgPSB7fTtcbiAgICAgICAgICBpZiAodmFsdWUubGVuZ3RoKSB7XG4gICAgICAgICAgICBPYmplY3Qua2V5cyhsYW5ndWFnZXMpLmZvckVhY2gobGFuZyA9PiB7XG4gICAgICAgICAgICAgIGxhbmdzW2xhbmddID0gbGFuZ3VhZ2VzW2xhbmddLmNhcmRbaV1ba2V5XTtcbiAgICAgICAgICAgIH0pO1xuICAgICAgICAgIH1cbiAgICAgICAgICBkYXRhW2tleV0gPSBsYW5ncztcbiAgICAgICAgfVxuICAgICAgfSk7XG4gICAgICByZXR1cm4gZGF0YTtcbiAgICB9KSxcbiAgICBtZXRhOiB7XG4gICAgICByYXJpdHk6IHJhcml0aWVzW2xhbmd1YWdlcy5qYS5yYXJpdHldLFxuICAgICAgY2xhc3M6IGNsYXNzZXNbbGFuZ3VhZ2VzLmphLmNsYXNzXSxcbiAgICAgIGNhdGVnb3J5OiBjYXRlZ29yaWVzW2NhdGVnb3J5XSxcbiAgICAgIHR5cGU6IHR5cGVzW2xhbmd1YWdlcy5qYS50eXBlXSxcbiAgICB9LFxuICB9O1xufVxuXG5jb25zdCBiYXNlID0gJ2h0dHBzOi8vc2hhZG93dmVyc2UtcG9ydGFsLmNvbSc7XG5leHBvcnQgZGVmYXVsdCAoKSA9PlxuICBmZXRjaEFsbENhcmRVcmwoKVxuICAudGhlbihpdGVtcyA9PiBQcm9taXNlLmFsbChcbiAgICBpdGVtcy5tYXAoaXRlbSA9PiB7XG4gICAgICBjb25zdCB1cmkgPSBiYXNlICsgaXRlbS51cmw7XG4gICAgICBjb25zdCBpZCA9IGl0ZW0udXJsLnNwbGl0KCcvJykuc2xpY2UoLTEpWzBdO1xuICAgICAgcmV0dXJuIFByb21pc2UucHJvcHMoe1xuICAgICAgICBqYTogYXhpb3ModXJpLCB7IGhlYWRlcnM6IHsgJ0FjY2VwdC1MYW5ndWFnZSc6ICdqYScgfSB9KVxuICAgICAgICAudGhlbigoeyBkYXRhIH0pID0+IHNjcmFwZUNhcmREYXRhKGRhdGEpKSxcblxuICAgICAgICBlbjogYXhpb3ModXJpLCB7IGhlYWRlcnM6IHsgJ0FjY2VwdC1MYW5ndWFnZSc6ICdlbicgfSB9KVxuICAgICAgICAudGhlbigoeyBkYXRhIH0pID0+IHNjcmFwZUNhcmREYXRhKGRhdGEsIGZhbHNlKSksXG4gICAgICB9KVxuICAgICAgLnRoZW4obGFuZ3VhZ2VzID0+IG5vcm1hbGl6ZShsYW5ndWFnZXMsIGlkLCBpdGVtLmNvc3QsIGl0ZW0uY2F0ZWdvcnkpKTtcbiAgICB9KVxuICApXG4pO1xuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "index.js"
+      ],
+      "names": [
+        "rarities",
+        "ブロンズレア",
+        "シルバーレア",
+        "ゴールドレア",
+        "レジェンド",
+        "classes",
+        "ニュートラル",
+        "エルフ",
+        "ロイヤル",
+        "ウィッチ",
+        "ドラゴン",
+        "ネクロマンサー",
+        "ヴァンパイア",
+        "ビショップ",
+        "categories",
+        "undefined",
+        "types",
+        "兵士",
+        "指揮官",
+        "土の印",
+        "normalize",
+        "languages",
+        "id",
+        "cost",
+        "category",
+        "names",
+        "Object",
+        "keys",
+        "forEach",
+        "lang",
+        "name",
+        "card",
+        "ja",
+        "map",
+        "data",
+        "i",
+        "indexOf",
+        "key",
+        "value",
+        "langs",
+        "length",
+        "meta",
+        "rarity",
+        "class",
+        "type",
+        "base",
+        "then",
+        "all",
+        "items",
+        "uri",
+        "item",
+        "url",
+        "split",
+        "slice",
+        "props",
+        "headers",
+        "en"
+      ],
+      "mappings": "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",
+      "file": "index.js",
+      "sourceRoot": "/Users/karur4n/sandbox/shadowversejson/development/src",
+      "sourcesContent": [
+        "import Promise from 'bluebird';\nimport axios from 'axios';\nimport fetchAllCardUrl from './fetch-all-card-url';\nimport scrapeCardData from './scrape-card-data';\n\nconst rarities = {\n  ブロンズレア: 'bronze',\n  シルバーレア: 'silver',\n  ゴールドレア: 'gold',\n  レジェンド: 'legendary',\n};\nconst classes = {\n  ニュートラル: 'neutral',\n  エルフ: 'forestcraft',\n  ロイヤル: 'swordcraft',\n  ウィッチ: 'runecraft',\n  ドラゴン: 'dragoncraft',\n  ネクロマンサー: 'shadowcraft',\n  ヴァンパイア: 'bloodcraft',\n  ビショップ: 'havencraft',\n};\nconst categories = [undefined, 'follower', 'spell', 'amulet'];\nconst types = {\n  '-': undefined,\n  兵士: 'officer',\n  指揮官: 'commander',\n  土の印: 'earth_sigil',\n};\nfunction normalize(languages, id, cost, category) {\n  const names = {};\n  Object.keys(languages).forEach(lang => {\n    names[lang] = languages[lang].name;\n  });\n\n  return {\n    id,\n    name: names,\n    cost: id === '101334020' ? 18 : cost,\n    card: languages.ja.card.map((data, i) => {\n      Object.keys(data).forEach(key => {\n        if (['skill', 'description'].indexOf(key) > -1) {\n          const value = data[key];\n          const langs = {};\n          if (value.length) {\n            Object.keys(languages).forEach(lang => {\n              langs[lang] = languages[lang].card[i][key];\n            });\n          }\n          data[key] = langs;\n        }\n      });\n      return data;\n    }),\n    meta: {\n      rarity: rarities[languages.ja.rarity],\n      class: classes[languages.ja.class],\n      category: categories[category],\n      type: types[languages.ja.type],\n    },\n  };\n}\n\nconst base = 'https://shadowverse-portal.com';\nexport default () =>\n  fetchAllCardUrl()\n  .then(items => Promise.all(\n    items.map(item => {\n      const uri = base + item.url;\n      const id = item.url.split('/').slice(-1)[0];\n      return Promise.props({\n        ja: axios(uri, { headers: { 'Accept-Language': 'ja' } })\n        .then(({ data }) => scrapeCardData(data)),\n\n        en: axios(uri, { headers: { 'Accept-Language': 'en' } })\n        .then(({ data }) => scrapeCardData(data, false)),\n      })\n      .then(languages => normalize(languages, id, item.cost, item.category));\n    })\n  )\n);\n"
+      ]
+    },
+    "mtime": 1484035012000
+  },
+  "{\"filename\":\"/Users/karur4n/sandbox/shadowversejson/development/src/fetch-all-card-url.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/Users/karur4n/sandbox/shadowversejson/development/src\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.21.0": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "immutable",
+            "imported": [
+              "Range"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "Range",
+                "local": "createRange"
+              }
+            ]
+          },
+          {
+            "source": "querystring",
+            "imported": [
+              "stringify"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "stringify",
+                "local": "queryStringify"
+              }
+            ]
+          },
+          {
+            "source": "util",
+            "imported": [
+              "format"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "format",
+                "local": "format"
+              }
+            ]
+          },
+          {
+            "source": "axios",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "axios"
+              }
+            ]
+          },
+          {
+            "source": "cheerio",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "cheerio"
+              }
+            ]
+          },
+          {
+            "source": "lodash.flattendeep",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "_flattenDeep"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [
+            "fetchAllCardUrl"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "fetchAllCardUrl",
+              "exported": "default"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/Users/karur4n/sandbox/shadowversejson/development/src/fetch-all-card-url.js",
+      "filenameRelative": "/Users/karur4n/sandbox/shadowversejson/development/src/fetch-all-card-url.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "fetch-all-card-url.js",
+      "sourceFileName": "fetch-all-card-url.js",
+      "sourceRoot": "/Users/karur4n/sandbox/shadowversejson/development/src",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/Users/karur4n/sandbox/shadowversejson/development/src",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "fetch-all-card-url"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _bluebird = require('bluebird');\n\nvar _bluebird2 = _interopRequireDefault(_bluebird);\n\nexports.default = fetchAllCardUrl;\n\nvar _immutable = require('immutable');\n\nvar _querystring = require('querystring');\n\nvar _util = require('util');\n\nvar _axios = require('axios');\n\nvar _axios2 = _interopRequireDefault(_axios);\n\nvar _cheerio = require('cheerio');\n\nvar _cheerio2 = _interopRequireDefault(_cheerio);\n\nvar _lodash = require('lodash.flattendeep');\n\nvar _lodash2 = _interopRequireDefault(_lodash);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar categories = [1, 2, 3]; // char_type[]\nvar costs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; // cost[]\nvar max = 5;\nvar step = 12;\nfunction fetchAllCardUrl() {\n  return _bluebird2.default.all((0, _lodash2.default)(categories.map(function (i) {\n    return costs.map(function (j) {\n      return (0, _immutable.Range)(0, max).toArray().map(function (k) {\n        var uri = (0, _util.format)('https://shadowverse-portal.com/cards?%s', (0, _querystring.stringify)({\n          'char_type[]': i,\n          'cost[]': j,\n          card_offset: k * step\n        }));\n\n        return (0, _axios2.default)(uri).then(function (_ref) {\n          var data = _ref.data;\n          return _cheerio2.default.load(data);\n        }).then(function ($) {\n          return $('#displayVisual>.el-card-visual>a').toArray().map(function (a) {\n            return {\n              url: $(a).attr('href'),\n              category: i,\n              cost: j\n            };\n          });\n        });\n      });\n    });\n  }))).then(function (uris) {\n    return uris.reduce(function (left, right) {\n      return left.concat(right);\n    }, []);\n  });\n}\nmodule.exports = exports['default'];\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZldGNoLWFsbC1jYXJkLXVybC5qcyJdLCJuYW1lcyI6WyJmZXRjaEFsbENhcmRVcmwiLCJjYXRlZ29yaWVzIiwiY29zdHMiLCJtYXgiLCJzdGVwIiwibWFwIiwidG9BcnJheSIsInVyaSIsImkiLCJqIiwiY2FyZF9vZmZzZXQiLCJrIiwidGhlbiIsImRhdGEiLCJsb2FkIiwiJCIsInVybCIsImEiLCJhdHRyIiwiY2F0ZWdvcnkiLCJjb3N0IiwidXJpcyIsInJlZHVjZSIsImxlZnQiLCJyaWdodCIsImNvbmNhdCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztrQkFXd0JBLGU7O0FBWHhCOztBQUNBOztBQUNBOztBQUNBOzs7O0FBQ0E7Ozs7QUFDQTs7Ozs7O0FBRUEsSUFBTUMsYUFBYSxDQUFDLENBQUQsRUFBSSxDQUFKLEVBQU8sQ0FBUCxDQUFuQixDLENBQThCO0FBQzlCLElBQU1DLFFBQVEsQ0FBQyxDQUFELEVBQUksQ0FBSixFQUFPLENBQVAsRUFBVSxDQUFWLEVBQWEsQ0FBYixFQUFnQixDQUFoQixFQUFtQixDQUFuQixFQUFzQixDQUF0QixFQUF5QixDQUF6QixFQUE0QixFQUE1QixDQUFkLEMsQ0FBK0M7QUFDL0MsSUFBTUMsTUFBTSxDQUFaO0FBQ0EsSUFBTUMsT0FBTyxFQUFiO0FBQ2UsU0FBU0osZUFBVCxHQUEyQjtBQUN4QyxTQUFPLHVCQUFZLHNCQUFhQyxXQUFXSSxHQUFYLENBQWU7QUFBQSxXQUFLSCxNQUFNRyxHQUFOLENBQVU7QUFBQSxhQUFLLHNCQUFZLENBQVosRUFBZUYsR0FBZixFQUFvQkcsT0FBcEIsR0FBOEJELEdBQTlCLENBQWtDLGFBQUs7QUFDeEcsWUFBTUUsTUFBTSxrQkFBTyx5Q0FBUCxFQUFrRCw0QkFBZTtBQUMzRSx5QkFBZUMsQ0FENEQ7QUFFM0Usb0JBQVVDLENBRmlFO0FBRzNFQyx1QkFBYUMsSUFBSVA7QUFIMEQsU0FBZixDQUFsRCxDQUFaOztBQU1BLGVBQU8scUJBQU1HLEdBQU4sRUFDTkssSUFETSxDQUNEO0FBQUEsY0FBR0MsSUFBSCxRQUFHQSxJQUFIO0FBQUEsaUJBQWMsa0JBQVFDLElBQVIsQ0FBYUQsSUFBYixDQUFkO0FBQUEsU0FEQyxFQUVORCxJQUZNLENBRUQ7QUFBQSxpQkFBS0csRUFBRSxrQ0FBRixFQUFzQ1QsT0FBdEMsR0FBZ0RELEdBQWhELENBQW9EO0FBQUEsbUJBQU07QUFDbkVXLG1CQUFLRCxFQUFFRSxDQUFGLEVBQUtDLElBQUwsQ0FBVSxNQUFWLENBRDhEO0FBRW5FQyx3QkFBVVgsQ0FGeUQ7QUFHbkVZLG9CQUFNWDtBQUg2RCxhQUFOO0FBQUEsV0FBcEQsQ0FBTDtBQUFBLFNBRkMsQ0FBUDtBQU9ELE9BZGtFLENBQUw7QUFBQSxLQUFWLENBQUw7QUFBQSxHQUFmLENBQWIsQ0FBWixFQWVORyxJQWZNLENBZUQ7QUFBQSxXQUFRUyxLQUFLQyxNQUFMLENBQVksVUFBQ0MsSUFBRCxFQUFPQyxLQUFQO0FBQUEsYUFBaUJELEtBQUtFLE1BQUwsQ0FBWUQsS0FBWixDQUFqQjtBQUFBLEtBQVosRUFBaUQsRUFBakQsQ0FBUjtBQUFBLEdBZkMsQ0FBUDtBQWdCRCIsImZpbGUiOiJmZXRjaC1hbGwtY2FyZC11cmwuanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL2thcnVyNG4vc2FuZGJveC9zaGFkb3d2ZXJzZWpzb24vZGV2ZWxvcG1lbnQvc3JjIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgUmFuZ2UgYXMgY3JlYXRlUmFuZ2UgfSBmcm9tICdpbW11dGFibGUnO1xuaW1wb3J0IHsgc3RyaW5naWZ5IGFzIHF1ZXJ5U3RyaW5naWZ5IH0gZnJvbSAncXVlcnlzdHJpbmcnO1xuaW1wb3J0IHsgZm9ybWF0IH0gZnJvbSAndXRpbCc7XG5pbXBvcnQgYXhpb3MgZnJvbSAnYXhpb3MnO1xuaW1wb3J0IGNoZWVyaW8gZnJvbSAnY2hlZXJpbyc7XG5pbXBvcnQgX2ZsYXR0ZW5EZWVwIGZyb20gJ2xvZGFzaC5mbGF0dGVuZGVlcCc7XG5cbmNvbnN0IGNhdGVnb3JpZXMgPSBbMSwgMiwgM107IC8vIGNoYXJfdHlwZVtdXG5jb25zdCBjb3N0cyA9IFsxLCAyLCAzLCA0LCA1LCA2LCA3LCA4LCA5LCAxMF07IC8vIGNvc3RbXVxuY29uc3QgbWF4ID0gNTtcbmNvbnN0IHN0ZXAgPSAxMjtcbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIGZldGNoQWxsQ2FyZFVybCgpIHtcbiAgcmV0dXJuIFByb21pc2UuYWxsKF9mbGF0dGVuRGVlcChjYXRlZ29yaWVzLm1hcChpID0+IGNvc3RzLm1hcChqID0+IGNyZWF0ZVJhbmdlKDAsIG1heCkudG9BcnJheSgpLm1hcChrID0+IHtcbiAgICBjb25zdCB1cmkgPSBmb3JtYXQoJ2h0dHBzOi8vc2hhZG93dmVyc2UtcG9ydGFsLmNvbS9jYXJkcz8lcycsIHF1ZXJ5U3RyaW5naWZ5KHtcbiAgICAgICdjaGFyX3R5cGVbXSc6IGksXG4gICAgICAnY29zdFtdJzogaixcbiAgICAgIGNhcmRfb2Zmc2V0OiBrICogc3RlcCxcbiAgICB9KSk7XG5cbiAgICByZXR1cm4gYXhpb3ModXJpKVxuICAgIC50aGVuKCh7IGRhdGEgfSkgPT4gY2hlZXJpby5sb2FkKGRhdGEpKVxuICAgIC50aGVuKCQgPT4gJCgnI2Rpc3BsYXlWaXN1YWw+LmVsLWNhcmQtdmlzdWFsPmEnKS50b0FycmF5KCkubWFwKGEgPT4gKHtcbiAgICAgIHVybDogJChhKS5hdHRyKCdocmVmJyksXG4gICAgICBjYXRlZ29yeTogaSxcbiAgICAgIGNvc3Q6IGosXG4gICAgfSkpKTtcbiAgfSkpKSkpXG4gIC50aGVuKHVyaXMgPT4gdXJpcy5yZWR1Y2UoKGxlZnQsIHJpZ2h0KSA9PiBsZWZ0LmNvbmNhdChyaWdodCksIFtdKSk7XG59XG4iXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "fetch-all-card-url.js"
+      ],
+      "names": [
+        "fetchAllCardUrl",
+        "categories",
+        "costs",
+        "max",
+        "step",
+        "map",
+        "toArray",
+        "uri",
+        "i",
+        "j",
+        "card_offset",
+        "k",
+        "then",
+        "data",
+        "load",
+        "$",
+        "url",
+        "a",
+        "attr",
+        "category",
+        "cost",
+        "uris",
+        "reduce",
+        "left",
+        "right",
+        "concat"
+      ],
+      "mappings": ";;;;;;;;;;kBAWwBA,e;;AAXxB;;AACA;;AACA;;AACA;;;;AACA;;;;AACA;;;;;;AAEA,IAAMC,aAAa,CAAC,CAAD,EAAI,CAAJ,EAAO,CAAP,CAAnB,C,CAA8B;AAC9B,IAAMC,QAAQ,CAAC,CAAD,EAAI,CAAJ,EAAO,CAAP,EAAU,CAAV,EAAa,CAAb,EAAgB,CAAhB,EAAmB,CAAnB,EAAsB,CAAtB,EAAyB,CAAzB,EAA4B,EAA5B,CAAd,C,CAA+C;AAC/C,IAAMC,MAAM,CAAZ;AACA,IAAMC,OAAO,EAAb;AACe,SAASJ,eAAT,GAA2B;AACxC,SAAO,uBAAY,sBAAaC,WAAWI,GAAX,CAAe;AAAA,WAAKH,MAAMG,GAAN,CAAU;AAAA,aAAK,sBAAY,CAAZ,EAAeF,GAAf,EAAoBG,OAApB,GAA8BD,GAA9B,CAAkC,aAAK;AACxG,YAAME,MAAM,kBAAO,yCAAP,EAAkD,4BAAe;AAC3E,yBAAeC,CAD4D;AAE3E,oBAAUC,CAFiE;AAG3EC,uBAAaC,IAAIP;AAH0D,SAAf,CAAlD,CAAZ;;AAMA,eAAO,qBAAMG,GAAN,EACNK,IADM,CACD;AAAA,cAAGC,IAAH,QAAGA,IAAH;AAAA,iBAAc,kBAAQC,IAAR,CAAaD,IAAb,CAAd;AAAA,SADC,EAEND,IAFM,CAED;AAAA,iBAAKG,EAAE,kCAAF,EAAsCT,OAAtC,GAAgDD,GAAhD,CAAoD;AAAA,mBAAM;AACnEW,mBAAKD,EAAEE,CAAF,EAAKC,IAAL,CAAU,MAAV,CAD8D;AAEnEC,wBAAUX,CAFyD;AAGnEY,oBAAMX;AAH6D,aAAN;AAAA,WAApD,CAAL;AAAA,SAFC,CAAP;AAOD,OAdkE,CAAL;AAAA,KAAV,CAAL;AAAA,GAAf,CAAb,CAAZ,EAeNG,IAfM,CAeD;AAAA,WAAQS,KAAKC,MAAL,CAAY,UAACC,IAAD,EAAOC,KAAP;AAAA,aAAiBD,KAAKE,MAAL,CAAYD,KAAZ,CAAjB;AAAA,KAAZ,EAAiD,EAAjD,CAAR;AAAA,GAfC,CAAP;AAgBD",
+      "file": "fetch-all-card-url.js",
+      "sourceRoot": "/Users/karur4n/sandbox/shadowversejson/development/src",
+      "sourcesContent": [
+        "import { Range as createRange } from 'immutable';\nimport { stringify as queryStringify } from 'querystring';\nimport { format } from 'util';\nimport axios from 'axios';\nimport cheerio from 'cheerio';\nimport _flattenDeep from 'lodash.flattendeep';\n\nconst categories = [1, 2, 3]; // char_type[]\nconst costs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; // cost[]\nconst max = 5;\nconst step = 12;\nexport default function fetchAllCardUrl() {\n  return Promise.all(_flattenDeep(categories.map(i => costs.map(j => createRange(0, max).toArray().map(k => {\n    const uri = format('https://shadowverse-portal.com/cards?%s', queryStringify({\n      'char_type[]': i,\n      'cost[]': j,\n      card_offset: k * step,\n    }));\n\n    return axios(uri)\n    .then(({ data }) => cheerio.load(data))\n    .then($ => $('#displayVisual>.el-card-visual>a').toArray().map(a => ({\n      url: $(a).attr('href'),\n      category: i,\n      cost: j,\n    })));\n  })))))\n  .then(uris => uris.reduce((left, right) => left.concat(right), []));\n}\n"
+      ]
+    },
+    "mtime": 1484035012000
+  },
+  "{\"filename\":\"/Users/karur4n/sandbox/shadowversejson/development/src/scrape-card-data.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],null],[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/Users/karur4n/sandbox/shadowversejson/development/src\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.21.0": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "cheerio",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "cheerio"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [
+            "scrapeCardData",
+            "html",
+            "includeMeta"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "scrapeCardData",
+              "exported": "default"
+            },
+            {
+              "kind": "local",
+              "local": "html",
+              "exported": "default"
+            },
+            {
+              "kind": "local",
+              "local": "includeMeta",
+              "exported": "default"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/Users/karur4n/sandbox/shadowversejson/development/src/scrape-card-data.js",
+      "filenameRelative": "/Users/karur4n/sandbox/shadowversejson/development/src/scrape-card-data.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "scrape-card-data.js",
+      "sourceFileName": "scrape-card-data.js",
+      "sourceRoot": "/Users/karur4n/sandbox/shadowversejson/development/src",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/Users/karur4n/sandbox/shadowversejson/development/src",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "scrape-card-data"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = scrapeCardData;\n\nvar _cheerio = require('cheerio');\n\nvar _cheerio2 = _interopRequireDefault(_cheerio);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction scrapeCardData(html) {\n  var includeMeta = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;\n\n  var $ = _cheerio2.default.load(html);\n  var name = $('h1').text().trim();\n\n  var items = $('.card-main-list > li').toArray();\n  var card = items.map(function (li) {\n    var $li = $(li);\n    var atk = $li.find('.is-atk').text().trim();\n    var life = $li.find('.is-life').text().trim();\n    return {\n      atk: atk ? Number(atk) : undefined,\n      life: life ? Number(life) : undefined,\n      skill: $li.find('.card-content-skill').text().trim(),\n      description: $li.find('.card-content-description').text().trim()\n    };\n  });\n  if (includeMeta === false) {\n    return {\n      name: name,\n      card: card\n    };\n  }\n\n  var $information = $('.card-info-content');\n  var type = $information.find('span:contains(タイプ)').next().text().trim();\n  var klass = $information.find('span:contains(クラス)').next().text().trim();\n  var rarity = $information.find('span:contains(レアリティ)').next().text().trim();\n  return {\n    name: name,\n    card: card,\n    type: type,\n    class: klass,\n    rarity: rarity\n  };\n}\nmodule.exports = exports['default'];\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNjcmFwZS1jYXJkLWRhdGEuanMiXSwibmFtZXMiOlsic2NyYXBlQ2FyZERhdGEiLCJodG1sIiwiaW5jbHVkZU1ldGEiLCIkIiwibG9hZCIsIm5hbWUiLCJ0ZXh0IiwidHJpbSIsIml0ZW1zIiwidG9BcnJheSIsImNhcmQiLCJtYXAiLCIkbGkiLCJsaSIsImF0ayIsImZpbmQiLCJsaWZlIiwiTnVtYmVyIiwidW5kZWZpbmVkIiwic2tpbGwiLCJkZXNjcmlwdGlvbiIsIiRpbmZvcm1hdGlvbiIsInR5cGUiLCJuZXh0Iiwia2xhc3MiLCJyYXJpdHkiLCJjbGFzcyJdLCJtYXBwaW5ncyI6Ijs7Ozs7a0JBRXdCQSxjOztBQUZ4Qjs7Ozs7O0FBRWUsU0FBU0EsY0FBVCxDQUF3QkMsSUFBeEIsRUFBa0Q7QUFBQSxNQUFwQkMsV0FBb0IsdUVBQU4sSUFBTTs7QUFDL0QsTUFBTUMsSUFBSSxrQkFBUUMsSUFBUixDQUFhSCxJQUFiLENBQVY7QUFDQSxNQUFNSSxPQUFPRixFQUFFLElBQUYsRUFBUUcsSUFBUixHQUFlQyxJQUFmLEVBQWI7O0FBRUEsTUFBTUMsUUFBUUwsRUFBRSxzQkFBRixFQUEwQk0sT0FBMUIsRUFBZDtBQUNBLE1BQU1DLE9BQU9GLE1BQU1HLEdBQU4sQ0FBVSxjQUFNO0FBQzNCLFFBQU1DLE1BQU1ULEVBQUVVLEVBQUYsQ0FBWjtBQUNBLFFBQU1DLE1BQU1GLElBQUlHLElBQUosQ0FBUyxTQUFULEVBQW9CVCxJQUFwQixHQUEyQkMsSUFBM0IsRUFBWjtBQUNBLFFBQU1TLE9BQU9KLElBQUlHLElBQUosQ0FBUyxVQUFULEVBQXFCVCxJQUFyQixHQUE0QkMsSUFBNUIsRUFBYjtBQUNBLFdBQU87QUFDTE8sV0FBS0EsTUFBTUcsT0FBT0gsR0FBUCxDQUFOLEdBQW9CSSxTQURwQjtBQUVMRixZQUFNQSxPQUFPQyxPQUFPRCxJQUFQLENBQVAsR0FBc0JFLFNBRnZCO0FBR0xDLGFBQU9QLElBQUlHLElBQUosQ0FBUyxxQkFBVCxFQUFnQ1QsSUFBaEMsR0FBdUNDLElBQXZDLEVBSEY7QUFJTGEsbUJBQWFSLElBQUlHLElBQUosQ0FBUywyQkFBVCxFQUFzQ1QsSUFBdEMsR0FBNkNDLElBQTdDO0FBSlIsS0FBUDtBQU1ELEdBVlksQ0FBYjtBQVdBLE1BQUlMLGdCQUFnQixLQUFwQixFQUEyQjtBQUN6QixXQUFPO0FBQ0xHLGdCQURLO0FBRUxLO0FBRkssS0FBUDtBQUlEOztBQUVELE1BQU1XLGVBQWVsQixFQUFFLG9CQUFGLENBQXJCO0FBQ0EsTUFBTW1CLE9BQU9ELGFBQWFOLElBQWIsQ0FBa0Isb0JBQWxCLEVBQXdDUSxJQUF4QyxHQUErQ2pCLElBQS9DLEdBQXNEQyxJQUF0RCxFQUFiO0FBQ0EsTUFBTWlCLFFBQVFILGFBQWFOLElBQWIsQ0FBa0Isb0JBQWxCLEVBQXdDUSxJQUF4QyxHQUErQ2pCLElBQS9DLEdBQXNEQyxJQUF0RCxFQUFkO0FBQ0EsTUFBTWtCLFNBQVNKLGFBQWFOLElBQWIsQ0FBa0Isc0JBQWxCLEVBQTBDUSxJQUExQyxHQUFpRGpCLElBQWpELEdBQXdEQyxJQUF4RCxFQUFmO0FBQ0EsU0FBTztBQUNMRixjQURLO0FBRUxLLGNBRks7QUFHTFksY0FISztBQUlMSSxXQUFPRixLQUpGO0FBS0xDO0FBTEssR0FBUDtBQU9EIiwiZmlsZSI6InNjcmFwZS1jYXJkLWRhdGEuanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL2thcnVyNG4vc2FuZGJveC9zaGFkb3d2ZXJzZWpzb24vZGV2ZWxvcG1lbnQvc3JjIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGNoZWVyaW8gZnJvbSAnY2hlZXJpbyc7XG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIHNjcmFwZUNhcmREYXRhKGh0bWwsIGluY2x1ZGVNZXRhID0gdHJ1ZSkge1xuICBjb25zdCAkID0gY2hlZXJpby5sb2FkKGh0bWwpO1xuICBjb25zdCBuYW1lID0gJCgnaDEnKS50ZXh0KCkudHJpbSgpO1xuXG4gIGNvbnN0IGl0ZW1zID0gJCgnLmNhcmQtbWFpbi1saXN0ID4gbGknKS50b0FycmF5KCk7XG4gIGNvbnN0IGNhcmQgPSBpdGVtcy5tYXAobGkgPT4ge1xuICAgIGNvbnN0ICRsaSA9ICQobGkpO1xuICAgIGNvbnN0IGF0ayA9ICRsaS5maW5kKCcuaXMtYXRrJykudGV4dCgpLnRyaW0oKTtcbiAgICBjb25zdCBsaWZlID0gJGxpLmZpbmQoJy5pcy1saWZlJykudGV4dCgpLnRyaW0oKTtcbiAgICByZXR1cm4ge1xuICAgICAgYXRrOiBhdGsgPyBOdW1iZXIoYXRrKSA6IHVuZGVmaW5lZCxcbiAgICAgIGxpZmU6IGxpZmUgPyBOdW1iZXIobGlmZSkgOiB1bmRlZmluZWQsXG4gICAgICBza2lsbDogJGxpLmZpbmQoJy5jYXJkLWNvbnRlbnQtc2tpbGwnKS50ZXh0KCkudHJpbSgpLFxuICAgICAgZGVzY3JpcHRpb246ICRsaS5maW5kKCcuY2FyZC1jb250ZW50LWRlc2NyaXB0aW9uJykudGV4dCgpLnRyaW0oKSxcbiAgICB9O1xuICB9KTtcbiAgaWYgKGluY2x1ZGVNZXRhID09PSBmYWxzZSkge1xuICAgIHJldHVybiB7XG4gICAgICBuYW1lLFxuICAgICAgY2FyZCxcbiAgICB9O1xuICB9XG5cbiAgY29uc3QgJGluZm9ybWF0aW9uID0gJCgnLmNhcmQtaW5mby1jb250ZW50Jyk7XG4gIGNvbnN0IHR5cGUgPSAkaW5mb3JtYXRpb24uZmluZCgnc3Bhbjpjb250YWlucyjjgr/jgqTjg5cpJykubmV4dCgpLnRleHQoKS50cmltKCk7XG4gIGNvbnN0IGtsYXNzID0gJGluZm9ybWF0aW9uLmZpbmQoJ3NwYW46Y29udGFpbnMo44Kv44Op44K5KScpLm5leHQoKS50ZXh0KCkudHJpbSgpO1xuICBjb25zdCByYXJpdHkgPSAkaW5mb3JtYXRpb24uZmluZCgnc3Bhbjpjb250YWlucyjjg6zjgqLjg6rjg4bjgqMpJykubmV4dCgpLnRleHQoKS50cmltKCk7XG4gIHJldHVybiB7XG4gICAgbmFtZSxcbiAgICBjYXJkLFxuICAgIHR5cGUsXG4gICAgY2xhc3M6IGtsYXNzLFxuICAgIHJhcml0eSxcbiAgfTtcbn1cbiJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "scrape-card-data.js"
+      ],
+      "names": [
+        "scrapeCardData",
+        "html",
+        "includeMeta",
+        "$",
+        "load",
+        "name",
+        "text",
+        "trim",
+        "items",
+        "toArray",
+        "card",
+        "map",
+        "$li",
+        "li",
+        "atk",
+        "find",
+        "life",
+        "Number",
+        "undefined",
+        "skill",
+        "description",
+        "$information",
+        "type",
+        "next",
+        "klass",
+        "rarity",
+        "class"
+      ],
+      "mappings": ";;;;;kBAEwBA,c;;AAFxB;;;;;;AAEe,SAASA,cAAT,CAAwBC,IAAxB,EAAkD;AAAA,MAApBC,WAAoB,uEAAN,IAAM;;AAC/D,MAAMC,IAAI,kBAAQC,IAAR,CAAaH,IAAb,CAAV;AACA,MAAMI,OAAOF,EAAE,IAAF,EAAQG,IAAR,GAAeC,IAAf,EAAb;;AAEA,MAAMC,QAAQL,EAAE,sBAAF,EAA0BM,OAA1B,EAAd;AACA,MAAMC,OAAOF,MAAMG,GAAN,CAAU,cAAM;AAC3B,QAAMC,MAAMT,EAAEU,EAAF,CAAZ;AACA,QAAMC,MAAMF,IAAIG,IAAJ,CAAS,SAAT,EAAoBT,IAApB,GAA2BC,IAA3B,EAAZ;AACA,QAAMS,OAAOJ,IAAIG,IAAJ,CAAS,UAAT,EAAqBT,IAArB,GAA4BC,IAA5B,EAAb;AACA,WAAO;AACLO,WAAKA,MAAMG,OAAOH,GAAP,CAAN,GAAoBI,SADpB;AAELF,YAAMA,OAAOC,OAAOD,IAAP,CAAP,GAAsBE,SAFvB;AAGLC,aAAOP,IAAIG,IAAJ,CAAS,qBAAT,EAAgCT,IAAhC,GAAuCC,IAAvC,EAHF;AAILa,mBAAaR,IAAIG,IAAJ,CAAS,2BAAT,EAAsCT,IAAtC,GAA6CC,IAA7C;AAJR,KAAP;AAMD,GAVY,CAAb;AAWA,MAAIL,gBAAgB,KAApB,EAA2B;AACzB,WAAO;AACLG,gBADK;AAELK;AAFK,KAAP;AAID;;AAED,MAAMW,eAAelB,EAAE,oBAAF,CAArB;AACA,MAAMmB,OAAOD,aAAaN,IAAb,CAAkB,oBAAlB,EAAwCQ,IAAxC,GAA+CjB,IAA/C,GAAsDC,IAAtD,EAAb;AACA,MAAMiB,QAAQH,aAAaN,IAAb,CAAkB,oBAAlB,EAAwCQ,IAAxC,GAA+CjB,IAA/C,GAAsDC,IAAtD,EAAd;AACA,MAAMkB,SAASJ,aAAaN,IAAb,CAAkB,sBAAlB,EAA0CQ,IAA1C,GAAiDjB,IAAjD,GAAwDC,IAAxD,EAAf;AACA,SAAO;AACLF,cADK;AAELK,cAFK;AAGLY,cAHK;AAILI,WAAOF,KAJF;AAKLC;AALK,GAAP;AAOD",
+      "file": "scrape-card-data.js",
+      "sourceRoot": "/Users/karur4n/sandbox/shadowversejson/development/src",
+      "sourcesContent": [
+        "import cheerio from 'cheerio';\n\nexport default function scrapeCardData(html, includeMeta = true) {\n  const $ = cheerio.load(html);\n  const name = $('h1').text().trim();\n\n  const items = $('.card-main-list > li').toArray();\n  const card = items.map(li => {\n    const $li = $(li);\n    const atk = $li.find('.is-atk').text().trim();\n    const life = $li.find('.is-life').text().trim();\n    return {\n      atk: atk ? Number(atk) : undefined,\n      life: life ? Number(life) : undefined,\n      skill: $li.find('.card-content-skill').text().trim(),\n      description: $li.find('.card-content-description').text().trim(),\n    };\n  });\n  if (includeMeta === false) {\n    return {\n      name,\n      card,\n    };\n  }\n\n  const $information = $('.card-info-content');\n  const type = $information.find('span:contains(タイプ)').next().text().trim();\n  const klass = $information.find('span:contains(クラス)').next().text().trim();\n  const rarity = $information.find('span:contains(レアリティ)').next().text().trim();\n  return {\n    name,\n    card,\n    type,\n    class: klass,\n    rarity,\n  };\n}\n"
+      ]
+    },
+    "mtime": 1484035012000
+  }
+}
