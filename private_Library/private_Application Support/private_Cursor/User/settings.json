@@ -1,0 +1,84 @@
+{
+  "editor.fontFamily": "UDEV Gothic 35",
+  "editor.fontSize": 15,
+  "terminal.integrated.fontSize": 15,
+  "editor.suggestSelection": "first",
+  "editor.experimentalEditContextEnabled": false,
+  "vim.easymotion": true,
+  "vim.highlightedyank.enable": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["f"],
+      "after": ["leader", "leader", "s"]
+    },
+    //
+    // 見た目の通り上下に移動する
+    //
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
+    }
+  ],
+  "files.associations": {
+    "*.tsx": "typescriptreact"
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.tabSize": 2,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "extensions.ignoreRecommendations": false,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editor.wrapTabs": true,
+  "editor.inlineSuggest.enabled": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "files.autoSaveDelay": 3000,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.tree.indent": 16,
+  "window.commandCenter": true,
+  "git.mergeEditor": false,
+  "githubPullRequests.pullBranch": "never",
+  "workbench.colorTheme": "GitHub Dark",
+  "git.openRepositoryInParentFolders": "never",
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "editor.fontLigatures": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "prisma.showPrismaDataPlatformNotification": false,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "terminal.integrated.fontFamily": "\"UDEV Gothic 35\"",
+  "cursor.cpp.disabledLanguages": ["scminput"],
+  "workbench.activityBar.orientation": "vertical",
+  "json.schemaDownload.enable": true,
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "update.releaseTrack": "prerelease"
+}
