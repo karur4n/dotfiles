@@ -1,8 +1,6 @@
-# if status is-interactive
-#   fzf --fish | source
-# end
-
-fzf --fish | source
+if status is-interactive
+  fzf --fish | source
+end
 
 # https://github.com/PatrickF1/fzf.fish?tab=readme-ov-file#-search-directory
 bind ctrl-f '_fzf_search_directory'
