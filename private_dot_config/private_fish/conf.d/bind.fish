@@ -1,6 +1,8 @@
 bind ctrl-g,h 'ghq_fzf'
 bind ctrl-w,w 'git_worktree_fzf'
 
+bind ctrl-m 'monorepo_fzf'
+
 # https://github.com/PatrickF1/fzf.fish?tab=readme-ov-file#-search-directory
 bind ctrl-f '_fzf_search_directory'
 
