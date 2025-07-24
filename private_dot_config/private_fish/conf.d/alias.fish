@@ -1,1 +1,5 @@
 alias c="cursor"
+alias cd="z"
+alias yolo="claude --dangerously-skip-permissions"
+alias vi="nvim"
+alias vim="nvim"
