@@ -1,6 +1,6 @@
 {
   "editor.fontFamily": "UDEV Gothic 35",
-  "editor.fontSize": 15,
+  "editor.fontSize": 14,
   "terminal.integrated.fontSize": 15,
   "editor.suggestSelection": "first",
   "editor.experimentalEditContextEnabled": false,
@@ -77,7 +77,6 @@
   "github.copilot.editor.enableAutoCompletions": true,
   "terminal.integrated.fontFamily": "\"UDEV Gothic 35\"",
   "cursor.cpp.disabledLanguages": ["scminput"],
-  "workbench.activityBar.orientation": "vertical",
   "json.schemaDownload.enable": true,
   "cursor.composer.shouldChimeAfterChatFinishes": true,
   "update.releaseTrack": "prerelease",
@@ -1327,5 +1326,17 @@
       "after": [">", "g", "v"]
     }
   ],
-  "vim.insertModeKeyBindings": []
+  "vim.insertModeKeyBindings": [],
+  "explorer.confirmDelete": false,
+  "gitlens.plusFeatures.enabled": false,
+  "gitlens.virtualRepositories.enabled": false,
+  "gitlens.mode.statusBar.enabled": false,
+  "gitlens.telemetry.enabled": false,
+  "gitlens.statusBar.enabled": false,
+  "gitlens.statusBar.pullRequests.enabled": false,
+  "gitlens.blame.heatmap.enabled": false,
+  "gitlens.graph.statusBar.enabled": false,
+  "gitlens.launchpad.indicator.enabled": false,
+  "gitlens.launchpad.indicator.polling.enabled": false,
+  "gitlens.ai.enabled": false
 }
