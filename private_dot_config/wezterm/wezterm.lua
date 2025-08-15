@@ -7,6 +7,8 @@ local appearance = require("appearance")
 
 appearance.apply_to_config(config)
 
+config.window_close_confirmation = "NeverPrompt"
+
 --
 -- Key bindings
 --
@@ -36,17 +38,34 @@ config.keys = {
 			flags = "FUZZY|WORKSPACES",
 		}),
 	},
-  --
-  -- Tab
-  --
+	-- 主に Claude Code で Shift + Enter で改行するための設定
+	{
+		key = "Enter",
+		mods = "SHIFT",
+		action = act.SendString("\n"),
+	},
+	--
+	-- Tab
+	--
 	{ key = "t", mods = "SUPER", action = act.SpawnTab("CurrentPaneDomain") },
 	{ key = "]", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(1) },
-	{ key = "RightArrow", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(1) },
+	-- { key = "RightArrow", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(1) },
 	{ key = "[", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(-1) },
-	{ key = "LeftArrow", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(-1) },
-  --
-  -- Pane
-  --
+	-- { key = "LeftArrow", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(-1) },
+	{ mods = "SUPER", key = "1", action = act.ActivateTab(0) },
+	{ mods = "SUPER", key = "2", action = act.ActivateTab(1) },
+	{ mods = "SUPER", key = "3", action = act.ActivateTab(2) },
+	{ mods = "SUPER", key = "4", action = act.ActivateTab(3) },
+	{ mods = "SUPER", key = "5", action = act.ActivateTab(4) },
+	{ mods = "SUPER", key = "6", action = act.ActivateTab(5) },
+	{ mods = "SUPER", key = "7", action = act.ActivateTab(6) },
+	{ mods = "SUPER", key = "8", action = act.ActivateTab(7) },
+	{ mods = "SUPER", key = "9", action = act.ActivateTab(8) },
+	{ mods = "SUPER", key = "0", action = act.ActivateTab(9) },
+
+	--
+	-- Pane
+	--
 	{ mods = "SUPER", key = "w", action = act.CloseCurrentPane({ confirm = true }) },
 	{ mods = "SUPER", key = "LeftArrow", action = act.ActivatePaneDirection("Left") },
 	{ mods = "SUPER", key = "RightArrow", action = act.ActivatePaneDirection("Right") },
@@ -97,19 +116,14 @@ config.key_tables = {
 				description = wezterm.format({
 					{ Attribute = { Intensity = "Bold" } },
 					{ Foreground = { AnsiColor = "Fuchsia" } },
-					{ Text = "Enter name for new workspace" },
+					{ Text = "Enter name for new workspace name" },
 				}),
 				action = wezterm.action_callback(function(window, pane, line)
 					-- line will be `nil` if they hit escape without entering anything
 					-- An empty string if they just hit enter
 					-- Or the actual line of text they wrote
 					if line then
-						window:perform_action(
-							act.SwitchToWorkspace({
-								name = line,
-							}),
-							pane
-						)
+						wezterm.mux.rename_workspace(wezterm.mux.get_active_workspace(), line)
 					end
 				end),
 			}),

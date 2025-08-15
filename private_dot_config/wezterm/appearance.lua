@@ -17,7 +17,7 @@ function module.apply_to_config(config)
 	config.window_frame = {
 		font = wezterm.font({ family = "UDEV Gothic 35NF", weight = "Bold" }),
 
-		font_size = 18.0,
+		font_size = 15.0,
 
 		active_titlebar_bg = "#333333",
 
