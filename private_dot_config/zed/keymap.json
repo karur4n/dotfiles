@@ -77,6 +77,8 @@
     "bindings": {
       // Open file finder
       "space space": "file_finder::Toggle",
+      // File explorer
+      "space e": "project_panel::ToggleFocus",
       // New file
       "space f n": "workspace::NewFile",
       // Open recent project
