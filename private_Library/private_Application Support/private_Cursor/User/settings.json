@@ -47,7 +47,6 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.editor.wrapTabs": true,
   "editor.inlineSuggest.enabled": true,
   "security.workspace.trust.untrustedFiles": "open",
   "files.autoSaveDelay": 3000,
@@ -59,7 +58,7 @@
   "window.commandCenter": true,
   "git.mergeEditor": false,
   "githubPullRequests.pullBranch": "never",
-  "workbench.colorTheme": "GitHub Dark",
+  "workbench.colorTheme": "Gruvbox Dark Medium",
   "git.openRepositoryInParentFolders": "never",
   "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "extensions.experimental.affinity": {
@@ -81,7 +80,6 @@
   "cursor.composer.shouldChimeAfterChatFinishes": true,
   "update.releaseTrack": "prerelease",
   "editor.accessibilitySupport": "off",
-  "window.nativeTabs": true,
 
   //
   // LazyVim
@@ -93,6 +91,12 @@
   "vim.easymotionKeys": "asdghklqwertyuiopzxcvbnmfj",
   "vim.leader": "<space>",
   "vim.normalModeKeyBindingsNonRecursive": [
+    // Custom
+    {
+      "before": ["<leader>", "c", "s"],
+      "commands": ["outline.toggleVisibility"]
+    },
+    // LazyVim
     {
       "before": [":", "w", "<CR>"],
       "commands": ["workbench.action.files.save"]
@@ -1338,5 +1342,8 @@
   "gitlens.graph.statusBar.enabled": false,
   "gitlens.launchpad.indicator.enabled": false,
   "gitlens.launchpad.indicator.polling.enabled": false,
-  "gitlens.ai.enabled": false
+  "gitlens.ai.enabled": false,
+  "vim.useSystemClipboard": true,
+  "workbench.editor.wrapTabs": true,
+  "terminal.integrated.lineHeight": 1.2
 }
