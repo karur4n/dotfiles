@@ -1,116 +1,61 @@
 {
+  //
+  // appearance
+  //
+  "workbench.colorTheme": "GitHub Dark",
   "editor.fontFamily": "UDEV Gothic 35",
   "editor.fontSize": 14,
-  "terminal.integrated.fontSize": 15,
-  "editor.suggestSelection": "first",
-  "editor.experimentalEditContextEnabled": false,
-  "vim.easymotion": true,
-  "vim.highlightedyank.enable": true,
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["f"],
-      "after": ["leader", "leader", "s"]
-    },
-    //
-    // 見た目の通り上下に移動する
-    //
-    {
-      "before": ["j"],
-      "after": ["g", "j"]
-    },
-    {
-      "before": ["k"],
-      "after": ["g", "k"]
-    }
-  ],
-  "files.associations": {
-    "*.tsx": "typescriptreact"
-  },
-  "workbench.iconTheme": "vscode-icons",
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "editor.tabSize": 2,
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  "terminal.integrated.fontFamily": "\"UDEV Gothic 35\"",
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.lineHeight": 1.2,
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.activityBar.orientation": "vertical",
   "extensions.ignoreRecommendations": false,
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.inlineSuggest.enabled": true,
   "security.workspace.trust.untrustedFiles": "open",
   "files.autoSaveDelay": 3000,
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "workbench.tree.renderIndentGuides": "always",
   "workbench.tree.indent": 16,
-  "window.commandCenter": true,
-  "git.mergeEditor": false,
   "githubPullRequests.pullBranch": "never",
-  "workbench.colorTheme": "Gruvbox Dark Medium",
-  "git.openRepositoryInParentFolders": "never",
-  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "json.schemaDownload.enable": true,
+  "update.releaseTrack": "dev",
+  "editor.accessibilitySupport": "off",
+  "explorer.confirmDelete": false,
+  "workbench.editor.wrapTabs": true,
+  "workbench.list.defaultFindMode": "filter",
+  "workbench.list.typeNavigationMode": "trigger",
+  //
+  // Cursor
+  //
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+
+  //
+  // Vim
+  //
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "editor.cursorSurroundingLines": 10,
+  "vim.handleKeys": {
+    "<C-space>": false,
+    "<C-h>": false,
+    "<C-j>": false,
+    "<C-k>": false,
+    "<C-l>": false,
+    "<C-s>": false,
+    "<C-d>": true
+  },
+  // 折りたたみをスクロール通過時に展開しない
+  "vim.foldfix": true,
+  // ヤンクしたところをハイライト表示
+  "vim.highlightedyank.enable": true,
+  "vim.easymotion": true,
+  "vim.easymotionKeys": "asdghklqwertyuiopzxcvbnmfj",
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
   },
-  "typescript.updateImportsOnFileMove.enabled": "never",
-  "javascript.updateImportsOnFileMove.enabled": "never",
-  "editor.fontLigatures": true,
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.formatOnSave": true,
-  "files.insertFinalNewline": true,
-  "prisma.showPrismaDataPlatformNotification": false,
-  "github.copilot.editor.enableAutoCompletions": true,
-  "terminal.integrated.fontFamily": "\"UDEV Gothic 35\"",
-  "cursor.cpp.disabledLanguages": ["scminput"],
-  "json.schemaDownload.enable": true,
-  "cursor.composer.shouldChimeAfterChatFinishes": true,
-  "update.releaseTrack": "prerelease",
-  "editor.accessibilitySupport": "off",
-
-  //
-  // LazyVim
-  //
-  "vim.showMarksInGutter": false,
-  "vim.foldfix": true,
-  "vim.surround": true,
-  "vim.easymotion": true,
-  "vim.easymotionKeys": "asdghklqwertyuiopzxcvbnmfj",
-  "vim.leader": "<space>",
   "vim.normalModeKeyBindingsNonRecursive": [
-    // Custom
-    {
-      "before": ["<leader>", "c", "s"],
-      "commands": ["outline.toggleVisibility"]
-    },
-    // LazyVim
-    {
-      "before": [":", "w", "<CR>"],
-      "commands": ["workbench.action.files.save"]
-    },
-    {
-      "before": ["<leader>", "w"],
-      "commands": ["workbench.action.files.save"]
-    },
-    {
-      "before": ["<leader>", "q"],
-      "commands": ["workbench.action.closeWindow"],
-      "when": "workbench.action.closeWindow"
-    },
-
     // FLASH.NVIM
     {
       // Flash
@@ -121,305 +66,11 @@
       // Flash Treesitter
       "before": ["S"],
       "after": ["<leader>", "<leader>", "<leader>", "j"]
-    }
-  ],
-  "vim.normalModeKeyBindings": [
-    // GENERAL
-    {
-      // Go to left window
-      "before": ["<C-h>"],
-      "after": ["<C-W>", "h"]
     },
     {
-      // Go to lower window
-      "before": ["<C-j>"],
-      "after": ["<C-W>", "j"]
-    },
-    {
-      // Go to upper window
-      "before": ["<C-k>"],
-      "after": ["<C-W>", "k"]
-    },
-    {
-      // Go to right window
-      "before": ["<C-l>"],
-      "after": ["<C-W>", "l"]
-    },
-    {
-      // Increase window height
-      "before": ["<C-Up>"],
-      "commands": ["workbench.action.increaseViewHeight"]
-    },
-    {
-      // Decrease window height
-      "before": ["<C-Up>"],
-      "commands": ["workbench.action.decreaseViewHeight"]
-    },
-    {
-      // Decrease window width
-      "before": ["<C-left>"],
-      "commands": ["workbench.action.decreaseViewWidth"]
-    },
-    {
-      // Increase window width
-      "before": ["<C-Right>"],
-      "commands": ["workbench.action.increaseViewWidth"]
-    },
-    {
-      // Move down
-      "before": ["<A-j>"],
-      "commands": ["editor.action.moveLinesDownAction"]
-    },
-    {
-      // Move up
-      "before": ["<A-k>"],
-      "commands": ["editor.action.moveLinesUpAction"]
-    },
-    {
-      // Prev buffer
-      "before": ["<S-h>"],
-      "commands": [":bprev"]
-    },
-    {
-      // Next buffer
-      "before": ["<S-l>"],
-      "commands": [":bnext"]
-    },
-    {
-      // Prev buffer
-      "before": ["[", "b"],
-      "commands": [":bprev"]
-    },
-    {
-      // Next buffer
-      "before": ["]", "b"],
-      "commands": [":bnext"]
-    },
-    // {
-    //   // Switch to Other Buffer
-    //   "before": ["<leader>", "b", "b"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Switch to Other Buffer
-    //   "before": ["<leader>", "`"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Escape and clear hlsearch
-    //   "before": ["<esc>"],
-    //   "commands": ["N/A - current VSCode behaviour"]
-    // },
-    {
-      // Redraw / clear hlsearch / diff update
-      "before": ["<leader>", "u", "r"],
-      "commands": ["workbench.action.reloadWindow"]
-    },
-    {
-      "before": ["g", "w"],
-      "after": ["*"]
-    },
-    // {
-    //   // Next search result
-    //   "before": ["n"],
-    //   "commands": ["N/A - current VSCode behaviour"]
-    // },
-    // {
-    //   // Prev search result
-    //   "before": ["N"],
-    //   "commands": ["N/A - current VSCode behaviour"]
-    // },
-    // {
-    //   // Save file
-    //   "before": ["<C-s"],
-    //   "commands": ["N/A - current VSCode behaviour"]
-    // },
-    {
-      // Lazy
-      "before": ["<leader>", "l"],
-      "commands": ["workbench.view.extensions"]
-    },
-    {
-      // New File
-      "before": ["<leader>", "f", "n"],
-      "commands": ["workbench.action.files.newUntitledFile"]
-    },
-    // {
-    //   // Location List
-    //   "before": ["<leader>", "x", "l"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Quickfix List
-    //   "before": ["<leader>", "x", "q"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Toggle format on Save
-    //   "before": ["<leader>", "u", "f"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Toggle spelling
-    //   "before": ["<leader>", "u", "s"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    {
-      // Toggle Word Wrap
-      "before": ["<leader>", "u", "w"],
-      "commands": ["editor.action.toggleWordWrap"]
-    },
-    // {
-    //   // Toggle Line Numbers
-    //   "before": ["<leader>", "u", "l"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Toggle Diagnostics
-    //   "before": ["<leader>", "u", "d"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Toggle Conceal
-    //   "before": ["<leader>", "u", "c"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Toggle Inlay Hints
-    //   "before": ["<leader>", "u", "h"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    {
-      // Lazygit (root dir)
-      "before": ["<leader>", "g", "g"],
-      "commands": ["workbench.view.scm"],
-      "when": "workbench.scm.active"
-    },
-    {
-      // Lazygit (cwd)
-      "before": ["<leader>", "g", "G"],
-      "commands": ["workbench.view.scm"],
-      "when": "workbench.scm.active"
-    },
-    {
-      // Quit all
-      "before": ["<leader>", "q", "q"],
-      "commands": ["workbench.action.quit"]
-    },
-    // {
-    //   // Inspect Pos
-    //   "before": ["<leader>", "u", "i"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    {
-      // LazyVim Changelog
-      "before": ["<leader>", "L"],
-      "commands": ["update.showCurrentReleaseNotes"]
-    },
-    {
-      // Terminal (root dir)
-      "before": ["<leader>", "f", "t"],
-      "commands": ["workbench.action.createTerminalEditor"],
-      "when": "terminal.active"
-    },
-    {
-      // Terminal (cwd)
-      "before": ["<leader>", "f", "T"],
-      "commands": ["workbench.action.createTerminalEditor"],
-      "when": "terminal.active"
-    },
-    // {
-    //   // Terminal (root dir)
-    //   "before": ["<C-/>"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Which Key Ignore
-    //   "before": ["<C-_>"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Enter Normal Mode
-    //   "before": ["<esc>", "<esc>"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Hide Terminal
-    //   "before": ["<C-/>"],
-    //   "commands": ["N/A - binding not possible in VSCode"],
-    // },
-    // {
-    //   // Other window
-    //   "before": ["<leader>", "w", "w"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Delete window
-    //   "before": ["<leader>", "d", "w"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Split window below
-    //   "before": ["<leader>", "w", "-"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Split window right
-    //   "before": ["<leader>", "w", "|"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Split window below
-    //   "before": ["<leader>", "-"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Split window right
-    //   "before": ["<leader>", "|"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Last Tab
-    //   "before": ["<leader>", "<tab>", "l"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // First Tab
-    //   "before": ["<leader>", "<tab>", "f"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // New Tab
-    //   "before": ["<leader>", "<tab>", "<tab>"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Next Tab
-    //   "before": ["<leader>", "<tab>", "]"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Close Tab
-    //   "before": ["<leader>", "<tab>", "d"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Previous Tab
-    //   "before": ["<leader>", "<tab>", "["],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // LSP
-    {
-      // Line Diagnostics
-      "before": ["<leader>", "c", "d"],
-      "commands": ["editor.action.showHover"],
-      "when": "workbench.panel.output.active"
-    },
-    {
-      // LSP info
-      "before": ["<leader>", "c", "l"],
-      "commands": ["workbench.action.output.toggleOutput"]
+      // Hover
+      "before": ["K"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
     },
     {
       // Goto Definition
@@ -445,11 +96,6 @@
       // Goto T[y]pe Definition
       "before": ["g", "y"],
       "commands": ["editor.action.goToTypeDefinition"]
-    },
-    {
-      // Hover
-      "before": ["K"],
-      "commands": ["editor.action.showHover"]
     },
     {
       // Signature Help
@@ -499,28 +145,47 @@
       "commands": ["editor.action.marker.prev"],
       "when": "editorFocus"
     },
+  ],
+  "vim.normalModeKeyBindings": [
+    // GENERAL
     {
-      // Format Document
-      "before": ["<leader>", "c", "f"],
-      "commands": ["editor.action.formatDocument"],
-      "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+      // Toggle Word Wrap
+      "before": ["<leader>", "u", "w"],
+      "commands": ["editor.action.toggleWordWrap"]
+    },
+    {
+      // Lazygit (root dir)
+      "before": ["<leader>", "g", "g"],
+      "commands": ["workbench.view.scm"],
+      "when": "workbench.scm.active"
+    },
+    {
+      // Terminal (root dir)
+      "before": ["<leader>", "f", "t"],
+      "commands": ["workbench.action.createTerminalEditor"],
+      "when": "terminal.active"
     },
     // {
-    //   // Format Range
-    //   "before": ["<leader>", "c", "f"],
-    //   "commands": ["N/A - no VSCode equivalent"]
+    //   // Hide Terminal
+    //   "before": ["<C-/>"],
+    //   "commands": ["N/A - binding not possible in VSCode"],
     // },
     {
-      // Code Action
-      "before": ["<leader>", "c", "a"],
-      "commands": ["editor.action.quickFix"],
-      "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+      // Split window below
+      "before": ["<leader>", "-"],
+      "commands": ["workbench.action.splitEditorDown"]
     },
     {
-      // Source Action
-      "before": ["<leader>", "c", "A"],
-      "commands": ["editor.action.quickFix"],
-      "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+      // Split window right
+      "before": ["<leader>", "|"],
+      "commands": ["workbench.action.splitEditorRight"]
+    },
+
+    // LSP
+    {
+      // LSP info
+      "before": ["<leader>", "c", "l"],
+      "commands": ["workbench.action.output.toggleOutput"]
     },
     {
       // Rename
@@ -529,182 +194,7 @@
       "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
     },
 
-    // BUFFERLINE.NVIM
-    {
-      // Toggle pin
-      // NOTE: Separate commands required due to VSCode limitations
-      // pin
-      "before": ["<leader>", "b", "p"],
-      "commands": ["workbench.action.pinEditor"],
-      "when": "!activeEditorIsPinned"
-    },
-    {
-      // Toggle pin
-      // NOTE: Separate commands required due to VSCode limitations
-      // unpin
-      "before": ["<leader>", "b", "u"],
-      "commands": ["workbench.action.unpinEditor"],
-      "when": "activeEditorIsPinned"
-    },
-    {
-      // Delete non-pinned buffers
-      "before": ["<leader>", "b", "P"],
-      "commands": ["workbench.action.closeAllEditors"]
-    },
-
-    // FLASH.NVIM
-    // {
-    //   // Flash
-    //   "before": ["s"],
-    //   "commands": ["BINDING IN vim.normalModeKeyBindingsNonRecursive"]
-    // },
-    // {
-    //   // Flash Treesitter
-    //   "before": ["S"],
-    //   "commands": ["BINDING IN vim.normalModeKeyBindingsNonRecursive"]
-    // },
-    // {
-    //   // Remote Treesitter
-    //   "before": ["r"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Treesitter Search
-    //   "before": ["R"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Toggle Flash Search
-    //   "before": ["<c-s>"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // MASON.NVIM
-    // {
-    //   // Mason
-    //   "before": ["<leader>", "c", "m"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // MINI.BUFREMOVE
-    // {
-    //   // Delete Buffer
-    //   "before": ["<leader>", "b", "d"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Delete Buffer (Force)
-    //   "before": ["<leader>", "b", "D"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // MINI.SURROUND
-    // {
-    //   // Add surrounding
-    //   "before": ["g", "z", "a"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Delete surrounding
-    //   "before": ["g", "z", "d"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Find right surrounding
-    //   "before": ["g", "z", "f"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Find left surrounding
-    //   "before": ["g", "z", "F"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Highlight surrounding
-    //   "before": ["g", "z", "h"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Replace surrounding
-    //   "before": ["g", "z", "r"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Update MiniSurround.config.n_lines
-    //   "before": ["g", "z", "n"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
     // NEO-TREE.NVIM
-    {
-      // Explorer NeoTree (root dir)
-      "before": ["<leader>", "fe"],
-      "commands": ["workbench.files.action.showActiveFileInExplorer"]
-    },
-    {
-      // Explorer NeoTree (cwd)
-      "before": ["<leader>", "fE"],
-      "commands": ["workbench.explorer.fileView.toggleVisibility"]
-    },
-    {
-      // Explorer NeoTree (root dir)
-      "before": ["<leader>", "e"],
-      "commands": ["workbench.files.action.showActiveFileInExplorer"]
-    },
-    {
-      // Explorer NeoTree (cwd)
-      "before": ["<leader>", "E"],
-      "commands": ["workbench.explorer.fileView.toggleVisibility"]
-    },
-
-    // NOICE.NVIM
-    // {
-    //   // Redirect Cmdline
-    //   "before": ["<S-Enter>"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    {
-      // Noice Last Message
-      "before": ["<leader>", "s", "n", "l"],
-      "commands": ["workbench.action.output.toggleOutput"],
-      "when": "workbench.panel.output.active"
-    },
-    {
-      // Noice History
-      "before": ["<leader>", "s", "n", "h"],
-      "commands": ["workbench.action.output.toggleOutput"],
-      "when": "workbench.panel.output.active"
-    },
-    {
-      // Noice All
-      "before": ["<leader>", "s", "n", "a"],
-      "commands": ["workbench.action.output.toggleOutput"],
-      "when": "workbench.panel.output.active"
-    },
-    // {
-    //   // Dismiss All
-    //   "before": ["<leader>", "s", "n", "d"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Scroll forward
-    //   "before": ["<c-f>"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Scroll backward
-    //   "before": ["<c-b>"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // NVIM-NOTIFY
-    // {
-    //   // Dismiss all Notifications
-    //   "before": ["<leader>", "u", "n"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // NVIM-SPECTRE
     {
       // Replace in files (Spectre)
       "before": ["<leader>", "s", "r"],
@@ -712,113 +202,16 @@
       "when": "editorFocus || editorIsOpen"
     },
 
-    // NVIM-TREESITTER
-    // {
-    //   // Increment selection
-    //   "before": ["<c-space>"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Decrement selection
-    //   "before": ["<bs>"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // PERSISTENCE.NVIM
-    // {
-    //   // Restore Session
-    //   "before": ["<leader>", "q", "s"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Restore Last Session
-    //   "before": ["<leader>", "q", "l"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Don't Save Current Session
-    //   "before": ["<leader>", "q", "d"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
     // TELESCOPE.NVIM
     {
       // Grep (root dir)
       "before": ["<leader>", "/"],
       "commands": ["workbench.action.findInFiles"]
     },
-    // {
-    //   // Command History
-    //   "before": ["<leader>", ":"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
     {
       // Find Files (root dir)
       "before": ["<leader>", "<space>"],
       "commands": ["workbench.action.quickOpen"]
-    },
-    {
-      // Buffers
-      "before": ["<leader>", "f", "b"],
-      "commands": ["workbench.action.quickOpen"]
-    },
-    {
-      // Find Files (root dir)
-      "before": ["<leader>", "f", "f"],
-      "commands": ["workbench.action.quickOpen"]
-    },
-    {
-      // Find Files (cwd)
-      "before": ["<leader>", "f", "F"],
-      "commands": ["workbench.action.quickOpen"]
-    },
-    {
-      // Recent
-      "before": ["<leader>", "f", "r"],
-      "commands": ["workbench.action.quickOpen"]
-    },
-    {
-      // Recent (cwd)
-      "before": ["<leader>", "f", "R"],
-      "commands": ["workbench.action.quickOpen"]
-    },
-    {
-      // commits
-      "before": ["<leader>", "g", "c"],
-      "commands": ["workbench.view.scm"],
-      "when": "workbench.scm.active"
-    },
-    {
-      // status
-      "before": ["<leader>", "g", "s"],
-      "commands": ["workbench.view.scm"],
-      "when": "workbench.scm.active"
-    },
-    // {
-    //   // Registers
-    //   "before": ['<leader>", "s", '"'],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Auto Commands
-    //   "before": ["<leader>", "s", "a"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    {
-      // Buffer
-      "before": ["<leader>", "s", "b"],
-      "commands": ["editor.action.startFindReplaceAction"],
-      "when": "editorFocus || editorIsOpen"
-    },
-    // {
-    //   // Command History
-    //   "before": ["<leader>", "s", "c"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    {
-      // Commands
-      "before": ["<leader>", "s", "C"],
-      "commands": ["workbench.action.showCommands"]
     },
     {
       // Document diagnostics
@@ -827,498 +220,9 @@
       "when": "workbench.panel.markers.view.active"
     },
     {
-      // Workspace diagnostics
-      "before": ["<leader>", "s", "D"],
-      "commands": ["workbench.actions.view.problems"],
-      "when": "workbench.panel.markers.view.active"
-    },
-    {
-      // Grep (root dir)
-      "before": ["<leader>", "s", "g"],
-      "commands": ["workbench.action.findInFiles"]
-    },
-    {
-      // Grep (cwd)
-      "before": ["<leader>", "s", "G"],
-      "commands": ["workbench.action.findInFiles"]
-    },
-    {
-      // Help Pages
-      "before": ["<leader>", "s", "h"],
-      "commands": ["workbench.action.openDocumentationUrl"]
-    },
-    // {
-    //   // Search Highlight Groups
-    //   "before": ["<leader>", "s", "H"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    {
-      // Key Maps
-      "before": ["<leader>", "s", "k"],
-      "commands": ["workbench.action.showCommands"]
-    },
-    // {
-    //   // Man Pages
-    //   "before": ["<leader>", "s", "M"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Jump to Mark
-    //   "before": ["<leader>", "s", "m"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Options
-    //   "before": ["<leader>", "s", "o"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Resume
-    //   "before": ["<leader>", "s", "R"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Word (root dir)
-    //   "before": ["<leader>", "s", "w"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Word (cwd)
-    //   "before": ["<leader>", "s", "W"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Selection (root dir)
-    //   "before": ["<leader>", "s", "w"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Selection (cwd)
-    //   "before": ["<leader>", "s", "W"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    {
-      // Colorscheme with preview
-      "before": ["<leader>", "u", "C"],
-      "commands": ["workbench.action.selectTheme"]
+      "before": ["<leader>", "c", "s"],
+      "commands": ["outline.focus"]
     }
-    // {
-    //   // Goto Symbol
-    //   "before": ["<leader>", "s", "s"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Goto Symbol (Workspace)
-    //   "before": ["<leader>", "s", "S"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // TODO-COMMENTS.NVIM
-    // {
-    //   // Next todo comment
-    //   "before": ["]t"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Previous todo comment
-    //   "before": ["[t"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Todo (Trouble)
-    //   "before": ["<leader>xt"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Todo/Fix/Fixme (Trouble)
-    //   "before": ["<leader>xT"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Todo
-    //   "before": ["<leader>st"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Todo/Fix/Fixme
-    //   "before": ["<leader>sT"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // TROUBLE.NVIM
-    // {
-    //   // Document Diagnostics (Trouble)
-    //   "before": ["<leader>xx"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Workspace Diagnostics (Trouble)
-    //   "before": ["<leader>xX"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Location List (Trouble)
-    //   "before": ["<leader>xL"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Quickfix List (Trouble)
-    //   "before": ["<leader>xQ"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Previous trouble/quickfix item
-    //   "before": ["[q"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Next trouble/quickfix item
-    //   "before": ["]q"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // VIM-ILLUMINATE
-    // {
-    //   // Next Reference
-    //   "before": ["]]"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Prev Reference
-    //   "before": ["[["],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // YANKY.NVIM
-    // {
-    //   // Open Yank History
-    //   "before": ["<leader>p"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Yank text
-    //   "before": ["y"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Put yanked text after cursor
-    //   "before": ["p"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Put yanked text before cursor
-    //   "before": ["P"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Put yanked text after selection
-    //   "before": ["gp"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Put yanked text before selection
-    //   "before": ["gP"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Cycle forward through yank history
-    //   "before": ["[y"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Cycle backward through yank history
-    //   "before": ["]y"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Put indented after cursor (linewise)
-    //   "before": ["]p"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Put indented before cursor (linewise)
-    //   "before": ["[p"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Put indented after cursor (linewise)
-    //   "before": ["]P"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Put indented before cursor (linewise)
-    //   "before": ["[P"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Put and indent right
-    //   "before": [">p"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Put and indent left
-    //   "before": ["<p"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Put before and indent right
-    //   "before": [">P"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Put before and indent left
-    //   "before": ["<P"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Put after applying a filter
-    //   "before": ["=p"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Put before applying a filter
-    //   "before": ["=P"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // NVIM-DAP
-    // {
-    //   // Breakpoint Condition
-    //   "before": ["<leader>dB"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Toggle Breakpoint
-    //   "before": ["<leader>db"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Continue
-    //   "before": ["<leader>dc"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Run to Cursor
-    //   "before": ["<leader>dC"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Go to line (no execute)
-    //   "before": ["<leader>dg"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Step Into
-    //   "before": ["<leader>di"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Down
-    //   "before": ["<leader>dj"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Up
-    //   "before": ["<leader>dk"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Run Last
-    //   "before": ["<leader>dl"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Step Out
-    //   "before": ["<leader>do"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Step Over
-    //   "before": ["<leader>dO"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Pause
-    //   "before": ["<leader>dp"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Toggle REPL
-    //   "before": ["<leader>dr"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Session
-    //   "before": ["<leader>ds"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Terminate
-    //   "before": ["<leader>dt"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Widgets
-    //   "before": ["<leader>dw"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // NVIM-DAP-UI
-    // {
-    //   // Dap UI
-    //   "before": ["<leader>du"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Eval
-    //   "before": ["<leader>de"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // ONE-SMALL-STEP-FOR-VIMKIND
-    // {
-    //   // Adapter Lua Server
-    //   "before": ["<leader>daL"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Adapter Lua
-    //   "before": ["<leader>dal"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // FLIT.NVIM
-    // {
-    //   // f
-    //   "before": ["f"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // F
-    //   "before": ["F"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // t
-    //   "before": ["t"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // T
-    //   "before": ["T"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // LEAP.NVIM
-    // {
-    //   // Leap forward to
-    //   "before": ["s"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Leap backward to
-    //   "before": ["S"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Leap from windows
-    //   "before": ["gs"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // MINI.FILES
-    // {
-    //   // Open mini.files (directory of current file)
-    //   "before": ["<leader>fm"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Open mini.files (cwd)
-    //   "before": ["<leader>fM"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // NVIM-DAP-PYTHON
-    // {
-    //   // Debug Method
-    //   "before": ["<leader>dPt"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Debug Class
-    //   "before": ["<leader>dPc"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // VENV-SELECTOR.NVIM
-    // {
-    //   // Select VirtualEnv
-    //   "before": ["<leader>cv"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // NEOTEST
-    // {
-    //   // Run File
-    //   "before": ["<leader>tt"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Run All Test Files
-    //   "before": ["<leader>tT"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Run Nearest
-    //   "before": ["<leader>tr"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Toggle Summary
-    //   "before": ["<leader>ts"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Show Output
-    //   "before": ["<leader>to"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Toggle Output Panel
-    //   "before": ["<leader>tO"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Stop
-    //   "before": ["<leader>tS"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // NVIM-DAP
-    // {
-    //   // Debug Nearest
-    //   "before": ["<leader>td"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // EDGY.NVIM
-    // {
-    //   // Edgy Toggle
-    //   "before": ["<leader>ue"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-    // {
-    //   // Edgy Select Window
-    //   "before": ["<leader>uE"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
-
-    // PROJECT.NVIM
-    // {
-    //   // Projects
-    //   "before": ["<leader>fp"],
-    //   "commands": ["N/A - no VSCode equivalent"]
-    // },
   ],
   "vim.visualModeKeyBindings": [
     {
@@ -1330,20 +234,5 @@
       "after": [">", "g", "v"]
     }
   ],
-  "vim.insertModeKeyBindings": [],
-  "explorer.confirmDelete": false,
-  "gitlens.plusFeatures.enabled": false,
-  "gitlens.virtualRepositories.enabled": false,
-  "gitlens.mode.statusBar.enabled": false,
-  "gitlens.telemetry.enabled": false,
-  "gitlens.statusBar.enabled": false,
-  "gitlens.statusBar.pullRequests.enabled": false,
-  "gitlens.blame.heatmap.enabled": false,
-  "gitlens.graph.statusBar.enabled": false,
-  "gitlens.launchpad.indicator.enabled": false,
-  "gitlens.launchpad.indicator.polling.enabled": false,
-  "gitlens.ai.enabled": false,
-  "vim.useSystemClipboard": true,
-  "workbench.editor.wrapTabs": true,
-  "terminal.integrated.lineHeight": 1.2
+  "outline.showVariables": false,
 }
