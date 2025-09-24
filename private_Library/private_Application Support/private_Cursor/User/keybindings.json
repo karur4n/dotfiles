@@ -67,7 +67,12 @@
   {
     "key": "escape",
     "command": "search.action.clearSearchResults",
-    "when": "searchViewletVisible"
+    "when": "sideBarFocus && activeViewlet == 'workbench.view.search'"
+  },
+  {
+    "key": "enter",
+    "command": "search.action.focusSearchList",
+    "when": "sideBarFocus && activeViewlet == 'workbench.view.search' && inputFocus"
   },
   {
     "key": "alt+enter",
