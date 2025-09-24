@@ -60,6 +60,16 @@
     "when": "filesExplorerFocus && foldersViewVisible && !inputFocus"
   },
   {
+    "key": "f",
+    "command": "filesExplorer.findInFolder",
+    "when": "filesExplorerFocus && foldersViewVisible && !inputFocus"
+  },
+  {
+    "key": "escape",
+    "command": "search.action.clearSearchResults",
+    "when": "searchViewletVisible"
+  },
+  {
     "key": "alt+enter",
     "command": "editor.action.quickFix",
     "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
