@@ -3,10 +3,26 @@ local wezterm = require("wezterm")
 local module = {}
 
 function module.apply_to_config(config)
-	config.font_size = 14
+	config.dpi = 109
+	config.dpi_by_screen = {
+		-- default
+		['Built-in Retina Display'] = 216,
+		-- office
+    ['DELL U3824DW'] = 109,
+  }
+
+	config.font_size = 11
 	config.line_height = 1.2
 	config.color_scheme = "Tokyo Night"
-	config.font = wezterm.font("UDEV Gothic 35NF")
+	config.font = wezterm.font_with_fallback({
+		{
+			family = "UDEV Gothic 35NF",
+			assume_emoji_presentation = false,
+		},
+		{
+			family = "Apple Color Emoji",
+		},
+	})
 
 	--
 	-- Tab
@@ -15,9 +31,18 @@ function module.apply_to_config(config)
 	config.show_new_tab_button_in_tab_bar = false
 
 	config.window_frame = {
-		font = wezterm.font({ family = "UDEV Gothic 35NF", weight = "Bold" }),
+		font = wezterm.font_with_fallback({
+			{
+				family = "UDEV Gothic 35NF",
+				weight = "Bold",
+				assume_emoji_presentation = false,
+			},
+			{
+				family = "Apple Color Emoji",
+			},
+		}),
 
-		font_size = 15.0,
+		font_size = 11.0,
 
 		active_titlebar_bg = "#333333",
 
