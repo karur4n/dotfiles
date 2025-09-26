@@ -20,7 +20,7 @@
   "editor.formatOnSave": true,
   "files.insertFinalNewline": true,
   "json.schemaDownload.enable": true,
-  "update.releaseTrack": "dev",
+  "update.releaseTrack": "prerelease",
   "editor.accessibilitySupport": "off",
   "explorer.confirmDelete": false,
   "workbench.editor.wrapTabs": true,
