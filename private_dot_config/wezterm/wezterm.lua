@@ -16,14 +16,14 @@ config.window_close_confirmation = "NeverPrompt"
 --
 config.disable_default_key_bindings = true
 
-config.leader = { key = "Space", mods = "CTRL" }
+-- config.leader = { key = "Space", mods = "CTRL" }
 
 config.keys = {
 	{ mods = "SUPER", key = "q", action = act.QuitApplication },
 	{ mods = "SUPER", key = "c", action = act.CopyTo("Clipboard") },
 	{ mods = "SUPER", key = "v", action = act.PasteFrom("Clipboard") },
 	{ mods = "SUPER|SHIFT", key = "r", action = act.ReloadConfiguration },
-	{ mods = "SUPER", key = "f", action = act.Search{CaseSensitiveString=""} },
+	{ mods = "SUPER", key = "f", action = act.Search({ CaseSensitiveString = "" }) },
 	{ mods = "SUPER", key = "+", action = act.IncreaseFontSize },
 	{ mods = "SUPER", key = "-", action = act.DecreaseFontSize },
 	{ mods = "SUPER", key = "0", action = act.ResetFontSize },
@@ -87,45 +87,45 @@ config.keys = {
 	}) },
 
 	{
-    key = 'T',
-    mods = 'CTRL|SHIFT',
-    action = act.PromptInputLine {
-      description = 'Enter new name for tab',
-      initial_value = '',
-      action = wezterm.action_callback(function(window, pane, line)
-        -- line will be `nil` if they hit escape without entering anything
-        -- An empty string if they just hit enter
-        -- Or the actual line of text they wrote
-        if line then
-          window:active_tab():set_title(line)
-        end
-      end),
-    },
-  },
+		key = "T",
+		mods = "CTRL|SHIFT",
+		action = act.PromptInputLine({
+			description = "Enter new name for tab",
+			initial_value = "",
+			action = wezterm.action_callback(function(window, pane, line)
+				-- line will be `nil` if they hit escape without entering anything
+				-- An empty string if they just hit enter
+				-- Or the actual line of text they wrote
+				if line then
+					window:active_tab():set_title(line)
+				end
+			end),
+		}),
+	},
 	{
-    key = 'W',
-    mods = 'CTRL|SHIFT',
-    action = act.PromptInputLine {
-      description = wezterm.format {
-        { Attribute = { Intensity = 'Bold' } },
-        { Foreground = { AnsiColor = 'Fuchsia' } },
-        { Text = 'Enter name for new workspace' },
-      },
-      action = wezterm.action_callback(function(window, pane, line)
-        -- line will be `nil` if they hit escape without entering anything
-        -- An empty string if they just hit enter
-        -- Or the actual line of text they wrote
-        if line then
-          window:perform_action(
-            act.SwitchToWorkspace {
-              name = line,
-            },
-            pane
-          )
-        end
-      end),
-    },
-  },
+		key = "W",
+		mods = "CTRL|SHIFT",
+		action = act.PromptInputLine({
+			description = wezterm.format({
+				{ Attribute = { Intensity = "Bold" } },
+				{ Foreground = { AnsiColor = "Fuchsia" } },
+				{ Text = "Enter name for new workspace" },
+			}),
+			action = wezterm.action_callback(function(window, pane, line)
+				-- line will be `nil` if they hit escape without entering anything
+				-- An empty string if they just hit enter
+				-- Or the actual line of text they wrote
+				if line then
+					window:perform_action(
+						act.SwitchToWorkspace({
+							name = line,
+						}),
+						pane
+					)
+				end
+			end),
+		}),
+	},
 }
 
 wezterm.on("update-right-status", function(window, pane)
@@ -133,18 +133,18 @@ wezterm.on("update-right-status", function(window, pane)
 end)
 
 function tab_title(tab_info)
-  local title = tab_info.tab_title
-  -- if the tab title is explicitly set, take that
-  if title and #title > 0 then
-    return title
-  end
-  -- Otherwise, use the title from the active pane
-  -- in that tab
-  return tab_info.active_pane.title
+	local title = tab_info.tab_title
+	-- if the tab title is explicitly set, take that
+	if title and #title > 0 then
+		return title
+	end
+	-- Otherwise, use the title from the active pane
+	-- in that tab
+	return tab_info.active_pane.title
 end
 
 function tab_emoji(tab_info)
-	local emojis = {"🔥", "🧊", "🆗", "😀", "🍃", "🍎", "🍌", "🍇"}
+	local emojis = { "🔥", "🧊", "🆗", "😀", "🍃", "🍎", "🍌", "🍇" }
 
 	if #emojis > tab_info.tab_index then
 		return emojis[tab_info.tab_index + 1]
@@ -153,17 +153,13 @@ function tab_emoji(tab_info)
 	return ""
 end
 
+wezterm.on("format-tab-title", function(tab)
+	local index = tab.tab_index + 1
+	local emoji = tab_emoji(tab)
+	local title = tab_title(tab)
 
-wezterm.on(
-	"format-tab-title",
-	function(tab)
-		local index = tab.tab_index + 1
-		local emoji = tab_emoji(tab)
-		local title = tab_title(tab)
-
-		return index .. ': ' .. emoji .. ' ' .. title
-	end
-)
+	return index .. ": " .. emoji .. " " .. title
+end)
 
 config.key_tables = {
 	-- Defines the keys that are active in our resize-pane mode.

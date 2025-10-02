@@ -196,11 +196,6 @@
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceMoveableToTrash && !inputFocus"
   },
   {
-    "key": "d",
-    "command": "moveFileToTrash",
-    "when": "explorerResourceMoveableToTrash && filesExplorerFocus && foldersViewVisible && !inputFocus"
-  },
-  {
     "key": "/",
     "command": "list.find",
     "when": "listFocus && listSupportsFind && !inputFocus"

@@ -6,9 +6,11 @@ function module.apply_to_config(config)
 	config.dpi = 109
 	config.dpi_by_screen = {
 		-- default
-		['Built-in Retina Display'] = 216,
+		['Built-in Retina Display'] = 180,
 		-- office
     ['DELL U3824DW'] = 109,
+		-- home
+		['DELL P3222QE'] = 180,
   }
 
 	config.font_size = 11
