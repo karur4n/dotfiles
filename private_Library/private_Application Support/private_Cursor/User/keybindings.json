@@ -208,5 +208,10 @@
     "key": "shift+cmd+left",
     "command": "workbench.action.decreaseViewSize"
   },
+  {
+    "key": "cmd+e",
+    "command": "-editor.action.toggleScreenReaderAccessibilityMode",
+    "when": "accessibilityHelpIsShown"
+  },
 ]
 

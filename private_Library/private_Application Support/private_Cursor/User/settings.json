@@ -235,4 +235,5 @@
     }
   ],
   "outline.showVariables": false,
+  "outline.showProperties": false,
 }
