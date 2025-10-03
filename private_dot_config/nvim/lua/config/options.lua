@@ -5,4 +5,5 @@
 vim.g.root_spec = { "cwd" }
 
 local opt = vim.opt
+
 opt.spelllang = { "en", "cjk" }
