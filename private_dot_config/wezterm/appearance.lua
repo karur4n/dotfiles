@@ -26,6 +26,8 @@ function module.apply_to_config(config)
 		},
 	})
 
+	config.window_decorations = "RESIZE"
+
 	--
 	-- Tab
 	--
