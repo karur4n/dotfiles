@@ -6,12 +6,12 @@ function module.apply_to_config(config)
 	config.dpi = 109
 	config.dpi_by_screen = {
 		-- default
-		['Built-in Retina Display'] = 180,
+		["Built-in Retina Display"] = 180,
 		-- office
-    ['DELL U3824DW'] = 109,
+		["DELL U3824DW"] = 109,
 		-- home
-		['DELL P3222QE'] = 180,
-  }
+		["DELL P3222QE"] = 180,
+	}
 
 	config.font_size = 11
 	config.line_height = 1.2
@@ -26,7 +26,7 @@ function module.apply_to_config(config)
 		},
 	})
 
-	config.window_decorations = "RESIZE"
+	config.window_decorations = "RESIZE|INTEGRATED_BUTTONS"
 
 	--
 	-- Tab
