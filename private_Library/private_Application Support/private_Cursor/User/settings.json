@@ -236,4 +236,8 @@
   ],
   "outline.showVariables": false,
   "outline.showProperties": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.cursorSmoothCaretAnimation": "on",
 }
