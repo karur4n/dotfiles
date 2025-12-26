@@ -69,11 +69,11 @@
     "command": "search.action.clearSearchResults",
     "when": "sideBarFocus && activeViewlet == 'workbench.view.search'"
   },
-  {
-    "key": "enter",
-    "command": "search.action.focusSearchList",
-    "when": "sideBarFocus && activeViewlet == 'workbench.view.search' && inputFocus"
-  },
+  // {
+  //   "key": "enter",
+  //   "command": "search.action.focusSearchList",
+  //   "when": "sideBarFocus && activeViewlet == 'workbench.view.search' && inputFocus"
+  // },
   {
     "key": "alt+enter",
     "command": "editor.action.quickFix",
@@ -155,16 +155,26 @@
     "command": "list.collapse",
     "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
+  // {
+  //   "key": "j",
+  //   "command": "list.focusDown",
+  //   "when": "listFocus && explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  // },
+  // {
+  //   "key": "k",
+  //   "command": "list.focusUp",
+  //   "when": "listFocus && explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  // },
   {
     "key": "j",
     "command": "list.focusDown",
-    "when": "listFocus && explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
+    "when": "listFocus && !inputFocus"
+},
+{
     "key": "k",
     "command": "list.focusUp",
-    "when": "listFocus && explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
+    "when": "listFocus && !inputFocus"
+},
   {
     "key": "h",
     "command": "editor.action.scrollLeftHover",
