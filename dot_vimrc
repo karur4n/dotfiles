@@ -1,0 +1,22 @@
+set nocompatible
+
+set backspace=indent,eol,start
+
+syntax on
+
+filetype plugin indent on
+
+set number
+
+set noerrorbells
+set visualbell
+
+set nobackup
+set noswapfile
+set undodir=~/tmp/vim/undo
+set viminfo+=n~/tmp/viminfo
+
+set expandtab
+set autoindent
+set smartindent
+

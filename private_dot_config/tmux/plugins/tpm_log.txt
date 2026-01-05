@@ -1,0 +1,423 @@
+[2025-08-08 18:02:51.524]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:02:51.533]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:02:51.996]	Installing "tmux-fzf"
+[2025-08-08 18:02:52.802]	  "tmux-fzf" download success
+[2025-08-08 18:02:52.862]	Done.
+
+[2025-08-08 18:02:59.205]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:02:59.214]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:02:59.395]	Already installed "tmux-fzf"
+[2025-08-08 18:02:59.405]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:02:59.603]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:02:59.612]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:02:59.816]	Updating all plugins!
+[2025-08-08 18:02:59.826]	
+[2025-08-08 18:02:59.926]	Already installed "tmux-fzf"
+[2025-08-08 18:02:59.934]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:02:59.968]	Updating all plugins!
+[2025-08-08 18:02:59.981]	
+[2025-08-08 18:03:00.374]	  "tmux-fzf" update success
+[2025-08-08 18:03:00.381]	    | Already up to date.
+[2025-08-08 18:03:00.389]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:03:00.534]	  "tmux-fzf" update success
+[2025-08-08 18:03:00.542]	    | Already up to date.
+[2025-08-08 18:03:00.550]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:03:00.852]	Done.
+[2025-08-08 18:03:00.852]	Done.
+
+
+[2025-08-08 18:03:06.836]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:03:06.845]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:03:07.030]	Already installed "tmux-fzf"
+[2025-08-08 18:03:07.040]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:03:07.163]	Updating all plugins!
+[2025-08-08 18:03:07.173]	
+[2025-08-08 18:03:07.196]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:03:07.205]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:03:07.549]	Already installed "tmux-fzf"
+[2025-08-08 18:03:07.564]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:03:07.623]	Updating all plugins!
+[2025-08-08 18:03:07.640]	
+[2025-08-08 18:03:08.113]	  "tmux-fzf" update success
+[2025-08-08 18:03:08.120]	    | Already up to date.
+[2025-08-08 18:03:08.128]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:03:08.198]	  "tmux-fzf" update success
+[2025-08-08 18:03:08.207]	    | Already up to date.
+[2025-08-08 18:03:08.216]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:03:08.228]	Done.
+
+[2025-08-08 18:03:08.273]	Removing "tmux-fzf"
+[2025-08-08 18:03:08.283]	  "tmux-fzf" clean success
+[2025-08-08 18:03:08.368]	Done.
+
+[2025-08-08 18:03:15.417]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:03:15.427]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:03:15.606]	Installing "tmux-fzf"
+[2025-08-08 18:03:15.676]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:03:15.684]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:03:15.842]	Already installed "tmux-fzf"
+[2025-08-08 18:03:15.850]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:03:15.970]	Updating all plugins!
+[2025-08-08 18:03:15.979]	
+[2025-08-08 18:03:16.503]	  "tmux-fzf" download success
+[2025-08-08 18:03:16.525]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:03:16.607]	  "tmux-fzf" update fail
+[2025-08-08 18:03:16.629]	Updating all plugins!
+[2025-08-08 18:03:16.630]	    | From https://github.com/sainnhe/tmux-fzf
+[2025-08-08 18:03:16.649]	
+[2025-08-08 18:03:16.649]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-08-08 18:03:16.660]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-08-08 18:03:16.669]	    | 	Anti-996-LICENSE
+[2025-08-08 18:03:16.677]	    | 	LICENSE
+[2025-08-08 18:03:16.685]	    | 	README.md
+[2025-08-08 18:03:16.694]	    | 	main.sh
+[2025-08-08 18:03:16.701]	    | 	main.tmux
+[2025-08-08 18:03:16.709]	    | 	scripts/.envs
+[2025-08-08 18:03:16.717]	    | 	scripts/.fzf-tmux
+[2025-08-08 18:03:16.724]	    | 	scripts/.preview
+[2025-08-08 18:03:16.732]	    | 	scripts/clipboard.sh
+[2025-08-08 18:03:16.739]	    | 	scripts/command.sh
+[2025-08-08 18:03:16.747]	    | 	scripts/copy-mode.sh
+[2025-08-08 18:03:16.754]	    | 	scripts/keybinding.sh
+[2025-08-08 18:03:16.762]	    | 	scripts/menu.sh
+[2025-08-08 18:03:16.769]	    | 	scripts/pane.sh
+[2025-08-08 18:03:16.777]	    | 	scripts/process.sh
+[2025-08-08 18:03:16.784]	    | 	scripts/session.sh
+[2025-08-08 18:03:16.792]	    | 	scripts/window.sh
+[2025-08-08 18:03:16.799]	    | Please move or remove them before you merge.
+[2025-08-08 18:03:16.807]	    | Aborting
+[2025-08-08 18:03:16.815]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:03:16.910]	Done.
+
+[2025-08-08 18:03:17.210]	  "tmux-fzf" update success
+[2025-08-08 18:03:17.217]	    | Already up to date.
+[2025-08-08 18:03:17.225]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:03:17.268]	Removing "tmux-fzf"
+[2025-08-08 18:03:17.275]	  "tmux-fzf" clean success
+[2025-08-08 18:03:17.333]	Done.
+
+[2025-08-08 18:03:24.897]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:03:24.907]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:03:25.086]	Installing "tmux-fzf"
+[2025-08-08 18:03:25.437]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:03:25.454]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:03:25.677]	Already installed "tmux-fzf"
+[2025-08-08 18:03:25.687]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:03:25.819]	Updating all plugins!
+[2025-08-08 18:03:25.828]	
+[2025-08-08 18:03:25.898]	  "tmux-fzf" download success
+[2025-08-08 18:03:25.907]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:03:25.934]	Updating all plugins!
+[2025-08-08 18:03:25.943]	
+[2025-08-08 18:03:26.391]	  "tmux-fzf" update success
+[2025-08-08 18:03:26.402]	    | Already up to date.
+[2025-08-08 18:03:26.472]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:03:26.625]	  "tmux-fzf" update success
+[2025-08-08 18:03:26.634]	    | Already up to date.
+[2025-08-08 18:03:26.644]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:03:26.659]	Done.
+
+[2025-08-08 18:03:26.757]	Removing "tmux-fzf"
+[2025-08-08 18:03:26.786]	  "tmux-fzf" clean success
+[2025-08-08 18:03:26.911]	Done.
+
+[2025-08-08 18:07:38.558]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:07:38.567]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:07:38.742]	Installing "tmux-fzf"
+[2025-08-08 18:07:38.902]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:07:38.910]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:07:39.098]	Already installed "tmux-fzf"
+[2025-08-08 18:07:39.107]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:07:39.233]	Updating all plugins!
+[2025-08-08 18:07:39.242]	
+[2025-08-08 18:07:39.705]	  "tmux-fzf" download success
+[2025-08-08 18:07:39.716]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:07:39.728]	  "tmux-fzf" update fail
+[2025-08-08 18:07:39.737]	    | From https://github.com/sainnhe/tmux-fzf
+[2025-08-08 18:07:39.750]	    |  * branch            HEAD       -> FETCH_HEAD
+[2025-08-08 18:07:39.766]	    | error: The following untracked working tree files would be overwritten by merge:
+[2025-08-08 18:07:39.777]	    | 	Anti-996-LICENSE
+[2025-08-08 18:07:39.786]	Updating all plugins!
+[2025-08-08 18:07:39.791]	    | 	LICENSE
+[2025-08-08 18:07:39.799]	
+[2025-08-08 18:07:39.804]	    | 	README.md
+[2025-08-08 18:07:39.820]	    | 	main.sh
+[2025-08-08 18:07:39.834]	    | 	main.tmux
+[2025-08-08 18:07:39.849]	    | 	scripts/.envs
+[2025-08-08 18:07:39.862]	    | 	scripts/.fzf-tmux
+[2025-08-08 18:07:39.877]	    | 	scripts/.preview
+[2025-08-08 18:07:39.892]	    | 	scripts/clipboard.sh
+[2025-08-08 18:07:39.907]	    | 	scripts/command.sh
+[2025-08-08 18:07:39.922]	    | 	scripts/copy-mode.sh
+[2025-08-08 18:07:39.932]	    | 	scripts/keybinding.sh
+[2025-08-08 18:07:39.941]	    | 	scripts/menu.sh
+[2025-08-08 18:07:39.949]	    | 	scripts/pane.sh
+[2025-08-08 18:07:39.957]	    | 	scripts/process.sh
+[2025-08-08 18:07:39.964]	    | 	scripts/session.sh
+[2025-08-08 18:07:39.972]	    | 	scripts/window.sh
+[2025-08-08 18:07:39.979]	    | Please move or remove them before you merge.
+[2025-08-08 18:07:39.987]	    | Aborting
+[2025-08-08 18:07:39.995]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:07:40.089]	Done.
+
+[2025-08-08 18:07:40.483]	  "tmux-fzf" update success
+[2025-08-08 18:07:40.490]	    | Already up to date.
+[2025-08-08 18:07:40.499]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:07:40.539]	Removing "tmux-fzf"
+[2025-08-08 18:07:40.547]	  "tmux-fzf" clean success
+[2025-08-08 18:07:40.604]	Done.
+
+[2025-08-08 18:09:03.929]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:09:03.938]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:09:04.207]	Installing "tmux-fzf"
+[2025-08-08 18:09:04.968]	  "tmux-fzf" download success
+[2025-08-08 18:09:04.976]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:09:05.200]	Updating all plugins!
+[2025-08-08 18:09:05.211]	
+[2025-08-08 18:09:05.877]	  "tmux-fzf" update success
+[2025-08-08 18:09:05.890]	    | Already up to date.
+[2025-08-08 18:09:05.900]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:09:06.010]	Done.
+
+[2025-08-08 18:09:15.965]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:09:15.974]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:09:16.012]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:09:16.021]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:09:16.146]	Already installed "tmux-fzf"
+[2025-08-08 18:09:16.146]	Already installed "tmux-fzf"
+[2025-08-08 18:09:16.155]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:09:16.155]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:09:16.363]	Updating all plugins!
+[2025-08-08 18:09:16.364]	Updating all plugins!
+[2025-08-08 18:09:16.375]	
+[2025-08-08 18:09:16.377]	
+[2025-08-08 18:09:17.072]	  "tmux-fzf" update success
+[2025-08-08 18:09:17.098]	    | Already up to date.
+[2025-08-08 18:09:17.150]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:09:17.218]	  "tmux-fzf" update success
+[2025-08-08 18:09:17.232]	    | Already up to date.
+[2025-08-08 18:09:17.256]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:09:17.445]	Done.
+
+[2025-08-08 18:09:17.517]	Done.
+
+[2025-08-08 18:13:37.880]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:13:37.889]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:13:38.071]	Already installed "tmux-fzf"
+[2025-08-08 18:13:38.080]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:13:38.209]	Updating all plugins!
+[2025-08-08 18:13:38.223]	
+[2025-08-08 18:13:38.826]	  "tmux-fzf" update success
+[2025-08-08 18:13:38.834]	    | Already up to date.
+[2025-08-08 18:13:38.842]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:13:38.932]	Done.
+
+[2025-08-08 18:13:48.001]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:13:48.010]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:13:48.194]	Already installed "tmux-fzf"
+[2025-08-08 18:13:48.203]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:13:48.324]	Updating all plugins!
+[2025-08-08 18:13:48.333]	
+[2025-08-08 18:13:48.883]	  "tmux-fzf" update success
+[2025-08-08 18:13:48.891]	    | Already up to date.
+[2025-08-08 18:13:48.899]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:13:48.992]	Done.
+
+[2025-08-08 18:14:02.875]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:14:02.893]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:14:03.056]	Already installed "tmux-fzf"
+[2025-08-08 18:14:03.064]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:14:03.182]	Updating all plugins!
+[2025-08-08 18:14:03.191]	
+[2025-08-08 18:14:03.786]	  "tmux-fzf" update success
+[2025-08-08 18:14:03.794]	    | Already up to date.
+[2025-08-08 18:14:03.801]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:14:03.896]	Done.
+
+[2025-08-08 18:14:07.974]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:14:07.983]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:14:08.241]	Already installed "tmux-fzf"
+[2025-08-08 18:14:08.252]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:14:08.484]	Updating all plugins!
+[2025-08-08 18:14:08.494]	
+[2025-08-08 18:14:09.104]	  "tmux-fzf" update success
+[2025-08-08 18:14:09.111]	    | Already up to date.
+[2025-08-08 18:14:09.119]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:14:09.211]	Done.
+
+[2025-08-08 18:14:39.970]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:14:39.980]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:14:40.165]	Already installed "tmux-fzf"
+[2025-08-08 18:14:40.174]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:14:40.292]	Updating all plugins!
+[2025-08-08 18:14:40.301]	
+[2025-08-08 18:14:40.845]	  "tmux-fzf" update success
+[2025-08-08 18:14:40.852]	    | Already up to date.
+[2025-08-08 18:14:40.860]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:14:40.952]	Done.
+
+[2025-08-08 18:15:30.102]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:15:30.112]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:15:30.287]	Already installed "tmux-fzf"
+[2025-08-08 18:15:30.304]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:15:30.422]	Updating all plugins!
+[2025-08-08 18:15:30.431]	
+[2025-08-08 18:15:30.986]	  "tmux-fzf" update success
+[2025-08-08 18:15:30.993]	    | Already up to date.
+[2025-08-08 18:15:31.001]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:15:31.093]	Done.
+
+[2025-08-08 18:18:11.471]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:18:11.480]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:18:11.665]	Already installed "tmux-fzf"
+[2025-08-08 18:18:11.674]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:18:11.791]	Updating all plugins!
+[2025-08-08 18:18:11.800]	
+[2025-08-08 18:18:12.348]	  "tmux-fzf" update success
+[2025-08-08 18:18:12.356]	    | Already up to date.
+[2025-08-08 18:18:12.364]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:18:12.455]	Done.
+
+[2025-08-08 18:18:21.669]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:18:21.679]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:18:21.813]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:18:21.823]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:18:21.940]	Already installed "tmux-fzf"
+[2025-08-08 18:18:21.940]	Already installed "tmux-fzf"
+[2025-08-08 18:18:21.948]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:18:21.948]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:18:22.068]	Updating all plugins!
+[2025-08-08 18:18:22.069]	Updating all plugins!
+[2025-08-08 18:18:22.081]	
+[2025-08-08 18:18:22.081]	
+[2025-08-08 18:18:22.656]	  "tmux-fzf" update success
+[2025-08-08 18:18:22.663]	    | Already up to date.
+[2025-08-08 18:18:22.672]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:18:22.688]	  "tmux-fzf" update success
+[2025-08-08 18:18:22.696]	    | Already up to date.
+[2025-08-08 18:18:22.704]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:18:22.769]	Done.
+
+[2025-08-08 18:18:22.800]	Done.
+
+[2025-08-08 18:22:58.720]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:22:58.729]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:22:58.909]	Already installed "tmux-fzf"
+[2025-08-08 18:22:58.918]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:22:59.035]	Updating all plugins!
+[2025-08-08 18:22:59.044]	
+[2025-08-08 18:22:59.618]	  "tmux-fzf" update success
+[2025-08-08 18:22:59.625]	    | Already up to date.
+[2025-08-08 18:22:59.633]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:22:59.728]	Done.
+
+[2025-08-08 18:23:29.783]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:23:29.792]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:23:29.979]	Already installed "tmux-fzf"
+[2025-08-08 18:23:29.988]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:23:30.106]	Updating all plugins!
+[2025-08-08 18:23:30.116]	
+[2025-08-08 18:23:30.688]	  "tmux-fzf" update success
+[2025-08-08 18:23:30.695]	    | Already up to date.
+[2025-08-08 18:23:30.703]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:23:30.794]	Done.
+
+[2025-08-08 18:23:37.714]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:23:37.723]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:23:37.901]	Already installed "tmux-fzf"
+[2025-08-08 18:23:37.910]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:23:38.029]	Updating all plugins!
+[2025-08-08 18:23:38.039]	
+[2025-08-08 18:23:38.627]	  "tmux-fzf" update success
+[2025-08-08 18:23:38.635]	    | Already up to date.
+[2025-08-08 18:23:38.643]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:23:38.733]	Done.
+
+[2025-08-08 18:24:22.003]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:24:22.012]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:24:22.200]	Already installed "tmux-fzf"
+[2025-08-08 18:24:22.210]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:24:22.330]	Updating all plugins!
+[2025-08-08 18:24:22.339]	
+[2025-08-08 18:24:22.911]	  "tmux-fzf" update success
+[2025-08-08 18:24:22.918]	    | Already up to date.
+[2025-08-08 18:24:22.926]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:24:23.017]	Done.
+
+[2025-08-08 18:25:15.928]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:25:15.938]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:25:16.130]	Already installed "tmux-fzf"
+[2025-08-08 18:25:16.139]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:25:16.284]	Updating all plugins!
+[2025-08-08 18:25:16.295]	
+[2025-08-08 18:25:16.899]	  "tmux-fzf" update success
+[2025-08-08 18:25:16.906]	    | Already up to date.
+[2025-08-08 18:25:16.914]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:25:17.005]	Done.
+
+[2025-08-08 18:29:47.017]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:29:47.026]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:29:47.286]	Already installed "tmux-fzf"
+[2025-08-08 18:29:47.296]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:29:47.523]	Updating all plugins!
+[2025-08-08 18:29:47.536]	
+[2025-08-08 18:29:48.174]	  "tmux-fzf" update success
+[2025-08-08 18:29:48.181]	    | Already up to date.
+[2025-08-08 18:29:48.189]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:29:48.281]	Done.
+
+[2025-08-08 18:30:20.637]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:30:20.646]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:30:20.831]	Already installed "tmux-fzf"
+[2025-08-08 18:30:20.842]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:30:20.961]	Updating all plugins!
+[2025-08-08 18:30:20.969]	
+[2025-08-08 18:30:21.535]	  "tmux-fzf" update success
+[2025-08-08 18:30:21.543]	    | Already up to date.
+[2025-08-08 18:30:21.553]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:30:21.643]	Done.
+
+[2025-08-08 18:30:27.866]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:30:27.877]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:30:28.076]	Already installed "tmux-fzf"
+[2025-08-08 18:30:28.085]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:30:28.208]	Updating all plugins!
+[2025-08-08 18:30:28.219]	
+[2025-08-08 18:30:28.795]	  "tmux-fzf" update success
+[2025-08-08 18:30:28.803]	    | Already up to date.
+[2025-08-08 18:30:28.811]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:30:28.905]	Done.
+
+[2025-08-08 18:32:30.987]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:32:30.999]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:32:31.199]	Already installed "tmux-fzf"
+[2025-08-08 18:32:31.213]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:32:31.349]	Updating all plugins!
+[2025-08-08 18:32:31.360]	
+[2025-08-08 18:32:31.936]	  "tmux-fzf" update success
+[2025-08-08 18:32:31.944]	    | Already up to date.
+[2025-08-08 18:32:31.952]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:32:32.052]	Done.
+
+[2025-08-08 18:34:30.127]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:34:30.136]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:34:30.318]	Already installed "tmux-fzf"
+[2025-08-08 18:34:30.327]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:34:30.444]	Updating all plugins!
+[2025-08-08 18:34:30.453]	
+[2025-08-08 18:34:31.015]	  "tmux-fzf" update success
+[2025-08-08 18:34:31.022]	    | Already up to date.
+[2025-08-08 18:34:31.030]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:34:31.119]	Done.
+
+[2025-08-08 18:36:45.887]	List of discovered tpm plugins: sainnhe/tmux-fzf
+[2025-08-08 18:36:45.897]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/install_plugins
+[2025-08-08 18:36:46.129]	Already installed "tmux-fzf"
+[2025-08-08 18:36:46.137]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/update_plugins all
+[2025-08-08 18:36:46.344]	Updating all plugins!
+[2025-08-08 18:36:46.357]	
+[2025-08-08 18:36:46.946]	  "tmux-fzf" update success
+[2025-08-08 18:36:46.954]	    | Already up to date.
+[2025-08-08 18:36:46.962]	Invoking /Users/kazuki.furukawa/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2025-08-08 18:36:47.054]	Done.
+
