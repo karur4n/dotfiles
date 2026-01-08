@@ -1,248 +1,247 @@
 {
-    "editor.fontFamily": "UDEV Gothic 35",
-    "editor.fontSize": 13,
-    "editor.tabSize": 2,
-    "terminal.integrated.fontFamily": "\"UDEV Gothic 35\"",
-    "terminal.integrated.lineHeight": 1.2,
-    "workbench.activityBar.orientation": "vertical",
-    "extensions.ignoreRecommendations": false,
-    "security.workspace.trust.untrustedFiles": "open",
-    "workbench.tree.renderIndentGuides": "always",
-    "workbench.tree.indent": 16,
-    "githubPullRequests.pullBranch": "never",
-    "files.insertFinalNewline": true,
-    "json.schemaDownload.enable": true,
-    "update.releaseTrack": "prerelease",
-    "explorer.confirmDelete": false,
-    "workbench.editor.wrapTabs": true,
-    "editor.guides.indentation": true,
-    "editor.guides.highlightActiveIndentation": true,
-  
-    //
-    // Vim
-    //
-    "vim.leader": "<space>",
-    "vim.useSystemClipboard": true,
-    "editor.cursorSurroundingLines": 10,
-    "vim.handleKeys": {
-      "<C-space>": false,
-      "<C-h>": false,
-      "<C-j>": false,
-      "<C-k>": false,
-      "<C-l>": false,
-      "<C-s>": false,
-      "<C-d>": true
+  "editor.fontFamily": "UDEV Gothic 35",
+  "editor.fontSize": 13,
+  "editor.tabSize": 2,
+  "terminal.integrated.fontFamily": "\"UDEV Gothic 35\"",
+  "terminal.integrated.lineHeight": 1.2,
+  "workbench.activityBar.orientation": "vertical",
+  "extensions.ignoreRecommendations": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.tree.indent": 16,
+  "githubPullRequests.pullBranch": "never",
+  "files.insertFinalNewline": true,
+  "json.schemaDownload.enable": true,
+  "update.releaseTrack": "prerelease",
+  "explorer.confirmDelete": false,
+  "workbench.editor.wrapTabs": true,
+  "editor.guides.indentation": true,
+  "editor.guides.highlightActiveIndentation": true,
+
+  //
+  // Vim
+  //
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "editor.cursorSurroundingLines": 10,
+  "vim.handleKeys": {
+    "<C-space>": false,
+    "<C-h>": false,
+    "<C-j>": false,
+    "<C-k>": false,
+    "<C-l>": false,
+    "<C-s>": false,
+    "<C-d>": true
+  },
+  // 折りたたみをスクロール通過時に展開しない
+  "vim.foldfix": true,
+  // ヤンクしたところをハイライト表示
+  "vim.highlightedyank.enable": true,
+  "vim.easymotion": true,
+  "vim.easymotionKeys": "asdghklqwertyuiopzxcvbnmfj",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
     },
-    // 折りたたみをスクロール通過時に展開しない
-    "vim.foldfix": true,
-    // ヤンクしたところをハイライト表示
-    "vim.highlightedyank.enable": true,
-    "vim.easymotion": true,
-    "vim.easymotionKeys": "asdghklqwertyuiopzxcvbnmfj",
-    "extensions.experimental.affinity": {
-      "vscodevim.vim": 1,
-      "asvetliakov.vscode-neovim": 1
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
     },
-    "vim.normalModeKeyBindingsNonRecursive": [
-      // FLASH.NVIM
-      {
-        // Flash
-        "before": ["s"],
-        "after": ["<leader>", "<leader>", "/"]
-      },
-      {
-        // Flash Treesitter
-        "before": ["S"],
-        "after": ["<leader>", "<leader>", "<leader>", "j"]
-      },
-      {
-        // Hover
-        "before": ["K"],
-        "commands": ["editor.action.showDefinitionPreviewHover"]
-      },
-      {
-        // Goto Definition
-        "before": ["g", "d"],
-        "commands": ["editor.action.revealDefinition"]
-      },
-      {
-        // References
-        "before": ["g", "r"],
-        "commands": ["editor.action.goToReferences"]
-      },
-      {
-        // Goto Declaration
-        "before": ["g", "D"],
-        "commands": ["editor.action.revealDeclaration"]
-      },
-      {
-        // Goto Implementation
-        "before": ["g", "I"],
-        "commands": ["editor.action.goToImplementation"]
-      },
-      {
-        // Goto T[y]pe Definition
-        "before": ["g", "y"],
-        "commands": ["editor.action.goToTypeDefinition"]
-      },
-      {
-        // Signature Help
-        "before": ["g", "K"],
-        "commands": ["editor.action.triggerParameterHints"],
-        "when": "editorHasSignatureHelpProvider && editorTextFocus"
-      },
-      {
-        // Signature Help
-        "before": ["<C-k>"],
-        "commands": ["editor.action.triggerParameterHints"],
-        "when": "editorHasSignatureHelpProvider && editorTextFocus"
-      },
-      {
-        // Next Diagnostic
-        "before": ["]", "d"],
-        "commands": ["editor.action.marker.next"],
-        "when": "editorFocus"
-      },
-      {
-        // Prev Diagnostic
-        "before": ["[", "d"],
-        "commands": ["editor.action.marker.prev"],
-        "when": "editorFocus"
-      },
-      {
-        // Next Error
-        "before": ["]", "e"],
-        "commands": ["editor.action.marker.next"],
-        "when": "editorFocus"
-      },
-      {
-        // Prev Error
-        "before": ["[", "e"],
-        "commands": ["editor.action.marker.prev"],
-        "when": "editorFocus"
-      },
-      {
-        // Next Warning
-        "before": ["]", "w"],
-        "commands": ["editor.action.marker.next"],
-        "when": "editorFocus"
-      },
-      {
-        // Prev Warning
-        "before": ["[", "w"],
-        "commands": ["editor.action.marker.prev"],
-        "when": "editorFocus"
-      }
-    ],
-    "vim.normalModeKeyBindings": [
-      // GENERAL
-      {
-        // Toggle Word Wrap
-        "before": ["<leader>", "u", "w"],
-        "commands": ["editor.action.toggleWordWrap"]
-      },
-      {
-        // Lazygit (root dir)
-        "before": ["<leader>", "g", "g"],
-        "commands": ["workbench.view.scm"],
-        "when": "workbench.scm.active"
-      },
-      {
-        // Terminal (root dir)
-        "before": ["<leader>", "f", "t"],
-        "commands": ["workbench.action.createTerminalEditor"],
-        "when": "terminal.active"
-      },
-      // {
-      //   // Hide Terminal
-      //   "before": ["<C-/>"],
-      //   "commands": ["N/A - binding not possible in VSCode"],
-      // },
-      {
-        // Split window below
-        "before": ["<leader>", "-"],
-        "commands": ["workbench.action.splitEditorDown"]
-      },
-      {
-        // Split window right
-        "before": ["<leader>", "|"],
-        "commands": ["workbench.action.splitEditorRight"]
-      },
-  
-      // LSP
-      {
-        // LSP info
-        "before": ["<leader>", "c", "l"],
-        "commands": ["workbench.action.output.toggleOutput"]
-      },
-      {
-        // Rename
-        "before": ["<leader>", "c", "r"],
-        "commands": ["editor.action.rename"],
-        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
-      },
-  
-      // NEO-TREE.NVIM
-      {
-        // Replace in files (Spectre)
-        "before": ["<leader>", "s", "r"],
-        "commands": ["editor.action.startFindReplaceAction"],
-        "when": "editorFocus || editorIsOpen"
-      },
-  
-      // TELESCOPE.NVIM
-      {
-        // Grep (root dir)
-        "before": ["<leader>", "/"],
-        "commands": ["workbench.action.findInFiles"]
-      },
-      {
-        // Find Files (root dir)
-        "before": ["<leader>", "<space>"],
-        "commands": ["workbench.action.quickOpen"]
-      },
-      {
-        // Document diagnostics
-        "before": ["<leader>", "s", "d"],
-        "commands": ["workbench.actions.view.problems"],
-        "when": "workbench.panel.markers.view.active"
-      },
-      {
-        "before": ["<leader>", "c", "s"],
-        "commands": ["outline.focus"]
-      }
-    ],
-    "vim.visualModeKeyBindings": [
-      {
-        "before": ["<"],
-        "after": ["<", "g", "v"]
-      },
-      {
-        "before": [">"],
-        "after": [">", "g", "v"]
-      }
-    ],
-    "outline.showVariables": false,
-    "outline.showProperties": false,
-    "[typescript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // FLASH.NVIM
+    {
+      // Flash
+      "before": ["s"],
+      "after": ["<leader>", "<leader>", "/"]
     },
-    "editor.formatOnSave": true,
-    "workbench.colorTheme": "Gruvbox Dark Medium",
-    "workbench.iconTheme": "catppuccin-macchiato",
-    "cursor.cpp.disabledLanguages": [
-      "plaintext"
-    ],
-    "cSpell.spellCheckDelayMs": 200,
-    "claudeCode.preferredLocation": "panel",
-    "editor.inlineSuggest.edits.showCollapsed": true,
-    "git.blame.editorDecoration.enabled": false,
-    "editor.accessibilitySupport": "off",
-    "window.zoomLevel": 0.2,
-    "cursor.composer.shouldChimeAfterChatFinishes": true,
-    "editor.cursorSmoothCaretAnimation": "on",
-    "cSpell.userWords": [
-      "worktree"
-    ],
-  }
-  
+    {
+      // Flash Treesitter
+      "before": ["S"],
+      "after": ["<leader>", "<leader>", "<leader>", "j"]
+    },
+    {
+      // Hover
+      "before": ["K"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    },
+    {
+      // Goto Definition
+      "before": ["g", "d"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    {
+      // References
+      "before": ["g", "r"],
+      "commands": ["editor.action.goToReferences"]
+    },
+    {
+      // Goto Declaration
+      "before": ["g", "D"],
+      "commands": ["editor.action.revealDeclaration"]
+    },
+    {
+      // Goto Implementation
+      "before": ["g", "I"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      // Goto T[y]pe Definition
+      "before": ["g", "y"],
+      "commands": ["editor.action.goToTypeDefinition"]
+    },
+    {
+      // Signature Help
+      "before": ["g", "K"],
+      "commands": ["editor.action.triggerParameterHints"],
+      "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    },
+    {
+      // Signature Help
+      "before": ["<C-k>"],
+      "commands": ["editor.action.triggerParameterHints"],
+      "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    },
+    {
+      // Next Diagnostic
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"],
+      "when": "editorFocus"
+    },
+    {
+      // Prev Diagnostic
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"],
+      "when": "editorFocus"
+    },
+    {
+      // Next Error
+      "before": ["]", "e"],
+      "commands": ["editor.action.marker.next"],
+      "when": "editorFocus"
+    },
+    {
+      // Prev Error
+      "before": ["[", "e"],
+      "commands": ["editor.action.marker.prev"],
+      "when": "editorFocus"
+    },
+    {
+      // Next Warning
+      "before": ["]", "w"],
+      "commands": ["editor.action.marker.next"],
+      "when": "editorFocus"
+    },
+    {
+      // Prev Warning
+      "before": ["[", "w"],
+      "commands": ["editor.action.marker.prev"],
+      "when": "editorFocus"
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    // GENERAL
+    {
+      // Toggle Word Wrap
+      "before": ["<leader>", "u", "w"],
+      "commands": ["editor.action.toggleWordWrap"]
+    },
+    {
+      // Lazygit (root dir)
+      "before": ["<leader>", "g", "g"],
+      "commands": ["workbench.view.scm"],
+      "when": "workbench.scm.active"
+    },
+    {
+      // Terminal (root dir)
+      "before": ["<leader>", "f", "t"],
+      "commands": ["workbench.action.createTerminalEditor"],
+      "when": "terminal.active"
+    },
+    // {
+    //   // Hide Terminal
+    //   "before": ["<C-/>"],
+    //   "commands": ["N/A - binding not possible in VSCode"],
+    // },
+    {
+      // Split window below
+      "before": ["<leader>", "-"],
+      "commands": ["workbench.action.splitEditorDown"]
+    },
+    {
+      // Split window right
+      "before": ["<leader>", "|"],
+      "commands": ["workbench.action.splitEditorRight"]
+    },
+
+    // LSP
+    {
+      // LSP info
+      "before": ["<leader>", "c", "l"],
+      "commands": ["workbench.action.output.toggleOutput"]
+    },
+    {
+      // Rename
+      "before": ["<leader>", "c", "r"],
+      "commands": ["editor.action.rename"],
+      "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+
+    // NEO-TREE.NVIM
+    {
+      // Replace in files (Spectre)
+      "before": ["<leader>", "s", "r"],
+      "commands": ["editor.action.startFindReplaceAction"],
+      "when": "editorFocus || editorIsOpen"
+    },
+
+    // TELESCOPE.NVIM
+    {
+      // Grep (root dir)
+      "before": ["<leader>", "/"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    {
+      // Find Files (root dir)
+      "before": ["<leader>", "<space>"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      // Document diagnostics
+      "before": ["<leader>", "s", "d"],
+      "commands": ["workbench.actions.view.problems"],
+      "when": "workbench.panel.markers.view.active"
+    },
+    {
+      "before": ["<leader>", "c", "s"],
+      "commands": ["outline.focus"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"]
+    },
+    {
+      "before": [">"],
+      "after": [">", "g", "v"]
+    }
+  ],
+  "outline.showVariables": false,
+  "outline.showProperties": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "workbench.colorTheme": "Gruvbox Dark Medium",
+  "cursor.cpp.disabledLanguages": ["plaintext"],
+  "cSpell.spellCheckDelayMs": 200,
+  "claudeCode.preferredLocation": "panel",
+  "editor.inlineSuggest.edits.showCollapsed": true,
+  "git.blame.editorDecoration.enabled": false,
+  "editor.accessibilitySupport": "off",
+  "window.zoomLevel": 0.2,
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "cSpell.userWords": ["worktree"],
+  "workbench.iconTheme": "vscode-icons"
+}

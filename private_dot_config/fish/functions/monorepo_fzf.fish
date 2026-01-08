@@ -8,14 +8,14 @@ function monorepo_fzf --description "Navigate to monorepo packages using fzf"
         # packages ディレクトリまでのパスを抽出
         set -l path_parts (string split "/" $current_path)
         set -l packages_index
-        
+
         for i in (seq (count $path_parts))
             if test $path_parts[$i] = "packages"
                 set packages_index $i
                 break
             end
         end
-        
+
         if test -n "$packages_index"
             set packages_dir (string join "/" $path_parts[1..$packages_index])
         end
@@ -50,7 +50,7 @@ function monorepo_fzf --description "Navigate to monorepo packages using fzf"
         --height=40% \
         --layout=reverse \
         --border \
-        --preview="ls -la $packages_dir/{}" \
+        --preview="ls -a --oneline $packages_dir/{}" \
         --preview-window=right:50%)
 
     # 選択されたディレクトリに移動

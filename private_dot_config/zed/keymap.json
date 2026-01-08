@@ -1,17 +1,10 @@
-// Zed keymap
-//
-// For information on binding keys, see the Zed
-// documentation: https://zed.dev/docs/key-bindings
-//
-// To see the default key bindings run `zed: open default keymap`
-// from the command palette.
 [
   // Terminal
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-/": "workspace::ToggleBottomDock"
-    }
+      "ctrl-/": "workspace::ToggleBottomDock",
+    },
   },
   // Window's navigation
   {
@@ -21,21 +14,21 @@
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ActivatePaneDown"
-    }
+      "ctrl-j": "workspace::ActivatePaneDown",
+    },
   },
   {
     "context": "GitPanel",
     "bindings": {
-      "q": "git_panel::Close"
-    }
+      "q": "git_panel::Close",
+    },
   },
   {
     "context": "AgentPanel",
     "bindings": {
       "ctrl-\\": "workspace::ToggleRightDock",
-      "cmd-k": "workspace::ToggleRightDock"
-    }
+      "cmd-k": "workspace::ToggleRightDock",
+    },
   },
   // File panel (netrw)
   {
@@ -68,8 +61,8 @@
       "shift-g": "menu::SelectLast",
       "g g": "menu::SelectFirst",
       "-": "project_panel::SelectParent",
-      "ctrl-6": "pane::AlternateFile"
-    }
+      "ctrl-6": "pane::AlternateFile",
+    },
   },
   // Empty pane, set of keybindings that are available when there is no active editor
   {
@@ -77,8 +70,6 @@
     "bindings": {
       // Open file finder
       "space space": "file_finder::Toggle",
-      // File explorer
-      "space e": "project_panel::ToggleFocus",
       // New file
       "space f n": "workspace::NewFile",
       // Open recent project
@@ -86,8 +77,8 @@
       // Search in all the files
       "space s g": "workspace::NewSearch",
       // Quit zed
-      "space q q": "zed::Quit"
-    }
+      "space q q": "zed::Quit",
+    },
   },
   {
     "context": "Editor && VimControl && !VimWaiting && !menu",
@@ -106,8 +97,8 @@
         "task::Spawn",
         {
           "task_name": "lazygit",
-          "reveal_target": "center"
-        }
+          "reveal_target": "center",
+        },
       ],
       "space g h d": "editor::ExpandAllDiffHunks",
       "space g h D": "git::Diff",
@@ -191,16 +182,16 @@
       "[ e": "editor::GoToPreviousDiagnostic",
       // Excerpts
       "] q": "editor::MoveToStartOfNextExcerpt",
-      "[ q": "editor::MoveToStartOfExcerpt"
-    }
+      "[ q": "editor::MoveToStartOfExcerpt",
+    },
   },
   {
     "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
     "bindings": {
       // Line's Motions
       "shift-j": "editor::MoveLineDown",
-      "shift-k": "editor::MoveLineUp"
-    }
+      "shift-k": "editor::MoveLineUp",
+    },
   },
   // Center the cursor on the screen when scrolling and find all references
   {
@@ -211,27 +202,27 @@
       "n": ["workspace::SendKeystrokes", "n z z z v"],
       "shift-n": ["workspace::SendKeystrokes", "shift-n z z z v"],
       "shift-g": ["workspace::SendKeystrokes", "shift-g z z"],
-      "g r": "editor::FindAllReferences"
-    }
+      "g r": "editor::FindAllReferences",
+    },
   },
   {
     "context": "vim_operator == d",
     "bindings": {
       "o": "editor::ExpandAllDiffHunks",
-      "r": "git::Restore"
-    }
+      "r": "git::Restore",
+    },
   },
   {
     "context": "vim_mode == normal || vim_mode == visual",
     "bindings": {
       "s": "vim::PushSneak",
-      "S": "vim::PushSneakBackward"
-    }
+      "S": "vim::PushSneakBackward",
+    },
   },
   {
     "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
     "bindings": {
-      "b": "vim::AnyBrackets"
-    }
-  }
+      "b": "vim::AnyBrackets",
+    },
+  },
 ]
