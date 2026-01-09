@@ -1,8 +1,6 @@
 [core]
 	# 改行コードを LF に統一（コミット時に CRLF → LF）
 	autocrlf = input
-	# ファイル名の大文字小文字を区別
-	ignorecase = false
 	# グローバル gitignore
 	excludesFile = ~/.gitignore_global
 [fetch]
