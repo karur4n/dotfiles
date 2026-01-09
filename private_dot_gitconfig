@@ -8,6 +8,14 @@
 [fetch]
 	# fetch 時に削除されたリモートブランチを自動削除
 	prune = true
+	# fetch 時に削除されたタグも自動削除
+	prunetags = true
+[diff]
+	# より賢い差分アルゴリズム
+	algorithm = histogram
+[column]
+	# ブランチ一覧を複数列で表示
+	ui = auto
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
@@ -19,6 +27,8 @@
 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [commit]
 	gpgsign = true
+	# コミット時に diff を表示
+	verbose = true
 [user]
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFp0XK947M1izzvspy4ydaoVKG/stcmVtvNSGYCLDOm3
 	name = kazuki furukawa
