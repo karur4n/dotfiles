@@ -15,3 +15,24 @@
 	email = 6816398+karur4n@users.noreply.github.com
 [init]
 	defaultBranch = main
+[branch]
+	# ブランチ一覧を最終コミット日順に表示（アルファベット順ではなく）
+	sort = -committerdate
+[tag]
+	# タグをバージョン番号順にソート（v1.9 < v1.10 のように正しく並ぶ）
+	sort = -version:refname
+[merge]
+	# コンフリクト時に「変更前の状態」も表示（diff3 の改良版）
+	conflictStyle = zdiff3
+[pull]
+	# fast-forward できない場合は失敗させる（意図しないマージコミットを防ぐ）
+	ff = only
+[push]
+	# 初回 push 時に自動で upstream を設定（-u オプション不要に）
+	autoSetupRemote = true
+[rerere]
+	# 同じコンフリクトの解決方法を記憶して自動適用
+	enabled = true
+[rebase]
+	# rebase 時に未コミットの変更を自動で stash/unstash
+	autoStash = true
