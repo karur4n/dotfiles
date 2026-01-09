@@ -1,15 +1,8 @@
 # macOS
 .DS_Store
-.AppleDouble
-.LSOverride
 ._*
 
-# Thumbnails
-Thumbs.db
-
-# IDE
-.idea/
-.vscode/
+# Vim
 *.swp
 *.swo
 *~
@@ -17,10 +10,3 @@ Thumbs.db
 # Editor backups
 *.bak
 *.orig
-
-# Logs
-*.log
-
-# Environment
-.env.local
-.env.*.local
