@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Thumbnails
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Editor backups
+*.bak
+*.orig
+
+# Logs
+*.log
+
+# Environment
+.env.local
+.env.*.local
