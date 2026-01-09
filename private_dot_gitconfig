@@ -16,6 +16,9 @@
 [column]
 	# ブランチ一覧を複数列で表示
 	ui = auto
+[help]
+	# タイポ時に修正候補を提案
+	autocorrect = prompt
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
