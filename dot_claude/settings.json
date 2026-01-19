@@ -297,5 +297,8 @@
     "type": "command",
     "command": "~/.claude/statusline.js"
   },
-  "language": "Japanese"
+  "language": "Japanese",
+  "enabledPlugins": {
+    "code-simplifier@claude-plugins-official": true
+  }
 }

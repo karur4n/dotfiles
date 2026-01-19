@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(chezmoi diff:*)",
+      "Bash(chezmoi apply:*)",
+      "Bash(chezmoi source-path:*)",
+      "Bash(SOURCE_DIR=\"/Users/furukawa/ghq/github.com/karur4n/dotfiles/configs\")",
+      "Bash(__NEW_LINE_f22b4ce590423876__ echo \"$SOURCE_DIR/nvim\")",
+      "Bash(rm:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(ghostty:*)"
+    ]
+  }
+}

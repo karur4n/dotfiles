@@ -1,0 +1,73 @@
+# Ghostty Configuration
+# https://ghostty.org/docs/config
+
+auto-update-channel = tip
+
+# =============================================================================
+# Font
+# =============================================================================
+font-family = "UDEV Gothic 35NF"
+font-size = 14
+font-thicken = true
+font-feature = "-calt"
+font-feature = "-dlig"
+font-feature = "-liga"
+adjust-cell-height = 20%
+
+# =============================================================================
+# Cursor
+# =============================================================================
+cursor-style = block
+shell-integration-features = no-cursor
+
+# =============================================================================
+# Theme & Colors
+# =============================================================================
+theme = Gruvbox Dark
+window-theme = auto
+
+# =============================================================================
+# Window
+# =============================================================================
+window-padding-x = 8
+window-padding-y = 8
+# macos-titlebar-style = hidden
+
+# =============================================================================
+# Split
+# =============================================================================
+split-divider-color = #eee
+unfocused-split-opacity = 0.8
+unfocused-split-fill = #eee
+
+# =============================================================================
+# Keybindings
+# =============================================================================
+
+# JIS keyboard: ¥ to backslash
+keybind = ¥=text:\\
+
+# Disable default keybinds
+keybind = ctrl+tab=unbind
+keybind = ctrl+shift+tab=unbind
+
+# JIS keyboard fix: unbind W3C key codes
+keybind = super+shift+bracket_right=unbind
+keybind = super+bracket_left=unbind
+keybind = super+bracket_right=unbind
+
+# Tab navigation
+keybind = super+shift+[=previous_tab
+
+# Split navigation
+keybind = super+[=goto_split:previous
+keybind = super+]=goto_split:next
+keybind = super+arrow_up=goto_split:up
+keybind = super+arrow_down=goto_split:down
+keybind = super+arrow_left=goto_split:left
+keybind = super+arrow_right=goto_split:right
+
+# =============================================================================
+# macOS
+# =============================================================================
+macos-option-as-alt = true
