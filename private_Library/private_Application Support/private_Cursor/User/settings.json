@@ -5,7 +5,7 @@
   "terminal.integrated.fontFamily": "\"UDEV Gothic 35\"",
   "terminal.integrated.lineHeight": 1.2,
   "workbench.activityBar.orientation": "vertical",
-  "extensions.ignoreRecommendations": false,
+  "extensions.ignoreRecommendations": true,
   "security.workspace.trust.untrustedFiles": "open",
   "workbench.tree.renderIndentGuides": "always",
   "workbench.tree.indent": 16,
@@ -399,7 +399,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.formatOnSave": true,
-  "workbench.colorTheme": "Cursor Light",
+  "workbench.colorTheme": "Gruvbox Dark Medium",
   "cursor.cpp.disabledLanguages": [
     "plaintext"
   ],

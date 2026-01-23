@@ -18,6 +18,7 @@ adjust-cell-height = 20%
 # Cursor
 # =============================================================================
 cursor-style = block
+cursor-style-blink = false
 shell-integration-features = no-cursor
 
 # =============================================================================
