@@ -8,7 +8,8 @@
       "Bash(__NEW_LINE_f22b4ce590423876__ echo \"$SOURCE_DIR/nvim\")",
       "Bash(rm:*)",
       "WebFetch(domain:github.com)",
-      "Bash(ghostty:*)"
+      "Bash(ghostty:*)",
+      "Bash(chezmoi git:*)"
     ]
   }
 }
