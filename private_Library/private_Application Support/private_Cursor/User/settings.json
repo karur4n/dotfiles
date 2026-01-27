@@ -7,7 +7,6 @@
   "workbench.activityBar.orientation": "vertical",
   "extensions.ignoreRecommendations": true,
   "security.workspace.trust.untrustedFiles": "open",
-  "workbench.tree.renderIndentGuides": "always",
   "workbench.tree.indent": 16,
   "githubPullRequests.pullBranch": "never",
   "files.insertFinalNewline": true,
@@ -30,7 +29,7 @@
     "<C-k>": false,
     "<C-l>": false,
     "<C-s>": false,
-    "<C-d>": true
+    "<C-d>": true,
   },
   // 折りたたみをスクロール通過時に展開しない
   "vim.foldfix": true,
@@ -40,230 +39,121 @@
   "vim.easymotionKeys": "asdghklqwertyuiopzxcvbnmfj",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "j"
-      ],
-      "after": [
-        "g",
-        "j"
-      ]
+      "before": ["j"],
+      "after": ["g", "j"],
     },
     {
-      "before": [
-        "k"
-      ],
-      "after": [
-        "g",
-        "k"
-      ]
+      "before": ["k"],
+      "after": ["g", "k"],
     },
     // FLASH.NVIM
     {
       // Flash
-      "before": [
-        "s"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "/"
-      ]
+      "before": ["s"],
+      "after": ["<leader>", "<leader>", "/"],
     },
     {
       // Flash Treesitter
-      "before": [
-        "S"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "<leader>",
-        "j"
-      ]
+      "before": ["S"],
+      "after": ["<leader>", "<leader>", "<leader>", "j"],
     },
     {
       // Hover
-      "before": [
-        "K"
-      ],
-      "commands": [
-        "editor.action.showDefinitionPreviewHover"
-      ]
+      "before": ["K"],
+      "commands": ["editor.action.showDefinitionPreviewHover"],
     },
     {
       // Goto Definition
-      "before": [
-        "g",
-        "d"
-      ],
-      "commands": [
-        "editor.action.revealDefinition"
-      ]
+      "before": ["g", "d"],
+      "commands": ["editor.action.revealDefinition"],
     },
     {
       // References
-      "before": [
-        "g",
-        "r"
-      ],
-      "commands": [
-        "editor.action.goToReferences"
-      ]
+      "before": ["g", "r"],
+      "commands": ["editor.action.goToReferences"],
     },
     {
       // Goto Declaration
-      "before": [
-        "g",
-        "D"
-      ],
-      "commands": [
-        "editor.action.revealDeclaration"
-      ]
+      "before": ["g", "D"],
+      "commands": ["editor.action.revealDeclaration"],
     },
     {
       // Goto Implementation
-      "before": [
-        "g",
-        "I"
-      ],
-      "commands": [
-        "editor.action.goToImplementation"
-      ]
+      "before": ["g", "I"],
+      "commands": ["editor.action.goToImplementation"],
     },
     {
       // Goto T[y]pe Definition
-      "before": [
-        "g",
-        "y"
-      ],
-      "commands": [
-        "editor.action.goToTypeDefinition"
-      ]
+      "before": ["g", "y"],
+      "commands": ["editor.action.goToTypeDefinition"],
     },
     {
       // Signature Help
-      "before": [
-        "g",
-        "K"
-      ],
-      "commands": [
-        "editor.action.triggerParameterHints"
-      ],
-      "when": "editorHasSignatureHelpProvider && editorTextFocus"
+      "before": ["g", "K"],
+      "commands": ["editor.action.triggerParameterHints"],
+      "when": "editorHasSignatureHelpProvider && editorTextFocus",
     },
     {
       // Signature Help
-      "before": [
-        "<C-k>"
-      ],
-      "commands": [
-        "editor.action.triggerParameterHints"
-      ],
-      "when": "editorHasSignatureHelpProvider && editorTextFocus"
+      "before": ["<C-k>"],
+      "commands": ["editor.action.triggerParameterHints"],
+      "when": "editorHasSignatureHelpProvider && editorTextFocus",
     },
     {
       // Next Diagnostic
-      "before": [
-        "]",
-        "d"
-      ],
-      "commands": [
-        "editor.action.marker.next"
-      ],
-      "when": "editorFocus"
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"],
+      "when": "editorFocus",
     },
     {
       // Prev Diagnostic
-      "before": [
-        "[",
-        "d"
-      ],
-      "commands": [
-        "editor.action.marker.prev"
-      ],
-      "when": "editorFocus"
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"],
+      "when": "editorFocus",
     },
     {
       // Next Error
-      "before": [
-        "]",
-        "e"
-      ],
-      "commands": [
-        "editor.action.marker.next"
-      ],
-      "when": "editorFocus"
+      "before": ["]", "e"],
+      "commands": ["editor.action.marker.next"],
+      "when": "editorFocus",
     },
     {
       // Prev Error
-      "before": [
-        "[",
-        "e"
-      ],
-      "commands": [
-        "editor.action.marker.prev"
-      ],
-      "when": "editorFocus"
+      "before": ["[", "e"],
+      "commands": ["editor.action.marker.prev"],
+      "when": "editorFocus",
     },
     {
       // Next Warning
-      "before": [
-        "]",
-        "w"
-      ],
-      "commands": [
-        "editor.action.marker.next"
-      ],
-      "when": "editorFocus"
+      "before": ["]", "w"],
+      "commands": ["editor.action.marker.next"],
+      "when": "editorFocus",
     },
     {
       // Prev Warning
-      "before": [
-        "[",
-        "w"
-      ],
-      "commands": [
-        "editor.action.marker.prev"
-      ],
-      "when": "editorFocus"
-    }
+      "before": ["[", "w"],
+      "commands": ["editor.action.marker.prev"],
+      "when": "editorFocus",
+    },
   ],
   "vim.normalModeKeyBindings": [
     // GENERAL
     {
       // Toggle Word Wrap
-      "before": [
-        "<leader>",
-        "u",
-        "w"
-      ],
-      "commands": [
-        "editor.action.toggleWordWrap"
-      ]
+      "before": ["<leader>", "u", "w"],
+      "commands": ["editor.action.toggleWordWrap"],
     },
     {
       // Lazygit (root dir)
-      "before": [
-        "<leader>",
-        "g",
-        "g"
-      ],
-      "commands": [
-        "workbench.view.scm"
-      ],
-      "when": "workbench.scm.active"
+      "before": ["<leader>", "g", "g"],
+      "commands": ["workbench.view.scm"],
+      "when": "workbench.scm.active",
     },
     {
       // Terminal (root dir)
-      "before": [
-        "<leader>",
-        "f",
-        "t"
-      ],
-      "commands": [
-        "workbench.action.createTerminalEditor"
-      ],
-      "when": "terminal.active"
+      "before": ["<leader>", "f", "t"],
+      "commands": ["workbench.action.createTerminalEditor"],
+      "when": "terminal.active",
     },
     // {
     //   // Hide Terminal
@@ -272,137 +162,73 @@
     // },
     {
       // Split window below
-      "before": [
-        "<leader>",
-        "-"
-      ],
-      "commands": [
-        "workbench.action.splitEditorDown"
-      ]
+      "before": ["<leader>", "-"],
+      "commands": ["workbench.action.splitEditorDown"],
     },
     {
       // Split window right
-      "before": [
-        "<leader>",
-        "|"
-      ],
-      "commands": [
-        "workbench.action.splitEditorRight"
-      ]
+      "before": ["<leader>", "|"],
+      "commands": ["workbench.action.splitEditorRight"],
     },
     // LSP
     {
       // LSP info
-      "before": [
-        "<leader>",
-        "c",
-        "l"
-      ],
-      "commands": [
-        "workbench.action.output.toggleOutput"
-      ]
+      "before": ["<leader>", "c", "l"],
+      "commands": ["workbench.action.output.toggleOutput"],
     },
     {
       // Rename
-      "before": [
-        "<leader>",
-        "c",
-        "r"
-      ],
-      "commands": [
-        "editor.action.rename"
-      ],
-      "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+      "before": ["<leader>", "c", "r"],
+      "commands": ["editor.action.rename"],
+      "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly",
     },
     // NEO-TREE.NVIM
     {
       // Replace in files (Spectre)
-      "before": [
-        "<leader>",
-        "s",
-        "r"
-      ],
-      "commands": [
-        "editor.action.startFindReplaceAction"
-      ],
-      "when": "editorFocus || editorIsOpen"
+      "before": ["<leader>", "s", "r"],
+      "commands": ["editor.action.startFindReplaceAction"],
+      "when": "editorFocus || editorIsOpen",
     },
     // TELESCOPE.NVIM
     {
       // Grep (root dir)
-      "before": [
-        "<leader>",
-        "/"
-      ],
-      "commands": [
-        "workbench.action.findInFiles"
-      ]
+      "before": ["<leader>", "/"],
+      "commands": ["workbench.action.findInFiles"],
     },
     {
       // Find Files (root dir)
-      "before": [
-        "<leader>",
-        "<space>"
-      ],
-      "commands": [
-        "workbench.action.quickOpen"
-      ]
+      "before": ["<leader>", "<space>"],
+      "commands": ["workbench.action.quickOpen"],
     },
     {
       // Document diagnostics
-      "before": [
-        "<leader>",
-        "s",
-        "d"
-      ],
-      "commands": [
-        "workbench.actions.view.problems"
-      ],
-      "when": "workbench.panel.markers.view.active"
+      "before": ["<leader>", "s", "d"],
+      "commands": ["workbench.actions.view.problems"],
+      "when": "workbench.panel.markers.view.active",
     },
     {
-      "before": [
-        "<leader>",
-        "c",
-        "s"
-      ],
-      "commands": [
-        "outline.focus"
-      ]
-    }
+      "before": ["<leader>", "c", "s"],
+      "commands": ["outline.focus"],
+    },
   ],
   "vim.visualModeKeyBindings": [
     {
-      "before": [
-        "<"
-      ],
-      "after": [
-        "<",
-        "g",
-        "v"
-      ]
+      "before": ["<"],
+      "after": ["<", "g", "v"],
     },
     {
-      "before": [
-        ">"
-      ],
-      "after": [
-        ">",
-        "g",
-        "v"
-      ]
-    }
+      "before": [">"],
+      "after": [">", "g", "v"],
+    },
   ],
   "outline.showVariables": false,
   "outline.showProperties": false,
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "editor.formatOnSave": true,
   "workbench.colorTheme": "Gruvbox Dark Medium",
-  "cursor.cpp.disabledLanguages": [
-    "plaintext"
-  ],
+  "cursor.cpp.disabledLanguages": ["plaintext"],
   "cSpell.spellCheckDelayMs": 200,
   "claudeCode.preferredLocation": "panel",
   "editor.inlineSuggest.edits.showCollapsed": true,
@@ -411,8 +237,7 @@
   "window.zoomLevel": 0.2,
   "cursor.composer.shouldChimeAfterChatFinishes": true,
   "editor.cursorSmoothCaretAnimation": "on",
-  "cSpell.userWords": [
-    "worktree"
-  ],
-  "workbench.iconTheme": "vscode-icons"
+  "cSpell.userWords": ["worktree"],
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.tree.renderIndentGuides": "always",
 }
