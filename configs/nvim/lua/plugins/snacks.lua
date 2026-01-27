@@ -3,6 +3,18 @@ return {
   opts = {
     picker = {
       hidden = true,
+      sources = {
+        explorer = {
+          hidden = true,
+          ignored = true,
+        },
+        grep = {
+          hidden = true,
+        },
+        files = {
+          hidden = true,
+        },
+      },
     },
   },
 }
