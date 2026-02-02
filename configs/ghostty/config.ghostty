@@ -1,6 +1,9 @@
 # Ghostty Configuration
 # https://ghostty.org/docs/config
 
+# =============================================================================
+# General
+# =============================================================================
 auto-update-channel = tip
 
 # =============================================================================
@@ -22,21 +25,12 @@ cursor-style-blink = false
 shell-integration-features = no-cursor
 
 # =============================================================================
-# Theme & Colors
+# Appearance
 # =============================================================================
 theme = Gruvbox Dark
 window-theme = auto
-
-# =============================================================================
-# Window
-# =============================================================================
 window-padding-x = 8
 window-padding-y = 8
-# macos-titlebar-style = hidden
-
-# =============================================================================
-# Split
-# =============================================================================
 split-divider-color = #eee
 unfocused-split-opacity = 0.8
 unfocused-split-fill = #eee
@@ -67,6 +61,9 @@ keybind = super+arrow_up=goto_split:up
 keybind = super+arrow_down=goto_split:down
 keybind = super+arrow_left=goto_split:left
 keybind = super+arrow_right=goto_split:right
+
+# Surface title
+keybind = super+i=prompt_surface_title
 
 # =============================================================================
 # macOS
