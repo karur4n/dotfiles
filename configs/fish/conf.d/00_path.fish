@@ -1,3 +1,4 @@
+set --export PATH $HOME/bin $PATH
 set --export PATH $HOME/.local/bin $PATH
 
 # Homebrew PATH (must load before other conf.d scripts)
