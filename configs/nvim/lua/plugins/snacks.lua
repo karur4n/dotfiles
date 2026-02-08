@@ -10,9 +10,14 @@ return {
         },
         grep = {
           hidden = true,
+          follow = true,
         },
         files = {
           hidden = true,
+          follow = true,
+        },
+        git_log = {
+          follow = true,
         },
       },
     },
