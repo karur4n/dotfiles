@@ -9,7 +9,17 @@
       "Bash(rm:*)",
       "WebFetch(domain:github.com)",
       "Bash(ghostty:*)",
-      "Bash(chezmoi git:*)"
+      "Bash(chezmoi git:*)",
+      "Bash(gh search issues:*)",
+      "Bash(gh api:*)",
+      "Bash(gh issue view:*)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:ghostty.org)",
+      "WebSearch",
+      "Bash(noti --help:*)",
+      "Bash(noti:*)",
+      "Bash(terminal-notifier:*)",
+      "Bash(osascript:*)"
     ]
   }
 }

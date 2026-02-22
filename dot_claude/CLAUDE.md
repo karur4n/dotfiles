@@ -1,1 +1,1 @@
-# Claude Entry Point
+- 各プランがover-engineered（過剰設計）・under-engineered（設計不足）・perfectly-engineered（完璧な設計）のどれかを判断し、その理由を述べよ
