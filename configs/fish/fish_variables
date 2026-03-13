@@ -1,6 +1,9 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR __fish_initialized:4300
+SETUVAR _fisher_franciscolourenco_2F_done_files:\x7e/\x2econfig/fish/conf\x2ed/done\x2efish
+SETUVAR _fisher_plugins:franciscolourenco/done
+SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:normal
@@ -28,4 +31,4 @@ SETUVAR fish_pager_color_description:yellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/Applications/Obsidian\x2eapp/Contents/MacOS\x1e/Users/furukawa/\x2elocal/bin\x1e/Users/furukawa/bin
+SETUVAR fish_user_paths:/Users/furukawa/\x2eopencode/bin\x1e/Users/furukawa/bin\x2dme\x1e/Applications/Obsidian\x2eapp/Contents/MacOS\x1e/Users/furukawa/\x2elocal/bin\x1e/Users/furukawa/bin

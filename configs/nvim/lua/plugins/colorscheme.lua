@@ -1,15 +1,21 @@
 return {
+  -- {
+  --   "rose-pine/neovim",
+  --   name = "rose-pine",
+  --   priority = 1000,
+  --   opts = {
+  --     variant = "auto", -- "auto", "main", "moon", "dawn"
+  --   },
+  -- },
   {
-    "ellisonleao/gruvbox.nvim",
+    "EdenEast/nightfox.nvim",
     priority = 1000,
-    opts = {
-      contrast = "hard", -- "hard", "soft" or empty string for medium
-    },
+    opts = {},
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "dayfox",
     },
   },
 }

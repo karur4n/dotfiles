@@ -27,13 +27,20 @@ shell-integration-features = no-cursor
 # =============================================================================
 # Appearance
 # =============================================================================
-theme = Gruvbox Dark
+# theme = Gruvbox Dark
+# theme = GitHub
+theme = Dayfox
+# theme = Rose Pine Dawn
+# theme = Gruvbox Light
+# theme = 3024 Day
 window-theme = auto
 window-padding-x = 8
 window-padding-y = 8
-split-divider-color = #eee
+# split-divider-color = #eee
+split-divider-color = #333
+
 unfocused-split-opacity = 0.8
-unfocused-split-fill = #eee
+unfocused-split-fill = #333
 
 # =============================================================================
 # Keybindings
