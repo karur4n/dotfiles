@@ -12,7 +12,7 @@
   "buffer_font_size": 15,
   "theme": {
     "mode": "light",
-    "light": "macOS Classic Light",
+    "light": "GitHub Light",
     "dark": "macOS Classic Dark",
   },
 }

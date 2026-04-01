@@ -10,7 +10,7 @@ auto-update-channel = tip
 # Font
 # =============================================================================
 font-family = "UDEV Gothic 35NF"
-font-size = 13
+font-size = 14
 font-thicken = true
 font-feature = "-calt"
 font-feature = "-dlig"
