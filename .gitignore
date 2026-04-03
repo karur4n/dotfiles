@@ -1,3 +1,4 @@
 dot_claude/settings.json
 configs/zed/prompts
 configs/karabiner/
+configs/fish/conf.d/private-*.fish
