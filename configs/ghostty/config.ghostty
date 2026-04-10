@@ -10,7 +10,7 @@ auto-update-channel = tip
 # Font
 # =============================================================================
 font-family = "UDEV Gothic 35NF"
-font-size = 14
+font-size = 13
 font-thicken = true
 font-feature = "-calt"
 font-feature = "-dlig"
@@ -33,6 +33,7 @@ theme = Dayfox
 # theme = Rose Pine Dawn
 # theme = Gruvbox Light
 # theme = 3024 Day
+# theme = Flexoki Light
 window-theme = auto
 window-padding-x = 8
 window-padding-y = 8

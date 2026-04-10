@@ -7,12 +7,17 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
   "vim_mode": true,
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "theme": {
     "mode": "light",
     "light": "GitHub Light",
-    "dark": "macOS Classic Dark",
+    "dark": "Tokyo Night",
   },
 }

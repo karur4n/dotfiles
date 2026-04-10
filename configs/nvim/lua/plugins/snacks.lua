@@ -3,6 +3,10 @@ return {
   opts = {
     picker = {
       hidden = true,
+      exclude = {
+        ".git",
+        "node_modules",
+      },
       sources = {
         explorer = {
           hidden = true,
@@ -14,6 +18,7 @@ return {
         },
         files = {
           hidden = true,
+          ignored = true,
           follow = true,
         },
         git_log = {
