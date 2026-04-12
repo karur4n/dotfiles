@@ -240,4 +240,7 @@
   "cSpell.userWords": ["worktree"],
   "workbench.iconTheme": "vscode-icons",
   "workbench.tree.renderIndentGuides": "always",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1,
+  },
 }
