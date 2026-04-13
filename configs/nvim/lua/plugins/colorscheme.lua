@@ -1,21 +1,16 @@
 return {
-  -- {
-  --   "rose-pine/neovim",
-  --   name = "rose-pine",
-  --   priority = 1000,
-  --   opts = {
-  --     variant = "auto", -- "auto", "main", "moon", "dawn"
-  --   },
-  -- },
   {
-    "EdenEast/nightfox.nvim",
+    "rose-pine/neovim",
+    name = "rose-pine",
     priority = 1000,
-    opts = {},
+    opts = {
+      variant = "auto", -- "auto", "main", "moon", "dawn"
+    },
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "dayfox",
+      colorscheme = "rose-pine",
     },
   },
 }
