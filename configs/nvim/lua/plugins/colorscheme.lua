@@ -1,16 +1,16 @@
 return {
   {
-    "rose-pine/neovim",
-    name = "rose-pine",
+    "folke/tokyonight.nvim",
+    lazy = false,
     priority = 1000,
     opts = {
-      variant = "auto", -- "auto", "main", "moon", "dawn"
+      style = "night", -- "night", "storm", "moon", "day"
     },
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "rose-pine",
+      colorscheme = "tokyonight",
     },
   },
 }
