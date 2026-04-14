@@ -56,12 +56,12 @@ keybind = ctrl+tab=unbind
 keybind = ctrl+shift+tab=unbind
 
 # JIS keyboard fix: unbind W3C key codes
-keybind = super+shift+bracket_right=unbind
-keybind = super+bracket_left=unbind
-keybind = super+bracket_right=unbind
+# keybind = super+shift+bracket_right=unbind
+# keybind = super+bracket_left=unbind
+# keybind = super+bracket_right=unbind
 
 # Tab navigation
-keybind = super+shift+[=previous_tab
+# keybind = super+shift+[=previous_tab
 
 # Split navigation
 keybind = super+[=goto_split:previous

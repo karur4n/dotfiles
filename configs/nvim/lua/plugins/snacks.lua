@@ -5,6 +5,8 @@ return {
       hidden = true,
       exclude = {
         ".git",
+        ".wt",
+        "dist",
         "node_modules",
       },
       sources = {
