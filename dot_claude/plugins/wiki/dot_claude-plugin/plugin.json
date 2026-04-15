@@ -1,7 +1,0 @@
-{
-  "name": "wiki",
-  "description": "Personal LLM wiki maintainer for Obsidian vaults. Incrementally builds and maintains a persistent, cross-referenced knowledge base from raw sources (markdown, PDF, images) in Japanese. Provides bootstrap, ingest, query, and lint operations.",
-  "author": {
-    "name": "Kazuki Furukawa"
-  }
-}
