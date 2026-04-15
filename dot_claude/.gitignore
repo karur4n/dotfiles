@@ -1,0 +1,36 @@
+# ~/.claude 配下で dotfiles (chezmoi) に持ち込みたくないもの
+# 会話履歴・セッション状態・ログ・ローカル override は機密扱いで git 管理対象外
+
+# 会話履歴 / セッション / ステート
+projects/
+sessions/
+shell-snapshots/
+session-env/
+history.jsonl
+
+# ログ・一時ファイル
+debug/
+logs/
+cache/
+paste-cache/
+file-history/
+daily-report-logs/
+ide/
+backups/
+
+# 公式 plugin 本体 (Claude Code が管理する自動インストール領域)
+plugins/cache/
+
+# ローカル override (個人設定・クレデンシャル含む可能性)
+settings.local.json
+*.local.md
+*.local.json
+.superclaude-metadata.json
+
+# caveman / その他 runtime flag
+.caveman-active
+.checksums
+
+# バックアップ
+*.bak
+*.orig
