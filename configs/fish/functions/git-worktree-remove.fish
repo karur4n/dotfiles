@@ -1,4 +1,7 @@
 function git-worktree-remove --description "Remove the current git worktree"
+    argparse 'f/force' -- $argv
+    or return 1
+
     # Get the current worktree path
     set -l current_wt (git rev-parse --show-toplevel 2>/dev/null)
     if test $status -ne 0
@@ -22,16 +25,26 @@ function git-worktree-remove --description "Remove the current git worktree"
         return 1
     end
 
-    echo "worktree '$current_wt' ($branch) を削除中..."
+    set -l delete_flag -d
+    if set -q _flag_force
+        set delete_flag -D
+        echo "worktree '$current_wt' ($branch) を強制削除中..."
+    else
+        echo "worktree '$current_wt' ($branch) を削除中..."
+    end
 
     # Move to the main working tree first
     cd $main_wt
+    or begin
+        echo "エラー: メインのworking treeへの移動に失敗しました"
+        return 1
+    end
 
     # Remove the worktree using git-wt
-    if git wt -d $branch
-        echo "worktree が正常に削除されました"
-    else
+    if not git wt $delete_flag $branch
         echo "worktreeの削除に失敗しました"
         return 1
     end
+
+    echo "worktree が正常に削除されました"
 end
