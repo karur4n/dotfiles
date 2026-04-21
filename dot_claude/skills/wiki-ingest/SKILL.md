@@ -28,6 +28,7 @@ vault パスはユーザー指示かコンテキスト (CLAUDE.md / cwd / 直近
 - **markdown** (`raw/<category>/*.md`): 全文読む
 - **PDF** (`raw/assets/*.pdf`): `Read` ツールでページを指定して読む。10 ページ超えるなら範囲分割
 - **画像** (`raw/assets/*.png|.jpg|.gif|.webp`): Read で可視化。OCR はしない前提 (見て分かる情報だけ拾う)。画像は wiki 本文に `![[raw/assets/<file>.png]]` で埋め込み、frontmatter `sources` にも同 wikilink を追加
+- **web URL / 「調査して取り込んで」依頼**: raw ファイルが未存在の場合、**最初に primary source を `defuddle parse <URL> --md -o raw/<category>/<YYYY-MM-DD>-<slug>.md` で取得して raw に保存**（1 URL = 1 raw）。その後 raw を読んで通常ワークフローへ。LLM が web 検索結果を合成したレポートを raw に書いてはいけない（primary source 性が失われ、wiki 本文の主張根拠を遡れなくなる）。raw → wiki の順序は例外なし
 - **複数ファイル**: ソースとしてまとめて 1 ページ化するか、別々に 1 ページずつ作るかユーザーに聞く。認識論的グルーピングを意識する (同じ問いに同じ答えが収束するソース群 → 統合、異質なものは分離)
 
 **画像・PDF のハルシネーション回避**: Read で読み取った内容だけを本文に書く。チャートの軸が一般理論と反対を向いている等、直感に反する内容があっても勝手に「訂正」しない。そのまま言語化し、必要なら「本ソースによれば」と明示する。
