@@ -1,5 +1,5 @@
 function git-worktree-remove --description "Remove the current git worktree"
-    argparse 'f/force' -- $argv
+    argparse 'D/force' -- $argv
     or return 1
 
     # Get the current worktree path
