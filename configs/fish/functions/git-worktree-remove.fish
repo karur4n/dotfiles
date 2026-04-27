@@ -33,18 +33,13 @@ function git-worktree-remove --description "Remove the current git worktree"
         echo "worktree '$current_wt' ($branch) を削除中..."
     end
 
-    # Move to the main working tree first
-    cd $main_wt
-    or begin
-        echo "エラー: メインのworking treeへの移動に失敗しました"
-        return 1
-    end
-
-    # Remove the worktree using git-wt
-    if not git wt $delete_flag $branch
+    # Remove the worktree using git-wt (run from main_wt so we don't have to cd)
+    if not git -C $main_wt wt $delete_flag $branch
         echo "worktreeの削除に失敗しました"
         return 1
     end
 
+    # Current directory was just deleted; move to the main working tree
+    cd $main_wt
     echo "worktree が正常に削除されました"
 end
