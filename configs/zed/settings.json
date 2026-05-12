@@ -8,7 +8,7 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "project_panel": {
-    "dock": "right"
+    "dock": "left"
   },
   "outline_panel": {
     "dock": "right"
@@ -32,9 +32,5 @@
   "vim_mode": true,
   "ui_font_size": 16,
   "buffer_font_size": 15,
-  "theme": {
-    "mode": "light",
-    "light": "GitHub Light",
-    "dark": "Tokyo Night",
-  },
+  "theme": "One Dark",
 }
