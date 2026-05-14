@@ -1,2 +1,5 @@
 [tools]
+bun = "latest"
 node = "24"
+"npm:difit" = "latest"
+"npm:opensrc" = "latest"

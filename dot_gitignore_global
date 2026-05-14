@@ -11,4 +11,7 @@
 *.bak
 *.orig
 
+# git worktree symlink (matches the symlink, .gitignore's `node_modules/` does not)
+node_modules
+
 docs/superpowers
