@@ -7,17 +7,45 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "file_scan_exclusions": [".claude/worktrees", ".wt", ".worktrees"],
+
+  "ui_font_family": ".ZedSans",
+  "buffer_font_family": "UDEV Gothic 35",
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry",
+    },
+  },
+  "cli_default_open_behavior": "existing_window",
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "agent": {
+    "new_thread_location": "new_worktree",
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "git_panel": {
+    "dock": "left",
+  },
   "icon_theme": {
     "mode": "dark",
     "light": "Zed (Default)",
-    "dark": "Zed (Default)"
+    "dark": "Zed (Default)",
   },
   "vim_mode": true,
-  "ui_font_size": 16,
-  "buffer_font_size": 15,
+  "ui_font_size": 15,
+  "buffer_font_size": 13,
   "theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "GitHub Light",
-    "dark": "Tokyo Night",
+    "dark": "One Dark",
   },
 }
