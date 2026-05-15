@@ -3,6 +3,7 @@
 	autocrlf = input
 	# グローバル gitignore
 	excludesFile = ~/.gitignore_global
+  pager = delta
 [fetch]
 	# fetch 時に削除されたリモートブランチを自動削除
 	prune = true
@@ -57,3 +58,9 @@
 [rebase]
 	# rebase 時に未コミットの変更を自動で stash/unstash
 	autoStash = true
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true  # use n and N to move between diff sections
+  line-numbers = true
+  dark = true      # or light = true, or omit for auto-detection
