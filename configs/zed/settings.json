@@ -7,6 +7,16 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "tabs": {
+    "git_status": false,
+    "file_icons": true
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "cli_default_open_behavior": "new_window",
+  "buffer_font_family": "UDEV Gothic 35",
   "project_panel": {
     "dock": "left"
   },
@@ -30,7 +40,7 @@
     "dark": "Zed (Default)"
   },
   "vim_mode": true,
-  "ui_font_size": 16,
-  "buffer_font_size": 15,
+  "ui_font_size": 15.0,
+  "buffer_font_size": 13.0,
   "theme": "One Dark",
 }
