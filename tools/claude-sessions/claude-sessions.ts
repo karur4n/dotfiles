@@ -3,6 +3,7 @@
 import { readdir, stat, mkdtemp, writeFile, rm } from "node:fs/promises"
 import { tmpdir } from "node:os"
 import { basename, join } from "node:path"
+import { existsSync } from "node:fs"
 
 export type Session = {
   sessionId: string
@@ -284,8 +285,10 @@ async function resume(session: Session): Promise<void> {
   if (!Bun.which("claude")) {
     throw new MissingDependencyError("claude CLI not found in PATH")
   }
+  // session.cwd may be a package subdir that was deleted; the worktree root always exists
+  const cwd = existsSync(session.cwd) ? session.cwd : session.worktreePath
   const proc = Bun.spawn(["claude", "--resume", session.sessionId], {
-    cwd: session.cwd,
+    cwd,
     stdin: "inherit",
     stdout: "inherit",
     stderr: "inherit",
