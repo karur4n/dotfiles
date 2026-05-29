@@ -259,19 +259,19 @@ async function pickSession(sessions: Session[], now: Date): Promise<string | nul
         "--delimiter=	",
         "--with-nth=2..",
         "--preview",
-        `cat ${dir}/{1}`,
+        `cat "${dir}/{1}"`,
         "--preview-window=right,50%,wrap",
         "--prompt=claude session> ",
       ],
       { stdin: "pipe", stdout: "pipe", stderr: "inherit" },
     )
-    proc.stdin.write(rows)
+    await proc.stdin.write(rows)
     await proc.stdin.end()
     const [out, code] = await Promise.all([
       new Response(proc.stdout).text(),
       proc.exited,
     ])
-    if (code !== 0) return null // 130 = user cancelled (Esc / Ctrl-C)
+    if (code !== 0) return null // 130 = Esc/Ctrl-C, 1 = no match, 2 = fzf error (printed to stderr)
     const selected = out.trim()
     if (selected.length === 0) return null
     return selected.split("\t")[0]
@@ -290,7 +290,8 @@ async function resume(session: Session): Promise<void> {
     stdout: "inherit",
     stderr: "inherit",
   })
-  await proc.exited
+  const code = await proc.exited
+  if (code !== 0) process.exit(code)
 }
 
 async function main(): Promise<void> {
@@ -305,7 +306,11 @@ async function main(): Promise<void> {
     throw e
   }
 
-  const home = process.env.HOME ?? ""
+  const home = process.env.HOME
+  if (!home) {
+    console.error("HOME environment variable is not set.")
+    process.exit(1)
+  }
   const projectsDir = join(home, ".claude", "projects")
   const now = new Date()
   const sessions = await collectSessions(projectsDir, worktrees)
