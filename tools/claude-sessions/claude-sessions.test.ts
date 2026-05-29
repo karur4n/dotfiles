@@ -1,7 +1,7 @@
 import { expect, test } from "bun:test"
 import * as mod from "./claude-sessions.ts"
 import { parseWorktreePorcelain } from "./claude-sessions.ts"
-import { mkdtemp, writeFile, rm } from "node:fs/promises"
+import { mkdtemp, mkdir, writeFile, rm, utimes } from "node:fs/promises"
 import { tmpdir } from "node:os"
 import { join } from "node:path"
 
@@ -208,7 +208,6 @@ test("formatPreview includes full context and the full prompt", () => {
 })
 
 import { collectSessions } from "./claude-sessions.ts"
-import { mkdir } from "node:fs/promises"
 
 test("collectSessions returns only sessions whose cwd is inside a worktree, newest first", async () => {
   const projects = await mkdtemp(join(tmpdir(), "cs-projects-"))
@@ -248,4 +247,34 @@ test("collectSessions returns only sessions whose cwd is inside a worktree, newe
 test("collectSessions returns empty array when projects dir is missing", async () => {
   const sessions = await collectSessions("/nonexistent/projects/dir", ["/virtual/repo"])
   expect(sessions).toEqual([])
+})
+
+test("collectSessions sorts matching sessions newest-first by mtime", async () => {
+  const projects = await mkdtemp(join(tmpdir(), "cs-sort-"))
+  const wt = "/virtual/repo"
+  try {
+    const dir = join(projects, "encoded")
+    await mkdir(dir, { recursive: true })
+
+    const older = join(dir, "11111111-0000-0000-0000-000000000000.jsonl")
+    const newer = join(dir, "22222222-0000-0000-0000-000000000000.jsonl")
+    const line = (prompt: string) =>
+      [
+        JSON.stringify({ type: "system", cwd: wt, gitBranch: "main" }),
+        JSON.stringify({ type: "user", message: { role: "user", content: prompt } }),
+      ].join("\n") + "\n"
+    await writeFile(older, line("older work"))
+    await writeFile(newer, line("newer work"))
+
+    // set explicit mtimes: older = 2026-01-01, newer = 2026-02-01
+    await utimes(older, new Date("2026-01-01T00:00:00Z"), new Date("2026-01-01T00:00:00Z"))
+    await utimes(newer, new Date("2026-02-01T00:00:00Z"), new Date("2026-02-01T00:00:00Z"))
+
+    const sessions = await collectSessions(projects, [wt])
+    expect(sessions.length).toBe(2)
+    expect(sessions[0].sessionId).toBe("22222222-0000-0000-0000-000000000000")
+    expect(sessions[1].sessionId).toBe("11111111-0000-0000-0000-000000000000")
+  } finally {
+    await rm(projects, { recursive: true, force: true })
+  }
 })
