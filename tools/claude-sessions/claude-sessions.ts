@@ -17,6 +17,14 @@ export type Session = {
 export class NotAGitRepoError extends Error {}
 export class MissingDependencyError extends Error {}
 
+export function parseWorktreePorcelain(text: string): string[] {
+  return text
+    .split("\n")
+    .filter((line) => line.startsWith("worktree "))
+    .map((line) => line.slice("worktree ".length).trim())
+    .filter((p) => p.length > 0)
+}
+
 async function main(): Promise<void> {
   console.error("not implemented yet")
   process.exit(1)
