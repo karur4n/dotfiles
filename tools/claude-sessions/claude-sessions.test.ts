@@ -166,7 +166,7 @@ test("truncate collapses whitespace and adds ellipsis past the limit", () => {
   expect(truncate("abcdefghij", 5)).toBe("abcd…")
 })
 
-import { formatRow, formatPreview } from "./claude-sessions.ts"
+import { formatRow } from "./claude-sessions.ts"
 import type { Session } from "./claude-sessions.ts"
 
 const sampleSession: Session = {
@@ -195,16 +195,6 @@ test("formatRow shows a placeholder for empty branch", () => {
   const now = new Date("2026-05-29T12:00:00Z")
   const row = formatRow({ ...sampleSession, branch: "" }, now)
   expect(row.split("\t")[1]).toContain("(no branch)")
-})
-
-test("formatPreview includes full context and the full prompt", () => {
-  const preview = formatPreview(sampleSession)
-  expect(preview).toContain("16541be5-0aa9-4c07-a38f-57db77e72c04")
-  expect(preview).toContain("/Users/me/repo/.wt/feature")
-  expect(preview).toContain("/Users/me/repo/.wt/feature/packages/api")
-  expect(preview).toContain("feature")
-  expect(preview).toContain("42")
-  expect(preview).toContain("implement the   thing\nplease")
 })
 
 import { collectSessions } from "./claude-sessions.ts"

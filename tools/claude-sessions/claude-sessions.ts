@@ -1,7 +1,6 @@
 #!/usr/bin/env bun
 
-import { readdir, stat, mkdtemp, writeFile, rm } from "node:fs/promises"
-import { tmpdir } from "node:os"
+import { readdir, stat } from "node:fs/promises"
 import { basename, join } from "node:path"
 import { existsSync } from "node:fs"
 
@@ -138,21 +137,6 @@ export function formatRow(session: Session, now: Date): string {
   return `${session.sessionId}\t${visible}`
 }
 
-export function formatPreview(session: Session): string {
-  return [
-    `Session : ${session.sessionId}`,
-    `Branch  : ${session.branch || "(no branch)"}`,
-    `Worktree: ${session.worktreePath}`,
-    `CWD     : ${session.cwd}`,
-    `Updated : ${session.updatedAt.toISOString()}`,
-    `Messages: ${session.messageCount}`,
-    ``,
-    `Last user prompt:`,
-    `----------------`,
-    session.lastUserPrompt || "(no prompt)",
-  ].join("\n")
-}
-
 const HEAD_BYTES = 64 * 1024
 const TAIL_BYTES = 256 * 1024
 
@@ -248,37 +232,26 @@ async function pickSession(sessions: Session[], now: Date): Promise<string | nul
   if (!Bun.which("fzf")) {
     throw new MissingDependencyError("fzf is required. Install it with: brew install fzf")
   }
-  const dir = await mkdtemp(join(tmpdir(), "claude-sessions-"))
-  try {
-    await Promise.all(
-      sessions.map((s) => writeFile(join(dir, s.sessionId), formatPreview(s))),
-    )
-    const rows = sessions.map((s) => formatRow(s, now)).join("\n")
-    const proc = Bun.spawn(
-      [
-        "fzf",
-        "--delimiter=	",
-        "--with-nth=2..",
-        "--preview",
-        `cat "${dir}/{1}"`,
-        "--preview-window=right,50%,wrap",
-        "--prompt=claude session> ",
-      ],
-      { stdin: "pipe", stdout: "pipe", stderr: "inherit" },
-    )
-    await proc.stdin.write(rows)
-    await proc.stdin.end()
-    const [out, code] = await Promise.all([
-      new Response(proc.stdout).text(),
-      proc.exited,
-    ])
-    if (code !== 0) return null // 130 = Esc/Ctrl-C, 1 = no match, 2 = fzf error (printed to stderr)
-    const selected = out.trim()
-    if (selected.length === 0) return null
-    return selected.split("\t")[0]
-  } finally {
-    await rm(dir, { recursive: true, force: true })
-  }
+  const rows = sessions.map((s) => formatRow(s, now)).join("\n")
+  const proc = Bun.spawn(
+    [
+      "fzf",
+      "--delimiter=	",
+      "--with-nth=2..",
+      "--prompt=claude session> ",
+    ],
+    { stdin: "pipe", stdout: "pipe", stderr: "inherit" },
+  )
+  await proc.stdin.write(rows)
+  await proc.stdin.end()
+  const [out, code] = await Promise.all([
+    new Response(proc.stdout).text(),
+    proc.exited,
+  ])
+  if (code !== 0) return null // 130 = Esc/Ctrl-C, 1 = no match, 2 = fzf error (printed to stderr)
+  const selected = out.trim()
+  if (selected.length === 0) return null
+  return selected.split("\t")[0]
 }
 
 async function resume(session: Session): Promise<void> {
