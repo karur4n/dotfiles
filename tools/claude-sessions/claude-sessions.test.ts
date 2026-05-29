@@ -27,3 +27,34 @@ test("parseWorktreePorcelain extracts worktree paths", () => {
 test("parseWorktreePorcelain handles empty input", () => {
   expect(parseWorktreePorcelain("")).toEqual([])
 })
+
+import { findContainingWorktree } from "./claude-sessions.ts"
+
+test("findContainingWorktree matches exact worktree path", () => {
+  const wts = ["/Users/me/repo", "/Users/me/repo/.wt/feature"]
+  expect(findContainingWorktree("/Users/me/repo", wts)).toBe("/Users/me/repo")
+})
+
+test("findContainingWorktree matches a subdirectory of a worktree", () => {
+  const wts = ["/Users/me/repo", "/Users/me/repo/.wt/feature"]
+  expect(
+    findContainingWorktree("/Users/me/repo/.wt/feature/packages/api", wts),
+  ).toBe("/Users/me/repo/.wt/feature")
+})
+
+test("findContainingWorktree prefers the longest (most specific) match", () => {
+  const wts = ["/Users/me/repo", "/Users/me/repo/.wt/feature"]
+  expect(
+    findContainingWorktree("/Users/me/repo/.wt/feature", wts),
+  ).toBe("/Users/me/repo/.wt/feature")
+})
+
+test("findContainingWorktree returns null when cwd is outside all worktrees", () => {
+  const wts = ["/Users/me/repo"]
+  expect(findContainingWorktree("/Users/other/proj", wts)).toBeNull()
+})
+
+test("findContainingWorktree does not match sibling prefix collisions", () => {
+  const wts = ["/Users/me/repo"]
+  expect(findContainingWorktree("/Users/me/repo-2", wts)).toBeNull()
+})
