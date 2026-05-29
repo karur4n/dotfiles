@@ -206,6 +206,31 @@ test("formatRow prefers aiTitle over the last user prompt as the label", () => {
   expect(visible).not.toContain("implement the thing please")
 })
 
+import { initScript } from "./claude-sessions.ts"
+
+test("initScript(fish) emits a cs function that calls the binary and resumes", () => {
+  const s = initScript("fish")
+  expect(s).not.toBeNull()
+  expect(s).toContain("function cs")
+  expect(s).toContain("command claude-sessions --print")
+  expect(s).toContain("claude --resume $out[2]")
+})
+
+test("initScript(bash) and initScript(zsh) emit a POSIX cs function", () => {
+  for (const sh of ["bash", "zsh"]) {
+    const s = initScript(sh)
+    expect(s).not.toBeNull()
+    expect(s).toContain("cs() {")
+    expect(s).toContain("command claude-sessions --print")
+    expect(s).toContain('claude --resume "$id"')
+  }
+})
+
+test("initScript returns null for an unknown shell", () => {
+  expect(initScript("powershell")).toBeNull()
+  expect(initScript("")).toBeNull()
+})
+
 import { resolveSessionDir } from "./claude-sessions.ts"
 
 test("resolveSessionDir uses the session cwd when it exists", () => {

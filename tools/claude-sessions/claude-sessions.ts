@@ -165,6 +165,36 @@ export function resolveSessionDir(session: Session, cwdExists: boolean): string 
   return cwdExists ? session.cwd : session.worktreePath
 }
 
+const FISH_INIT = `function cs --description 'Pick a Claude session (current repo + worktrees) and resume it, cd-ing into its dir'
+    set -l out (command claude-sessions --print)
+    or return $status
+    test (count $out) -lt 2; and return
+    cd $out[1]; and claude --resume $out[2]
+end`
+
+const POSIX_INIT = `cs() {
+  local out dir id
+  out="$(command claude-sessions --print)" || return $?
+  [ -z "$out" ] && return 0
+  dir="$(printf '%s\\n' "$out" | sed -n '1p')"
+  id="$(printf '%s\\n' "$out" | sed -n '2p')"
+  [ -n "$dir" ] && [ -n "$id" ] && cd "$dir" && claude --resume "$id"
+}`
+
+// git-wt-style shell integration: `claude-sessions --init <shell>` prints a wrapper
+// function the shell evals/sources, so the parent shell cd's into the session dir.
+export function initScript(shell: string): string | null {
+  switch (shell) {
+    case "fish":
+      return FISH_INIT
+    case "bash":
+    case "zsh":
+      return POSIX_INIT
+    default:
+      return null
+  }
+}
+
 const HEAD_BYTES = 64 * 1024
 const TAIL_BYTES = 256 * 1024
 
@@ -300,6 +330,18 @@ async function resume(session: Session): Promise<void> {
 }
 
 async function main(): Promise<void> {
+  const args = process.argv.slice(2)
+  const initIdx = args.indexOf("--init")
+  if (initIdx !== -1) {
+    const script = initScript(args[initIdx + 1] ?? "")
+    if (script === null) {
+      console.error("Usage: claude-sessions --init <bash|zsh|fish>")
+      process.exit(1)
+    }
+    console.log(script)
+    return
+  }
+
   let worktrees: string[]
   try {
     worktrees = await getWorktreePaths()

@@ -1,9 +1,9 @@
-function cs --description 'Claude セッションを選んで、その cwd へ cd しつつ resume'
-    # ~/.config/fish は dotfiles リポジトリへの symlink。関数の位置からリポジトリ root を解決し、
-    # ghq のパスをハードコードせずにツールを参照する。
-    set -l repo (path resolve (status dirname)/../../..)
-    set -l out (bun $repo/tools/claude-sessions/claude-sessions.ts --print)
-    or return $status                      # 非 git / 依存不足は CLI 側がメッセージを出して非0終了
-    test (count $out) -lt 2; and return    # Esc キャンセル時は出力なし
+# claude-sessions のシェル統合（fish オートロード）。
+# 内容は `claude-sessions --init fish` の出力と同一。bash/zsh は eval "$(claude-sessions --init bash)" を使う。
+# 起動コストと conf.d ロード順（mise より前に走る問題）を避けるため、source ではなくオートロードで定義する。
+function cs --description 'Pick a Claude session (current repo + worktrees) and resume it, cd-ing into its dir'
+    set -l out (command claude-sessions --print)
+    or return $status
+    test (count $out) -lt 2; and return
     cd $out[1]; and claude --resume $out[2]
 end

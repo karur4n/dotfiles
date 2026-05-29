@@ -17,7 +17,8 @@ git リポジトリ内で実行する:
 bun /path/to/tools/claude-sessions/claude-sessions.ts
 ```
 
-PATH に通すには、任意の bin ディレクトリへシンボリックリンクを張る:
+PATH に通すには、任意の bin ディレクトリへシンボリックリンクを張る（この dotfiles では
+chezmoi が `~/.local/bin/claude-sessions` を自動で張る）:
 
 ```sh
 ln -s "$PWD/tools/claude-sessions/claude-sessions.ts" ~/.local/bin/claude-sessions
@@ -29,21 +30,30 @@ ln -s "$PWD/tools/claude-sessions/claude-sessions.ts" ~/.local/bin/claude-sessio
 各行の表示: `ブランチ  相対更新時刻  メッセージ数  短縮sessionId  ラベル`
 ラベルは AI 生成タイトル（`ai-title`）。無いセッションは最終ユーザープロンプトを表示。
 
-## シェル統合（cd してから resume / fish）
+## シェル統合（cd してから resume）
 
 CLI 単体実行だと、resume 後に元のディレクトリへ戻る（子プロセスは親シェルの cwd を
-変更できないため）。シェル自身を worktree へ `cd` させたい場合は `--print` モードと
-ラッパー関数を使う。`--print` は `claude` を起動せず、cd 先ディレクトリと sessionId を
-stdout に2行で出力する（fzf の UI は tty/stderr に描画されるので関数側で stdout を
-受けても問題ない）。
+変更できないため）。シェル自身を worktree へ `cd` させ続けるには、git-wt と同じく
+`--init` が出力するラッパー関数 `cs` を使う。`cs` は `claude-sessions --print` を呼ぶ
+（`--print` は `claude` を起動せず cd 先ディレクトリと sessionId を stdout に2行で出力。
+fzf の UI は tty/stderr に描画されるので stdout を受けても問題ない）。
+
+```sh
+claude-sessions --init <bash|zsh|fish>   # ラッパー関数 cs を出力
+```
+
+bash / zsh:
+
+```sh
+eval "$(claude-sessions --init bash)"    # ~/.bashrc / ~/.zshrc に追記
+```
+
+fish: この dotfiles ではオートロード関数 `configs/fish/functions/cs.fish` として設置済み
+（内容は `claude-sessions --init fish` と同一）。手動なら次のどちらか:
 
 ```fish
-function cs --description 'Claude セッションを選んで、その cwd へ cd しつつ resume'
-    set -l out (claude-sessions --print)
-    or return $status                      # 非 git / 依存不足は CLI 側がメッセージを出して非0終了
-    test (count $out) -lt 2; and return    # Esc キャンセル時は出力なし
-    cd $out[1]; and claude --resume $out[2]
-end
+claude-sessions --init fish > ~/.config/fish/functions/cs.fish   # オートロード（推奨・起動コスト0）
+# または config.fish 等で:  claude-sessions --init fish | source
 ```
 
 これで `cs` 実行 → 一覧から選ぶ → 選んだセッションの cwd に cd した状態で resume し、
