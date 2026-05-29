@@ -177,6 +177,7 @@ const sampleSession: Session = {
   updatedAt: new Date("2026-05-29T09:00:00Z"),
   messageCount: 42,
   lastUserPrompt: "implement the   thing\nplease",
+  aiTitle: null,
 }
 
 test("formatRow puts sessionId in a leading tab-delimited hidden field", () => {
@@ -197,6 +198,37 @@ test("formatRow shows a placeholder for empty branch", () => {
   expect(row.split("\t")[1]).toContain("(no branch)")
 })
 
+test("formatRow prefers aiTitle over the last user prompt as the label", () => {
+  const now = new Date("2026-05-29T12:00:00Z")
+  const row = formatRow({ ...sampleSession, aiTitle: "PR #35190 ロジック実装" }, now)
+  const visible = row.split("\t")[1]
+  expect(visible).toContain("PR #35190 ロジック実装")
+  expect(visible).not.toContain("implement the thing please")
+})
+
+import { extractLatestAiTitle } from "./claude-sessions.ts"
+
+test("extractLatestAiTitle returns the most recent ai-title", () => {
+  const tail = [
+    JSON.stringify({ type: "ai-title", aiTitle: "old title", sessionId: "s" }),
+    JSON.stringify({ type: "assistant", message: { role: "assistant", content: "x" } }),
+    JSON.stringify({ type: "ai-title", aiTitle: "new title", sessionId: "s" }),
+  ].join("\n")
+  expect(extractLatestAiTitle(tail)).toBe("new title")
+})
+
+test("extractLatestAiTitle tolerates a truncated leading line from tail slice", () => {
+  const tail =
+    'le":"truncated"}\n' +
+    JSON.stringify({ type: "ai-title", aiTitle: "real title", sessionId: "s" })
+  expect(extractLatestAiTitle(tail)).toBe("real title")
+})
+
+test("extractLatestAiTitle returns null when no ai-title is present", () => {
+  const tail = JSON.stringify({ type: "user", message: { role: "user", content: "hi" } })
+  expect(extractLatestAiTitle(tail)).toBeNull()
+})
+
 import { collectSessions } from "./claude-sessions.ts"
 
 test("collectSessions returns only sessions whose cwd is inside a worktree, newest first", async () => {
@@ -211,6 +243,7 @@ test("collectSessions returns only sessions whose cwd is inside a worktree, newe
       [
         JSON.stringify({ type: "system", cwd: wt + "/packages/api", gitBranch: "feature" }),
         JSON.stringify({ type: "user", message: { role: "user", content: "do A" } }),
+        JSON.stringify({ type: "ai-title", aiTitle: "title for A", sessionId: "aaaaaaaa-0000-0000-0000-000000000000" }),
       ].join("\n") + "\n",
     )
 
@@ -227,7 +260,8 @@ test("collectSessions returns only sessions whose cwd is inside a worktree, newe
     expect(sessions[0].worktreePath).toBe(wt)
     expect(sessions[0].branch).toBe("feature")
     expect(sessions[0].lastUserPrompt).toBe("do A")
-    expect(sessions[0].messageCount).toBe(2)
+    expect(sessions[0].aiTitle).toBe("title for A")
+    expect(sessions[0].messageCount).toBe(3)
     expect(sessions[0].updatedAt instanceof Date).toBe(true)
   } finally {
     await rm(projects, { recursive: true, force: true })

@@ -12,6 +12,7 @@ export type Session = {
   updatedAt: Date
   messageCount: number
   lastUserPrompt: string
+  aiTitle: string | null
 }
 
 export class NotAGitRepoError extends Error {}
@@ -126,14 +127,35 @@ export function extractLastUserPrompt(tailText: string): string | null {
   return null
 }
 
+export function extractLatestAiTitle(tailText: string): string | null {
+  const lines = tailText.split("\n")
+  for (let i = lines.length - 1; i >= 0; i--) {
+    const t = lines[i].trim()
+    if (t.length === 0) continue
+    let obj: unknown
+    try {
+      obj = JSON.parse(t)
+    } catch {
+      continue
+    }
+    if (obj === null || typeof obj !== "object") continue
+    const rec = obj as Record<string, unknown>
+    if (rec.type !== "ai-title") continue
+    if (typeof rec.aiTitle === "string" && rec.aiTitle.trim().length > 0) {
+      return rec.aiTitle.trim()
+    }
+  }
+  return null
+}
+
 export function formatRow(session: Session, now: Date): string {
   const branch = session.branch || "(no branch)"
   const rel = formatRelativeTime(session.updatedAt, now)
   const shortId = session.sessionId.slice(0, 8)
-  const prompt = truncate(session.lastUserPrompt || "(no prompt)", 80)
+  const label = truncate(session.aiTitle || session.lastUserPrompt || "(no prompt)", 80)
   const visible =
     `${branch.padEnd(24)} ${rel.padStart(8)}  ` +
-    `${String(session.messageCount).padStart(5)}msg  ${shortId}  ${prompt}`
+    `${String(session.messageCount).padStart(5)}msg  ${shortId}  ${label}`
   return `${session.sessionId}\t${visible}`
 }
 
@@ -186,6 +208,7 @@ async function readSessionMeta(
   if (worktreePath === null) return null
   const tailText = await f.slice(Math.max(0, st.size - TAIL_BYTES), st.size).text()
   const lastUserPrompt = extractLastUserPrompt(tailText) ?? "(prompt not found)"
+  const aiTitle = extractLatestAiTitle(tailText)
   const messageCount = await countLines(file)
   const sessionId = basename(file).replace(/\.jsonl$/, "")
   return {
@@ -196,6 +219,7 @@ async function readSessionMeta(
     updatedAt: st.mtime,
     messageCount,
     lastUserPrompt,
+    aiTitle,
   }
 }
 
