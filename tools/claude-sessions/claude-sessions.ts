@@ -1,6 +1,7 @@
 #!/usr/bin/env bun
 
-import { readdir, stat } from "node:fs/promises"
+import { readdir, stat, mkdtemp, writeFile, rm } from "node:fs/promises"
+import { tmpdir } from "node:os"
 import { basename, join } from "node:path"
 
 export type Session = {
@@ -226,9 +227,122 @@ export async function collectSessions(
   return sessions
 }
 
+async function getWorktreePaths(): Promise<string[]> {
+  const proc = Bun.spawn(["git", "worktree", "list", "--porcelain"], {
+    stdout: "pipe",
+    stderr: "pipe",
+  })
+  const [out, err, code] = await Promise.all([
+    new Response(proc.stdout).text(),
+    new Response(proc.stderr).text(),
+    proc.exited,
+  ])
+  if (code !== 0) {
+    throw new NotAGitRepoError(err.trim() || "git worktree list failed")
+  }
+  return parseWorktreePorcelain(out)
+}
+
+async function pickSession(sessions: Session[], now: Date): Promise<string | null> {
+  if (!Bun.which("fzf")) {
+    throw new MissingDependencyError("fzf is required. Install it with: brew install fzf")
+  }
+  const dir = await mkdtemp(join(tmpdir(), "claude-sessions-"))
+  try {
+    await Promise.all(
+      sessions.map((s) => writeFile(join(dir, s.sessionId), formatPreview(s))),
+    )
+    const rows = sessions.map((s) => formatRow(s, now)).join("\n")
+    const proc = Bun.spawn(
+      [
+        "fzf",
+        "--delimiter=	",
+        "--with-nth=2..",
+        "--preview",
+        `cat ${dir}/{1}`,
+        "--preview-window=right,50%,wrap",
+        "--prompt=claude session> ",
+      ],
+      { stdin: "pipe", stdout: "pipe", stderr: "inherit" },
+    )
+    proc.stdin.write(rows)
+    await proc.stdin.end()
+    const [out, code] = await Promise.all([
+      new Response(proc.stdout).text(),
+      proc.exited,
+    ])
+    if (code !== 0) return null // 130 = user cancelled (Esc / Ctrl-C)
+    const selected = out.trim()
+    if (selected.length === 0) return null
+    return selected.split("\t")[0]
+  } finally {
+    await rm(dir, { recursive: true, force: true })
+  }
+}
+
+async function resume(session: Session): Promise<void> {
+  if (!Bun.which("claude")) {
+    throw new MissingDependencyError("claude CLI not found in PATH")
+  }
+  const proc = Bun.spawn(["claude", "--resume", session.sessionId], {
+    cwd: session.cwd,
+    stdin: "inherit",
+    stdout: "inherit",
+    stderr: "inherit",
+  })
+  await proc.exited
+}
+
 async function main(): Promise<void> {
-  console.error("not implemented yet")
-  process.exit(1)
+  let worktrees: string[]
+  try {
+    worktrees = await getWorktreePaths()
+  } catch (e) {
+    if (e instanceof NotAGitRepoError) {
+      console.error("Not a git repository (run this inside a git repo).")
+      process.exit(1)
+    }
+    throw e
+  }
+
+  const home = process.env.HOME ?? ""
+  const projectsDir = join(home, ".claude", "projects")
+  const now = new Date()
+  const sessions = await collectSessions(projectsDir, worktrees)
+
+  if (sessions.length === 0) {
+    console.error("No Claude sessions found for this repository or its worktrees.")
+    process.exit(0)
+  }
+
+  let selectedId: string | null
+  try {
+    selectedId = await pickSession(sessions, now)
+  } catch (e) {
+    if (e instanceof MissingDependencyError) {
+      console.error(e.message)
+      process.exit(1)
+    }
+    throw e
+  }
+
+  if (selectedId === null) process.exit(0) // cancelled
+
+  const selected = sessions.find((s) => s.sessionId === selectedId)
+  if (selected === undefined) {
+    console.error("Selected session not found.")
+    process.exit(1)
+  }
+
+  try {
+    await resume(selected)
+  } catch (e) {
+    if (e instanceof MissingDependencyError) {
+      console.error(e.message)
+      process.exit(1)
+    }
+    throw e
+  }
 }
 
 if (import.meta.main) {
