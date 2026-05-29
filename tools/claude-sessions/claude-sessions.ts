@@ -66,6 +66,45 @@ export function extractCwdBranch(
   return null
 }
 
+export function extractLastUserPrompt(tailText: string): string | null {
+  const lines = tailText.split("\n")
+  for (let i = lines.length - 1; i >= 0; i--) {
+    const t = lines[i].trim()
+    if (t.length === 0) continue
+    let obj: unknown
+    try {
+      obj = JSON.parse(t)
+    } catch {
+      continue
+    }
+    if (obj === null || typeof obj !== "object") continue
+    const rec = obj as Record<string, unknown>
+    if (rec.type !== "user") continue
+    if (rec.isMeta === true) continue
+    const message = rec.message as Record<string, unknown> | undefined
+    const content = message?.content
+    let text: string | null = null
+    if (typeof content === "string") {
+      text = content
+    } else if (Array.isArray(content)) {
+      const hasToolResult = content.some(
+        (p) => p !== null && typeof p === "object" && (p as Record<string, unknown>).type === "tool_result",
+      )
+      if (hasToolResult) continue
+      const textPart = content.find(
+        (p) =>
+          p !== null &&
+          typeof p === "object" &&
+          (p as Record<string, unknown>).type === "text" &&
+          typeof (p as Record<string, unknown>).text === "string",
+      ) as { text: string } | undefined
+      if (textPart) text = textPart.text
+    }
+    if (text !== null && text.trim().length > 0) return text.trim()
+  }
+  return null
+}
+
 async function main(): Promise<void> {
   console.error("not implemented yet")
   process.exit(1)

@@ -90,3 +90,54 @@ test("extractCwdBranch returns null when no cwd present", () => {
   const head = JSON.stringify({ type: "last-prompt", leafUuid: "x" })
   expect(extractCwdBranch(head)).toBeNull()
 })
+
+import { extractLastUserPrompt } from "./claude-sessions.ts"
+
+test("extractLastUserPrompt returns the last string-content user message", () => {
+  const tail = [
+    JSON.stringify({ type: "user", message: { role: "user", content: "first" } }),
+    JSON.stringify({ type: "assistant", message: { role: "assistant", content: "ok" } }),
+    JSON.stringify({ type: "user", message: { role: "user", content: "second" } }),
+    JSON.stringify({ type: "assistant", message: { role: "assistant", content: "done" } }),
+  ].join("\n")
+  expect(extractLastUserPrompt(tail)).toBe("second")
+})
+
+test("extractLastUserPrompt extracts text part from array content", () => {
+  const tail = JSON.stringify({
+    type: "user",
+    message: { role: "user", content: [{ type: "text", text: "hello there" }] },
+  })
+  expect(extractLastUserPrompt(tail)).toBe("hello there")
+})
+
+test("extractLastUserPrompt skips tool_result user messages", () => {
+  const tail = [
+    JSON.stringify({ type: "user", message: { role: "user", content: "real prompt" } }),
+    JSON.stringify({
+      type: "user",
+      message: { role: "user", content: [{ type: "tool_result", content: "x" }] },
+    }),
+  ].join("\n")
+  expect(extractLastUserPrompt(tail)).toBe("real prompt")
+})
+
+test("extractLastUserPrompt skips meta messages", () => {
+  const tail = [
+    JSON.stringify({ type: "user", message: { role: "user", content: "keep me" } }),
+    JSON.stringify({ type: "user", isMeta: true, message: { role: "user", content: "meta noise" } }),
+  ].join("\n")
+  expect(extractLastUserPrompt(tail)).toBe("keep me")
+})
+
+test("extractLastUserPrompt tolerates a truncated leading line from tail slice", () => {
+  const tail =
+    'tial":"truncated json from slice boundary"}\n' +
+    JSON.stringify({ type: "user", message: { role: "user", content: "good" } })
+  expect(extractLastUserPrompt(tail)).toBe("good")
+})
+
+test("extractLastUserPrompt returns null when no user prompt present", () => {
+  const tail = JSON.stringify({ type: "assistant", message: { role: "assistant", content: "x" } })
+  expect(extractLastUserPrompt(tail)).toBeNull()
+})
