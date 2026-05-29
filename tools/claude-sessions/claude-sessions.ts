@@ -41,6 +41,31 @@ export function findContainingWorktree(
   return best
 }
 
+export function extractCwdBranch(
+  headText: string,
+): { cwd: string; branch: string } | null {
+  for (const line of headText.split("\n")) {
+    const t = line.trim()
+    if (t.length === 0) continue
+    let obj: unknown
+    try {
+      obj = JSON.parse(t)
+    } catch {
+      continue
+    }
+    if (obj !== null && typeof obj === "object" && "cwd" in obj) {
+      const rec = obj as Record<string, unknown>
+      if (typeof rec.cwd === "string") {
+        return {
+          cwd: rec.cwd,
+          branch: typeof rec.gitBranch === "string" ? rec.gitBranch : "",
+        }
+      }
+    }
+  }
+  return null
+}
+
 async function main(): Promise<void> {
   console.error("not implemented yet")
   process.exit(1)
