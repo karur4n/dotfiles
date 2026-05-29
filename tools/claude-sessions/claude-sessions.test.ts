@@ -141,3 +141,24 @@ test("extractLastUserPrompt returns null when no user prompt present", () => {
   const tail = JSON.stringify({ type: "assistant", message: { role: "assistant", content: "x" } })
   expect(extractLastUserPrompt(tail)).toBeNull()
 })
+
+import { formatRelativeTime, truncate } from "./claude-sessions.ts"
+
+test("formatRelativeTime renders coarse buckets", () => {
+  const now = new Date("2026-05-29T12:00:00Z")
+  expect(formatRelativeTime(new Date("2026-05-29T11:59:30Z"), now)).toBe("30s ago")
+  expect(formatRelativeTime(new Date("2026-05-29T11:30:00Z"), now)).toBe("30m ago")
+  expect(formatRelativeTime(new Date("2026-05-29T09:00:00Z"), now)).toBe("3h ago")
+  expect(formatRelativeTime(new Date("2026-05-26T12:00:00Z"), now)).toBe("3d ago")
+  expect(formatRelativeTime(new Date("2026-05-08T12:00:00Z"), now)).toBe("3w ago")
+})
+
+test("formatRelativeTime clamps future timestamps to 0s", () => {
+  const now = new Date("2026-05-29T12:00:00Z")
+  expect(formatRelativeTime(new Date("2026-05-29T12:01:00Z"), now)).toBe("0s ago")
+})
+
+test("truncate collapses whitespace and adds ellipsis past the limit", () => {
+  expect(truncate("  hello   world  ", 80)).toBe("hello world")
+  expect(truncate("abcdefghij", 5)).toBe("abcd…")
+})
