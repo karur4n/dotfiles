@@ -152,6 +152,81 @@ export function formatPreview(session: Session): string {
   ].join("\n")
 }
 
+const HEAD_BYTES = 64 * 1024
+const TAIL_BYTES = 256 * 1024
+
+async function listSessionFiles(projectsDir: string): Promise<string[]> {
+  let dirents
+  try {
+    dirents = await readdir(projectsDir, { withFileTypes: true })
+  } catch {
+    return []
+  }
+  const files: string[] = []
+  for (const d of dirents) {
+    if (!d.isDirectory()) continue
+    const sub = join(projectsDir, d.name)
+    let entries: string[]
+    try {
+      entries = await readdir(sub)
+    } catch {
+      continue
+    }
+    for (const e of entries) {
+      if (e.endsWith(".jsonl")) files.push(join(sub, e))
+    }
+  }
+  return files
+}
+
+async function countLines(path: string): Promise<number> {
+  const proc = Bun.spawn(["wc", "-l", path], { stdout: "pipe", stderr: "ignore" })
+  const [out] = await Promise.all([new Response(proc.stdout).text(), proc.exited])
+  const n = parseInt(out.trim().split(/\s+/)[0] ?? "0", 10)
+  return Number.isFinite(n) ? n : 0
+}
+
+async function readSessionMeta(
+  file: string,
+  worktrees: string[],
+): Promise<Session | null> {
+  const f = Bun.file(file)
+  const size = f.size
+  if (size === 0) return null
+  const headText = await f.slice(0, Math.min(HEAD_BYTES, size)).text()
+  const cb = extractCwdBranch(headText)
+  if (cb === null) return null
+  const worktreePath = findContainingWorktree(cb.cwd, worktrees)
+  if (worktreePath === null) return null
+  const tailText = await f.slice(Math.max(0, size - TAIL_BYTES), size).text()
+  const lastUserPrompt = extractLastUserPrompt(tailText) ?? "(prompt not found)"
+  const st = await stat(file)
+  const messageCount = await countLines(file)
+  const sessionId = basename(file).replace(/\.jsonl$/, "")
+  return {
+    sessionId,
+    cwd: cb.cwd,
+    branch: cb.branch,
+    worktreePath,
+    updatedAt: st.mtime,
+    messageCount,
+    lastUserPrompt,
+  }
+}
+
+export async function collectSessions(
+  projectsDir: string,
+  worktrees: string[],
+): Promise<Session[]> {
+  const files = await listSessionFiles(projectsDir)
+  const metas = await Promise.all(
+    files.map((f) => readSessionMeta(f, worktrees).catch(() => null)),
+  )
+  const sessions = metas.filter((s): s is Session => s !== null)
+  sessions.sort((a, b) => b.updatedAt.getTime() - a.updatedAt.getTime())
+  return sessions
+}
+
 async function main(): Promise<void> {
   console.error("not implemented yet")
   process.exit(1)

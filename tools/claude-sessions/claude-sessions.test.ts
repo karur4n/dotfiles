@@ -1,6 +1,9 @@
 import { expect, test } from "bun:test"
 import * as mod from "./claude-sessions.ts"
 import { parseWorktreePorcelain } from "./claude-sessions.ts"
+import { mkdtemp, writeFile, rm } from "node:fs/promises"
+import { tmpdir } from "node:os"
+import { join } from "node:path"
 
 test("module exports Session type usage compiles and error classes exist", () => {
   expect(typeof mod.NotAGitRepoError).toBe("function")
@@ -202,4 +205,47 @@ test("formatPreview includes full context and the full prompt", () => {
   expect(preview).toContain("feature")
   expect(preview).toContain("42")
   expect(preview).toContain("implement the   thing\nplease")
+})
+
+import { collectSessions } from "./claude-sessions.ts"
+import { mkdir } from "node:fs/promises"
+
+test("collectSessions returns only sessions whose cwd is inside a worktree, newest first", async () => {
+  const projects = await mkdtemp(join(tmpdir(), "cs-projects-"))
+  const wt = "/virtual/repo/.wt/feature"
+  try {
+    const dirA = join(projects, "encoded-A")
+    await mkdir(dirA, { recursive: true })
+    const fileA = join(dirA, "aaaaaaaa-0000-0000-0000-000000000000.jsonl")
+    await writeFile(
+      fileA,
+      [
+        JSON.stringify({ type: "system", cwd: wt + "/packages/api", gitBranch: "feature" }),
+        JSON.stringify({ type: "user", message: { role: "user", content: "do A" } }),
+      ].join("\n") + "\n",
+    )
+
+    const dirB = join(projects, "encoded-B")
+    await mkdir(dirB, { recursive: true })
+    await writeFile(
+      join(dirB, "bbbbbbbb-0000-0000-0000-000000000000.jsonl"),
+      JSON.stringify({ type: "system", cwd: "/somewhere/else", gitBranch: "x" }) + "\n",
+    )
+
+    const sessions = await collectSessions(projects, ["/virtual/repo", wt])
+    expect(sessions.length).toBe(1)
+    expect(sessions[0].sessionId).toBe("aaaaaaaa-0000-0000-0000-000000000000")
+    expect(sessions[0].worktreePath).toBe(wt)
+    expect(sessions[0].branch).toBe("feature")
+    expect(sessions[0].lastUserPrompt).toBe("do A")
+    expect(sessions[0].messageCount).toBe(2)
+    expect(sessions[0].updatedAt instanceof Date).toBe(true)
+  } finally {
+    await rm(projects, { recursive: true, force: true })
+  }
+})
+
+test("collectSessions returns empty array when projects dir is missing", async () => {
+  const sessions = await collectSessions("/nonexistent/projects/dir", ["/virtual/repo"])
+  expect(sessions).toEqual([])
 })
