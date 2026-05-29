@@ -206,6 +206,16 @@ test("formatRow prefers aiTitle over the last user prompt as the label", () => {
   expect(visible).not.toContain("implement the thing please")
 })
 
+import { resolveSessionDir } from "./claude-sessions.ts"
+
+test("resolveSessionDir uses the session cwd when it exists", () => {
+  expect(resolveSessionDir(sampleSession, true)).toBe("/Users/me/repo/.wt/feature/packages/api")
+})
+
+test("resolveSessionDir falls back to the worktree root when the cwd is gone", () => {
+  expect(resolveSessionDir(sampleSession, false)).toBe("/Users/me/repo/.wt/feature")
+})
+
 import { extractLatestAiTitle } from "./claude-sessions.ts"
 
 test("extractLatestAiTitle returns the most recent ai-title", () => {

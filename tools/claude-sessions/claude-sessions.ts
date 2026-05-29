@@ -159,6 +159,12 @@ export function formatRow(session: Session, now: Date): string {
   return `${session.sessionId}\t${visible}`
 }
 
+// The session's recorded cwd may be a (now-deleted) package subdir; the worktree
+// root is always present because git just enumerated it.
+export function resolveSessionDir(session: Session, cwdExists: boolean): string {
+  return cwdExists ? session.cwd : session.worktreePath
+}
+
 const HEAD_BYTES = 64 * 1024
 const TAIL_BYTES = 256 * 1024
 
@@ -282,8 +288,7 @@ async function resume(session: Session): Promise<void> {
   if (!Bun.which("claude")) {
     throw new MissingDependencyError("claude CLI not found in PATH")
   }
-  // session.cwd may be a package subdir that was deleted; the worktree root always exists
-  const cwd = existsSync(session.cwd) ? session.cwd : session.worktreePath
+  const cwd = resolveSessionDir(session, existsSync(session.cwd))
   const proc = Bun.spawn(["claude", "--resume", session.sessionId], {
     cwd,
     stdin: "inherit",
@@ -337,6 +342,14 @@ async function main(): Promise<void> {
   if (selected === undefined) {
     console.error("Selected session not found.")
     process.exit(1)
+  }
+
+  // --print: emit the target dir and sessionId for a shell wrapper to `cd` and resume,
+  // so the parent shell stays in the worktree. stdout = exactly two lines.
+  if (process.argv.slice(2).includes("--print")) {
+    console.log(resolveSessionDir(selected, existsSync(selected.cwd)))
+    console.log(selected.sessionId)
+    return
   }
 
   try {

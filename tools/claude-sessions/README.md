@@ -24,9 +24,30 @@ ln -s "$PWD/tools/claude-sessions/claude-sessions.ts" ~/.local/bin/claude-sessio
 ```
 
 - 新しい順に並ぶ。fuzzy 検索で絞り込める。
-- Enter で選択 → そのセッションの worktree で resume。Esc で何もせず終了。
+- Enter で選択 → そのセッションの cwd（無ければ worktree ルート）で resume。Esc で何もせず終了。
 
-各行の表示: `ブランチ  相対更新時刻  メッセージ数  短縮sessionId  最終ユーザープロンプト`
+各行の表示: `ブランチ  相対更新時刻  メッセージ数  短縮sessionId  ラベル`
+ラベルは AI 生成タイトル（`ai-title`）。無いセッションは最終ユーザープロンプトを表示。
+
+## シェル統合（cd してから resume / fish）
+
+CLI 単体実行だと、resume 後に元のディレクトリへ戻る（子プロセスは親シェルの cwd を
+変更できないため）。シェル自身を worktree へ `cd` させたい場合は `--print` モードと
+ラッパー関数を使う。`--print` は `claude` を起動せず、cd 先ディレクトリと sessionId を
+stdout に2行で出力する（fzf の UI は tty/stderr に描画されるので関数側で stdout を
+受けても問題ない）。
+
+```fish
+function cs --description 'Claude セッションを選んで、その cwd へ cd しつつ resume'
+    set -l out (claude-sessions --print)
+    or return $status                      # 非 git / 依存不足は CLI 側がメッセージを出して非0終了
+    test (count $out) -lt 2; and return    # Esc キャンセル時は出力なし
+    cd $out[1]; and claude --resume $out[2]
+end
+```
+
+これで `cs` 実行 → 一覧から選ぶ → 選んだセッションの cwd に cd した状態で resume し、
+Claude を抜けてもそのディレクトリに留まる。
 
 ## 仕組み
 
