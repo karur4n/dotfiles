@@ -126,6 +126,32 @@ export function extractLastUserPrompt(tailText: string): string | null {
   return null
 }
 
+export function formatRow(session: Session, now: Date): string {
+  const branch = session.branch || "(no branch)"
+  const rel = formatRelativeTime(session.updatedAt, now)
+  const shortId = session.sessionId.slice(0, 8)
+  const prompt = truncate(session.lastUserPrompt || "(no prompt)", 80)
+  const visible =
+    `${branch.padEnd(24)} ${rel.padStart(8)}  ` +
+    `${String(session.messageCount).padStart(5)}msg  ${shortId}  ${prompt}`
+  return `${session.sessionId}\t${visible}`
+}
+
+export function formatPreview(session: Session): string {
+  return [
+    `Session : ${session.sessionId}`,
+    `Branch  : ${session.branch || "(no branch)"}`,
+    `Worktree: ${session.worktreePath}`,
+    `CWD     : ${session.cwd}`,
+    `Updated : ${session.updatedAt.toISOString()}`,
+    `Messages: ${session.messageCount}`,
+    ``,
+    `Last user prompt:`,
+    `----------------`,
+    session.lastUserPrompt || "(no prompt)",
+  ].join("\n")
+}
+
 async function main(): Promise<void> {
   console.error("not implemented yet")
   process.exit(1)
