@@ -1,5 +1,9 @@
 return {
   "folke/snacks.nvim",
+  -- LazyVim default <leader><space> is Find Files (Root Dir); override to cwd
+  keys = {
+    { "<leader><space>", LazyVim.pick("files", { root = false }), desc = "Find Files (cwd)" },
+  },
   opts = {
     picker = {
       hidden = true,
