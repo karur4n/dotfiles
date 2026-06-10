@@ -7,6 +7,12 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "disable_ai": false,
+  "agent_servers": {
+    "codex-acp": {
+      "type": "registry"
+    }
+  },
   "tabs": {
     "git_status": false,
     "file_icons": true
@@ -27,7 +33,13 @@
     "dock": "right"
   },
   "agent": {
-    "dock": "left",
+    "default_model": {
+      "provider": "openai-subscribed",
+      "model": "gpt-5.5",
+      "enable_thinking": true,
+      "effort": "medium"
+    },
+    "dock": "right",
     "favorite_models": [],
     "model_parameters": []
   },
@@ -41,6 +53,6 @@
   },
   "vim_mode": true,
   "ui_font_size": 15.0,
-  "buffer_font_size": 13.0,
+  "buffer_font_size": 12.0,
   "theme": "One Dark",
 }
