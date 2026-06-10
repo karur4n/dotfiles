@@ -15,3 +15,5 @@
 node_modules
 
 docs/superpowers
+.claude/scheduled_tasks.lock
+.claude/scheduled_tasks.json
