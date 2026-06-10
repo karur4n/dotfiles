@@ -227,7 +227,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "editor.formatOnSave": true,
-  "workbench.colorTheme": "Gruvbox Dark Medium",
   "cursor.cpp.disabledLanguages": ["plaintext"],
   "cSpell.spellCheckDelayMs": 200,
   "claudeCode.preferredLocation": "panel",
@@ -243,4 +242,6 @@
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1,
   },
+  "window.autoDetectColorScheme": false,
+  "workbench.colorTheme": "Default Dark Modern",
 }
