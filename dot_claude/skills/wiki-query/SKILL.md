@@ -9,9 +9,9 @@ LLM wiki を知識源として質問に答える。Chat 履歴に消えがちな
 
 ## 前提ファイル
 
-1. `<vault>/wiki/config.json` — vault 内設定
-2. `<vault>/wiki/schema.md` — ページ書式 (filing する時に必要)
-3. `<vault>/wiki/index.md` — 探索の入り口
+1. `<vault>/llm-wiki/wiki/config.json` — vault 内設定
+2. `<vault>/llm-wiki/wiki/schema.md` — ページ書式 (filing する時に必要)
+3. `<vault>/llm-wiki/wiki/index.md` — 探索の入り口
 
 vault パスはユーザー指示かコンテキストから決める。`schema.md` が無い場合は既存ページ 3-5 本をサンプリングして実際の規約を観察してから filing する (ingest skill と同じフォールバック)。
 
@@ -20,13 +20,13 @@ vault パスはユーザー指示かコンテキストから決める。`schema.
 1. **質問を分解** — 何を問われているか、どのカテゴリ・概念を跨ぎそうか特定
 2. **index.md を読む** — カテゴリ節ごとに眺めて、候補ページを 3-10 本 pick。summary が質問と関連するかで絞る
 3. **候補ページ本文を読む** — 関連セクションを抽出。frontmatter の `sources` / `tags` を見て芋づる式に広げる
-4. **必要なら grep** — index タイトル・summary で拾えない話題は本文 grep (`rg -n "<keyword>" <vault>/wiki/`)
+4. **必要なら grep** — index タイトル・summary で拾えない話題は本文 grep (`rg -n "<keyword>" <vault>/llm-wiki/wiki/`)
 5. **synthesize** — 日本語で回答。以下を守る:
    - 主張ごとに出典ページを `[[ページ名]]` か相対リンクで示す
    - 複数ページを跨ぐ時は矛盾を隠さない。食い違いは正直に提示
    - wiki に根拠が無い部分は「wiki に無いので一般論」と明示
 6. **filing 判断** — 回答が以下いずれかに当てはまるなら、新規ページとして wiki に残すか user に提案:
-   - 複数ページを跨ぐ比較・統合 (例: `<vault>/wiki/<category>/<A> vs <B>.md`)
+   - 複数ページを跨ぐ比較・統合 (例: `<vault>/llm-wiki/wiki/<category>/<A> vs <B>.md`)
    - 既存に無い概念の整理
    - 意思決定に使える判断基準表
    - 次に調べるべき問いのリスト (後で ingest の目標になる)
@@ -49,7 +49,7 @@ filing に同意が得られたら **raw に保存してから `wiki:ingest` で
 
 ### Step 1: raw に合成テキストを保存
 
-`raw/<category>/<title>.md` として保存。frontmatter:
+`llm-wiki/raw/<category>/<title>.md` として保存。frontmatter:
 
 ```yaml
 ---
@@ -72,9 +72,9 @@ log.md の query エントリは ingest エントリとまとめて prepend:
 
 ```markdown
 ## [YYYY-MM-DD] query | <質問の要約>
-- 参照: wiki/<category>/<A>.md, wiki/<category>/<B>.md
-- raw 作成: raw/<category>/<title>.md — <1 行要約>
-- wiki 新規作成: wiki/<category>/<title>.md — <1 行要約>
+- 参照: llm-wiki/wiki/<category>/<A>.md, llm-wiki/wiki/<category>/<B>.md
+- raw 作成: llm-wiki/raw/<category>/<title>.md — <1 行要約>
+- wiki 新規作成: llm-wiki/wiki/<category>/<title>.md — <1 行要約>
 - index.md 更新
 ```
 
