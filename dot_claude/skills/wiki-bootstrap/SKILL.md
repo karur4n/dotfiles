@@ -112,8 +112,8 @@ generated: YYYY-MM-DD
 - index.md 更新
 ```
 
-- `<operation>` は `ingest` / `query` / `lint` / `bootstrap` のいずれか
-- プレフィックスを固定することで `grep "^## \[" log.md | head -5` で最近の履歴を取れる
+- `<operation>` は小文字英単語 1 語。代表は `ingest` / `query` / `lint` / `bootstrap` で、保守作業は実態に合う動詞でよい (`migrate` / `rename` / `refactor` / `update` 等)
+- 守るべきは書式 `## [YYYY-MM-DD] <op> | <タイトル>`。これで `grep "^## \[" log.md | head -5` で最近の履歴を取れる
 - **新しい項目はファイル先頭に prepend** (# Wiki Log 見出しの直下、他エントリの前に挿入)。新しいものが常に上に来る。過去履歴を逆時系列で一覧できる
 
 ### ディレクトリ規約

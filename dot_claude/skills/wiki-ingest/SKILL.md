@@ -1,6 +1,6 @@
 ---
 name: wiki-ingest
-description: Ingest a raw source (markdown, PDF, or image) into the personal LLM wiki. Reads the source, extracts key information in Japanese, creates or updates relevant wiki pages with cross-references, and appends an entry to log.md while refreshing index.md. Use whenever the user drops a new raw file in the vault and says "これを wiki に取り込んで", "ingest this", "wiki に追加", "読み込んで wiki 更新", or references a file under llm-wiki/raw/ that should be summarized into the wiki. Always consult schema.md for conventions before editing — never guess the frontmatter or index format.
+description: Ingest a raw source (markdown, PDF, or image) into the personal LLM wiki. Reads the source, extracts key information in Japanese, creates or updates relevant wiki pages with cross-references, and appends an entry to log.md while refreshing index.md. Use whenever the user drops a new raw file in the vault and says "これを wiki に取り込んで", "ingest this", "wiki に追加", "読み込んで wiki 更新", or references a file under llm-wiki/raw/ that should be summarized into the wiki. Also use when the user gives a web URL or article to add to the wiki, or asks to 調査して wiki に取り込んで — the source is fetched into raw/ first. Always consult schema.md for conventions before editing — never guess the frontmatter or index format.
 ---
 
 # wiki:ingest
