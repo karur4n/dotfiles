@@ -121,6 +121,13 @@ switch_workspace = "prefix+shift+1..9"   # optional indexed binding, e.g. "prefi
 # type = "pane"
 # command = "lazygit"
 
+# prefix+shift+b: fork focused claude session into a new pane below
+[[keys.command]]
+key = "prefix+shift+b"
+type = "shell"
+command = "~/.config/herdr/scripts/branch-in-new-pane.sh"
+description = "Branch claude session into new pane"
+
 # Legacy indexed shortcut config is still parsed for compatibility.
 # Prefer switch_tab, switch_workspace, and focus_agent for new configs.
 # [keys.indexed]
