@@ -121,11 +121,12 @@ switch_workspace = "prefix+shift+1..9"   # optional indexed binding, e.g. "prefi
 # type = "pane"
 # command = "lazygit"
 
-# prefix+shift+b: fork focused claude session into a new pane below
+# claude-branch plugin: prefix+shift+b で claude セッションを新 pane にフォーク
+# (要 herdr plugin link configs/herdr/plugins/claude-branch — マシンごとに1回)
 [[keys.command]]
 key = "prefix+shift+b"
 type = "shell"
-command = "~/.config/herdr/scripts/branch-in-new-pane.sh"
+command = "herdr plugin action invoke claude.branch.split"
 description = "Branch claude session into new pane"
 
 # Legacy indexed shortcut config is still parsed for compatibility.

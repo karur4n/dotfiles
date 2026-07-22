@@ -1,0 +1,12 @@
+id = "claude.branch"
+name = "Claude Branch"
+version = "0.1.0"
+min_herdr_version = "0.7.0"
+description = "Fork the focused Claude Code session into a new pane."
+platforms = ["linux", "macos"]
+
+[[actions]]
+id = "split"
+title = "Branch claude session into split pane"
+contexts = ["pane"]
+command = ["python3", "claude_branch.py"]
