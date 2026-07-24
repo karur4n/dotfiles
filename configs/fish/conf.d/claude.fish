@@ -1,0 +1,1 @@
+set --export CLAUDE_AFK_TIMEOUT_MS "10000"

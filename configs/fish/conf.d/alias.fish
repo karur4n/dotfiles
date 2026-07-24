@@ -1,4 +1,3 @@
-alias c="cursor"
 alias che="chezmoi"
 alias ls="eza -a --icons=always --color=always"
 alias ll="eza -a --icons=always --color=always -l"

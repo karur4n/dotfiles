@@ -38,10 +38,11 @@ theme = TokyoNight Night
 window-theme = auto
 window-padding-x = 8
 window-padding-y = 8
+window-new-tab-position = end
 # split-divider-color = #eee
 split-divider-color = #333333
 
-unfocused-split-opacity = 0.9
+unfocused-split-opacity = 0.5
 unfocused-split-fill = #333333
 
 # =============================================================================

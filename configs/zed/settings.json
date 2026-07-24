@@ -7,7 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "disable_ai": false,
+  "disable_ai": true,
   "agent_servers": {
     "codex-acp": {
       "type": "registry"
