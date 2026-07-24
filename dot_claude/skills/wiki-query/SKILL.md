@@ -49,12 +49,18 @@ filing に同意が得られたら **raw に保存してから `wiki:ingest` で
 
 ### Step 1: raw に合成テキストを保存
 
-`llm-wiki/raw/<category>/<title>.md` として保存。frontmatter:
+config の `raw_layout` に従う（詳細は wiki-ingest スキル参照。未設定なら nested）。
+
+- **nested**: `llm-wiki/raw/<category>/<title>.md` として保存
+- **flat**: `llm-wiki/raw/<title>.md` として保存し、frontmatter に `raw_source: <category>` を追加
+
+frontmatter:
 
 ```yaml
 ---
 title: "<タイトル>"
 source: "wiki:query"
+raw_source: <category>   # flat の vault のみ。nested なら不要
 created: YYYY-MM-DD
 description: "<質問をそのまま記載>"
 tags:
@@ -73,7 +79,7 @@ log.md の query エントリは ingest エントリとまとめて prepend:
 ```markdown
 ## [YYYY-MM-DD] query | <質問の要約>
 - 参照: llm-wiki/wiki/<category>/<A>.md, llm-wiki/wiki/<category>/<B>.md
-- raw 作成: llm-wiki/raw/<category>/<title>.md — <1 行要約>
+- raw 作成: llm-wiki/raw/<category>/<title>.md — <1 行要約>   ← flat なら llm-wiki/raw/<title>.md (raw_source: <category>)
 - wiki 新規作成: llm-wiki/wiki/<category>/<title>.md — <1 行要約>
 - index.md 更新
 ```
