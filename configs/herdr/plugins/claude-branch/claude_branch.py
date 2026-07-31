@@ -5,7 +5,6 @@ from __future__ import annotations
 
 import json
 import os
-import shutil
 import subprocess
 import time
 from typing import Any
@@ -48,14 +47,21 @@ def main() -> None:
     if pane.get("agent") != "claude" or session.get("kind") != "id" or not session.get("value"):
         fail("focused pane has no known claude session")
 
-    claude = shutil.which("claude") or os.path.expanduser("~/.local/bin/claude")
+    # NOTE: herdr >= 0.8 removed `agent start --cwd/--split`; split a pane
+    # first, then start the agent in it via --kind/--pane.
+    new_pane = run_json([
+        "pane", "split", str(pane_id),
+        "--direction", "down",
+        "--cwd", pane["cwd"],
+        "--no-focus",
+    ])["result"]["pane"]["pane_id"]
+
     name = f"branch-{time.strftime('%H%M%S')}"
     run_json([
         "agent", "start", name,
-        "--cwd", pane["cwd"],
-        "--split", "down",
-        "--no-focus",
-        "--", claude, "--resume", session["value"], "--fork-session",
+        "--kind", "claude",
+        "--pane", str(new_pane),
+        "--", "--resume", session["value"], "--fork-session",
     ])
 
 
