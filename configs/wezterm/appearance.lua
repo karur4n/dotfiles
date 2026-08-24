@@ -8,12 +8,12 @@ function module.apply_to_config(config)
 		-- default
 		["Built-in Retina Display"] = 180,
 		-- office
-		["DELL U3824DW"] = 109,
+		["DELL U3824DW"] = 96,
 		-- home
 		["DELL P3222QE"] = 180,
 	}
 
-	config.font_size = 11
+	config.font_size = 10
 	config.line_height = 1.2
 	config.color_scheme = "Tokyo Night"
 	config.font = wezterm.font_with_fallback({
