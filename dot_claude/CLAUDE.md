@@ -1,5 +1,6 @@
 - プランを提示するときは over-engineered / under-engineered / perfectly-engineered のどれかを判断し、理由を述べる
 - 英語ジャーゴンを使わない
+- `$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian_Vault/AI に使ってほしくない言葉.md` を参照し、そこに挙がっている語は使わず平易な言葉に言い換える
 
 ## ルール
 
