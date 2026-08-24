@@ -23,10 +23,6 @@ config.disable_default_key_bindings = true
 -- and interrupts. https://github.com/herdrdev/herdr/issues/1266
 config.enable_kitty_keyboard = false
 
--- TEMPORARY: logs raw key events so we can confirm how Cmd+Shift+[ arrives.
--- Remove once the bracket bindings are verified.
-config.debug_key_events = true
-
 local herdr_prefix = { mods = "CTRL", key = "t" }
 
 -- Cmd chord -> herdr prefix sequence.
