@@ -10,7 +10,7 @@ onboarding = false
 # Built-in themes: catppuccin, terminal, tokyo-night, dracula, nord,
 #                  gruvbox, one-dark, solarized, kanagawa, rose-pine,
 #                  vesper
-name = "one-dark"
+name = "tokyo-night"
 
 # Follow host terminal light/dark appearance and switch Herdr UI themes.
 # Existing manual behavior is unchanged unless this is true.
@@ -63,6 +63,10 @@ new_cwd = "follow"
 # alt+..., cmd/super, and punctuation-with-modifiers may depend on your terminal/tmux setup.
 prefix = "ctrl+t"
 
+# NOTE: keep every binding prefix-based so the same config works from any host
+# terminal (Ghostty, ssh). Cmd-key ergonomics live in the WezTerm config, which
+# translates Cmd chords into these prefix sequences.
+
 # Prefix-mode actions
 # help = "prefix+?"
 # settings = "prefix+s"
@@ -77,22 +81,24 @@ prefix = "ctrl+t"
 # remove_worktree = ""  # optional, unset by default; opens confirmation
 # rename_workspace = "prefix+shift+w"
 # close_workspace = "prefix+shift+d"
-previous_workspace = "prefix+up" # optional, unset by default
-next_workspace = "prefix+down"     # optional, unset by default
+previous_workspace = ["prefix+up", "alt+up"] # optional, unset by default
+next_workspace = ["prefix+down", "alt+down"]     # optional, unset by default
 previous_agent = "prefix+,"     # optional, unset by default
 next_agent = "prefix+."         # optional, unset by default
 # focus_agent = ""        # optional indexed binding, e.g. "prefix+alt+1..9"
 # remote_image_paste = "ctrl+v" # only active in herdr --remote; empty disables raw-key image paste
 # new_tab = "prefix+c"
 # rename_tab = "prefix+shift+t"
-# previous_tab = "prefix+p"
-# next_tab = "prefix+n"
+previous_tab = "prefix+p"
+next_tab = "prefix+n"
 # switch_tab = "prefix+1..9"
 switch_workspace = "prefix+shift+1..9"   # optional indexed binding, e.g. "prefix+shift+1..9"
 # close_tab = "prefix+shift+x"
 # rename_pane = "prefix+shift+p"
 # edit_scrollback = "prefix+e"
-# focus_pane_left = "prefix+h"
+# NOTE: the default prefix+h is taken by the hunk diff command below, which
+# silently shadows it. Move pane-left off h so it stays reachable.
+focus_pane_left = "prefix+shift+h"
 # focus_pane_down = "prefix+j"
 # focus_pane_up = "prefix+k"
 # focus_pane_right = "prefix+l"
@@ -205,6 +211,7 @@ show_agent_labels_on_pane_borders = true
 
 # Expanded agent rows. Built-ins are state_icon, state_text, workspace, tab, pane, agent,
 # terminal_title, and terminal_title_stripped.
+agent_panel_sort = "spaces"
 [ui.sidebar.agents.rows_by_agent]
 claude = [["state_icon", "workspace", "tab"], ["terminal_title_stripped"], ["agent"]]
 
