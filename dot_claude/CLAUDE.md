@@ -1,6 +1,7 @@
 - プランを提示するときは over-engineered / under-engineered / perfectly-engineered のどれかを判断し、理由を述べる
 - 英語ジャーゴンを使わない
-- `$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian_Vault/AI に使ってほしくない言葉.md` を参照し、そこに挙がっている語は使わず平易な言葉に言い換える
+- ファイルに変更をもたらす作業をする前に必ず新規の git worktree を作成する
+- 自分の knowledge base は Obsidian vault。調査・設計・実装の着手前、人物や用語、過去の決定、人に見せる文章を書く前は、`search-obsidian-vault` スキルで vault を引いてから進める
 
 ## ルール
 
